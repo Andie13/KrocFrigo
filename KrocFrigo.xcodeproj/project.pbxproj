@@ -1,0 +1,450 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8B0948C11B4AD51600C611F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0948C01B4AD51600C611F5 /* main.m */; };
+		8B0948C41B4AD51600C611F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0948C31B4AD51600C611F5 /* AppDelegate.m */; };
+		8B0948C71B4AD51600C611F5 /* KrocFrigo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B0948C51B4AD51600C611F5 /* KrocFrigo.xcdatamodeld */; };
+		8B0948CA1B4AD51600C611F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0948C91B4AD51600C611F5 /* ViewController.m */; };
+		8B0948CD1B4AD51600C611F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B0948CB1B4AD51600C611F5 /* Main.storyboard */; };
+		8B0948CF1B4AD51600C611F5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B0948CE1B4AD51600C611F5 /* Images.xcassets */; };
+		8B0948D21B4AD51600C611F5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B0948D01B4AD51600C611F5 /* LaunchScreen.xib */; };
+		8B0948DE1B4AD51600C611F5 /* KrocFrigoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0948DD1B4AD51600C611F5 /* KrocFrigoTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8B0948D81B4AD51600C611F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B0948B31B4AD51500C611F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B0948BA1B4AD51500C611F5;
+			remoteInfo = KrocFrigo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8B0948BB1B4AD51500C611F5 /* KrocFrigo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KrocFrigo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B0948BF1B4AD51600C611F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B0948C01B4AD51600C611F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8B0948C21B4AD51600C611F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8B0948C31B4AD51600C611F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8B0948C61B4AD51600C611F5 /* KrocFrigo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KrocFrigo.xcdatamodel; sourceTree = "<group>"; };
+		8B0948C81B4AD51600C611F5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8B0948C91B4AD51600C611F5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8B0948CC1B4AD51600C611F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8B0948CE1B4AD51600C611F5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8B0948D11B4AD51600C611F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		8B0948D71B4AD51600C611F5 /* KrocFrigoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KrocFrigoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B0948DC1B4AD51600C611F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B0948DD1B4AD51600C611F5 /* KrocFrigoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KrocFrigoTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8B0948B81B4AD51500C611F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B0948D41B4AD51600C611F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8B0948B21B4AD51500C611F5 = {
+			isa = PBXGroup;
+			children = (
+				8B0948BD1B4AD51500C611F5 /* KrocFrigo */,
+				8B0948DA1B4AD51600C611F5 /* KrocFrigoTests */,
+				8B0948BC1B4AD51500C611F5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8B0948BC1B4AD51500C611F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8B0948BB1B4AD51500C611F5 /* KrocFrigo.app */,
+				8B0948D71B4AD51600C611F5 /* KrocFrigoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8B0948BD1B4AD51500C611F5 /* KrocFrigo */ = {
+			isa = PBXGroup;
+			children = (
+				8B0948C21B4AD51600C611F5 /* AppDelegate.h */,
+				8B0948C31B4AD51600C611F5 /* AppDelegate.m */,
+				8B0948C81B4AD51600C611F5 /* ViewController.h */,
+				8B0948C91B4AD51600C611F5 /* ViewController.m */,
+				8B0948CB1B4AD51600C611F5 /* Main.storyboard */,
+				8B0948CE1B4AD51600C611F5 /* Images.xcassets */,
+				8B0948D01B4AD51600C611F5 /* LaunchScreen.xib */,
+				8B0948C51B4AD51600C611F5 /* KrocFrigo.xcdatamodeld */,
+				8B0948BE1B4AD51500C611F5 /* Supporting Files */,
+			);
+			path = KrocFrigo;
+			sourceTree = "<group>";
+		};
+		8B0948BE1B4AD51500C611F5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8B0948BF1B4AD51600C611F5 /* Info.plist */,
+				8B0948C01B4AD51600C611F5 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8B0948DA1B4AD51600C611F5 /* KrocFrigoTests */ = {
+			isa = PBXGroup;
+			children = (
+				8B0948DD1B4AD51600C611F5 /* KrocFrigoTests.m */,
+				8B0948DB1B4AD51600C611F5 /* Supporting Files */,
+			);
+			path = KrocFrigoTests;
+			sourceTree = "<group>";
+		};
+		8B0948DB1B4AD51600C611F5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8B0948DC1B4AD51600C611F5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8B0948BA1B4AD51500C611F5 /* KrocFrigo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B0948E11B4AD51600C611F5 /* Build configuration list for PBXNativeTarget "KrocFrigo" */;
+			buildPhases = (
+				8B0948B71B4AD51500C611F5 /* Sources */,
+				8B0948B81B4AD51500C611F5 /* Frameworks */,
+				8B0948B91B4AD51500C611F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KrocFrigo;
+			productName = KrocFrigo;
+			productReference = 8B0948BB1B4AD51500C611F5 /* KrocFrigo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8B0948D61B4AD51600C611F5 /* KrocFrigoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B0948E41B4AD51600C611F5 /* Build configuration list for PBXNativeTarget "KrocFrigoTests" */;
+			buildPhases = (
+				8B0948D31B4AD51600C611F5 /* Sources */,
+				8B0948D41B4AD51600C611F5 /* Frameworks */,
+				8B0948D51B4AD51600C611F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B0948D91B4AD51600C611F5 /* PBXTargetDependency */,
+			);
+			name = KrocFrigoTests;
+			productName = KrocFrigoTests;
+			productReference = 8B0948D71B4AD51600C611F5 /* KrocFrigoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8B0948B31B4AD51500C611F5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Andie Perrault";
+				TargetAttributes = {
+					8B0948BA1B4AD51500C611F5 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					8B0948D61B4AD51600C611F5 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 8B0948BA1B4AD51500C611F5;
+					};
+				};
+			};
+			buildConfigurationList = 8B0948B61B4AD51500C611F5 /* Build configuration list for PBXProject "KrocFrigo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8B0948B21B4AD51500C611F5;
+			productRefGroup = 8B0948BC1B4AD51500C611F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8B0948BA1B4AD51500C611F5 /* KrocFrigo */,
+				8B0948D61B4AD51600C611F5 /* KrocFrigoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8B0948B91B4AD51500C611F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B0948CD1B4AD51600C611F5 /* Main.storyboard in Resources */,
+				8B0948D21B4AD51600C611F5 /* LaunchScreen.xib in Resources */,
+				8B0948CF1B4AD51600C611F5 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B0948D51B4AD51600C611F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8B0948B71B4AD51500C611F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B0948C41B4AD51600C611F5 /* AppDelegate.m in Sources */,
+				8B0948C11B4AD51600C611F5 /* main.m in Sources */,
+				8B0948CA1B4AD51600C611F5 /* ViewController.m in Sources */,
+				8B0948C71B4AD51600C611F5 /* KrocFrigo.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B0948D31B4AD51600C611F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B0948DE1B4AD51600C611F5 /* KrocFrigoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8B0948D91B4AD51600C611F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B0948BA1B4AD51500C611F5 /* KrocFrigo */;
+			targetProxy = 8B0948D81B4AD51600C611F5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8B0948CB1B4AD51600C611F5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B0948CC1B4AD51600C611F5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8B0948D01B4AD51600C611F5 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B0948D11B4AD51600C611F5 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8B0948DF1B4AD51600C611F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8B0948E01B4AD51600C611F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8B0948E21B4AD51600C611F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KrocFrigo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8B0948E31B4AD51600C611F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KrocFrigo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8B0948E51B4AD51600C611F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KrocFrigoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KrocFrigo.app/KrocFrigo";
+			};
+			name = Debug;
+		};
+		8B0948E61B4AD51600C611F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KrocFrigoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KrocFrigo.app/KrocFrigo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8B0948B61B4AD51500C611F5 /* Build configuration list for PBXProject "KrocFrigo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B0948DF1B4AD51600C611F5 /* Debug */,
+				8B0948E01B4AD51600C611F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B0948E11B4AD51600C611F5 /* Build configuration list for PBXNativeTarget "KrocFrigo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B0948E21B4AD51600C611F5 /* Debug */,
+				8B0948E31B4AD51600C611F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8B0948E41B4AD51600C611F5 /* Build configuration list for PBXNativeTarget "KrocFrigoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B0948E51B4AD51600C611F5 /* Debug */,
+				8B0948E61B4AD51600C611F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8B0948C51B4AD51600C611F5 /* KrocFrigo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8B0948C61B4AD51600C611F5 /* KrocFrigo.xcdatamodel */,
+			);
+			currentVersion = 8B0948C61B4AD51600C611F5 /* KrocFrigo.xcdatamodel */;
+			path = KrocFrigo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8B0948B31B4AD51500C611F5 /* Project object */;
+}
