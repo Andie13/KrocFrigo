@@ -7,14 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26864E09B14FCE5AA77A1EE7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F017AA51DCEEDA9789BFBF5 /* libPods.a */; };
+		8B01A2B91B4BB0A300855A04 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B01A2B81B4BB0A300855A04 /* DataManager.m */; };
+		8B01A2BC1B4BB0B700855A04 /* Outils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B01A2BB1B4BB0B700855A04 /* Outils.m */; };
 		8B0948C11B4AD51600C611F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0948C01B4AD51600C611F5 /* main.m */; };
 		8B0948C41B4AD51600C611F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0948C31B4AD51600C611F5 /* AppDelegate.m */; };
 		8B0948C71B4AD51600C611F5 /* KrocFrigo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B0948C51B4AD51600C611F5 /* KrocFrigo.xcdatamodeld */; };
-		8B0948CA1B4AD51600C611F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0948C91B4AD51600C611F5 /* ViewController.m */; };
 		8B0948CD1B4AD51600C611F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B0948CB1B4AD51600C611F5 /* Main.storyboard */; };
 		8B0948CF1B4AD51600C611F5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B0948CE1B4AD51600C611F5 /* Images.xcassets */; };
 		8B0948D21B4AD51600C611F5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B0948D01B4AD51600C611F5 /* LaunchScreen.xib */; };
 		8B0948DE1B4AD51600C611F5 /* KrocFrigoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0948DD1B4AD51600C611F5 /* KrocFrigoTests.m */; };
+		8B09492A1B4AE93300C611F5 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B0949291B4AE93300C611F5 /* libsqlite3.dylib */; };
+		8B11EB501B515F960049168E /* angry_birds_cake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B11EB3F1B515F960049168E /* angry_birds_cake.jpg */; };
+		8B11EB511B515F960049168E /* creme_brelee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B11EB401B515F960049168E /* creme_brelee.jpg */; };
+		8B11EB521B515F960049168E /* egg_benedict.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B11EB411B515F960049168E /* egg_benedict.jpg */; };
+		8B11EB531B515F960049168E /* full_breakfast.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B11EB421B515F960049168E /* full_breakfast.jpg */; };
+		8B11EB541B515F960049168E /* green_tea.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B11EB431B515F960049168E /* green_tea.jpg */; };
+		8B11EB551B515F960049168E /* ham_and_cheese_panini.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B11EB441B515F960049168E /* ham_and_cheese_panini.jpg */; };
+		8B11EB561B515F960049168E /* ham_and_egg_sandwich.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B11EB451B515F960049168E /* ham_and_egg_sandwich.jpg */; };
+		8B11EB571B515F960049168E /* hamburger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B11EB461B515F960049168E /* hamburger.jpg */; };
+		8B11EB581B515F960049168E /* instant_noodle_with_egg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B11EB471B515F960049168E /* instant_noodle_with_egg.jpg */; };
+		8B11EB591B515F960049168E /* japanese_noodle_with_pork.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B11EB481B515F960049168E /* japanese_noodle_with_pork.jpg */; };
+		8B11EB5A1B515F960049168E /* mushroom_risotto.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B11EB491B515F960049168E /* mushroom_risotto.jpg */; };
+		8B11EB5B1B515F960049168E /* noodle_with_bbq_pork.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B11EB4A1B515F960049168E /* noodle_with_bbq_pork.jpg */; };
+		8B11EB5C1B515F960049168E /* photo-frame.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B11EB4B1B515F960049168E /* photo-frame.png */; };
+		8B11EB5D1B515F960049168E /* starbucks_coffee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B11EB4C1B515F960049168E /* starbucks_coffee.jpg */; };
+		8B11EB5E1B515F960049168E /* thai_shrimp_cake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B11EB4D1B515F960049168E /* thai_shrimp_cake.jpg */; };
+		8B11EB5F1B515F960049168E /* vegetable_curry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B11EB4E1B515F960049168E /* vegetable_curry.jpg */; };
+		8B11EB601B515F960049168E /* white_chocolate_donut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B11EB4F1B515F960049168E /* white_chocolate_donut.jpg */; };
+		8B11EB631B51780C0049168E /* ReciepesDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B11EB621B51780C0049168E /* ReciepesDetailsViewController.m */; };
+		8B11EB661B5178DC0049168E /* Recipes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B11EB651B5178DC0049168E /* Recipes.m */; };
+		8B23913C1B526D2F007339ED /* Ingredients.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B23913B1B526D2F007339ED /* Ingredients.m */; };
+		8B23913E1B53BEB0007339ED /* wood-floorboards-texture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B23913D1B53BEB0007339ED /* wood-floorboards-texture.jpg */; };
+		8BC67A791B51144800CF5D73 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC67A781B51144800CF5D73 /* FacebookSDK.framework */; };
+		8BCFA2CA1B4CF5CB0069BEAD /* AccueilCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BCFA2C91B4CF5CB0069BEAD /* AccueilCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,20 +54,54 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19CB8DD916184B08317DEFB9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		8B01A29F1B4BA29E00855A04 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
+		8B01A2B71B4BB0A300855A04 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		8B01A2B81B4BB0A300855A04 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		8B01A2BA1B4BB0B700855A04 /* Outils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Outils.h; sourceTree = "<group>"; };
+		8B01A2BB1B4BB0B700855A04 /* Outils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Outils.m; sourceTree = "<group>"; };
 		8B0948BB1B4AD51500C611F5 /* KrocFrigo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KrocFrigo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B0948BF1B4AD51600C611F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B0948C01B4AD51600C611F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8B0948C21B4AD51600C611F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8B0948C31B4AD51600C611F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8B0948C61B4AD51600C611F5 /* KrocFrigo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KrocFrigo.xcdatamodel; sourceTree = "<group>"; };
-		8B0948C81B4AD51600C611F5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8B0948C91B4AD51600C611F5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8B0948CC1B4AD51600C611F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B0948CE1B4AD51600C611F5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8B0948D11B4AD51600C611F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8B0948D71B4AD51600C611F5 /* KrocFrigoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KrocFrigoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B0948DC1B4AD51600C611F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B0948DD1B4AD51600C611F5 /* KrocFrigoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KrocFrigoTests.m; sourceTree = "<group>"; };
+		8B0949291B4AE93300C611F5 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		8B11EB3F1B515F960049168E /* angry_birds_cake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = angry_birds_cake.jpg; sourceTree = "<group>"; };
+		8B11EB401B515F960049168E /* creme_brelee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = creme_brelee.jpg; sourceTree = "<group>"; };
+		8B11EB411B515F960049168E /* egg_benedict.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = egg_benedict.jpg; sourceTree = "<group>"; };
+		8B11EB421B515F960049168E /* full_breakfast.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = full_breakfast.jpg; sourceTree = "<group>"; };
+		8B11EB431B515F960049168E /* green_tea.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = green_tea.jpg; sourceTree = "<group>"; };
+		8B11EB441B515F960049168E /* ham_and_cheese_panini.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ham_and_cheese_panini.jpg; sourceTree = "<group>"; };
+		8B11EB451B515F960049168E /* ham_and_egg_sandwich.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ham_and_egg_sandwich.jpg; sourceTree = "<group>"; };
+		8B11EB461B515F960049168E /* hamburger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hamburger.jpg; sourceTree = "<group>"; };
+		8B11EB471B515F960049168E /* instant_noodle_with_egg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = instant_noodle_with_egg.jpg; sourceTree = "<group>"; };
+		8B11EB481B515F960049168E /* japanese_noodle_with_pork.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = japanese_noodle_with_pork.jpg; sourceTree = "<group>"; };
+		8B11EB491B515F960049168E /* mushroom_risotto.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mushroom_risotto.jpg; sourceTree = "<group>"; };
+		8B11EB4A1B515F960049168E /* noodle_with_bbq_pork.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = noodle_with_bbq_pork.jpg; sourceTree = "<group>"; };
+		8B11EB4B1B515F960049168E /* photo-frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-frame.png"; sourceTree = "<group>"; };
+		8B11EB4C1B515F960049168E /* starbucks_coffee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = starbucks_coffee.jpg; sourceTree = "<group>"; };
+		8B11EB4D1B515F960049168E /* thai_shrimp_cake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = thai_shrimp_cake.jpg; sourceTree = "<group>"; };
+		8B11EB4E1B515F960049168E /* vegetable_curry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vegetable_curry.jpg; sourceTree = "<group>"; };
+		8B11EB4F1B515F960049168E /* white_chocolate_donut.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = white_chocolate_donut.jpg; sourceTree = "<group>"; };
+		8B11EB611B51780C0049168E /* ReciepesDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReciepesDetailsViewController.h; path = Outils/ZvShare/ReciepesDetailsViewController.h; sourceTree = "<group>"; };
+		8B11EB621B51780C0049168E /* ReciepesDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReciepesDetailsViewController.m; path = Outils/ZvShare/ReciepesDetailsViewController.m; sourceTree = "<group>"; };
+		8B11EB641B5178DC0049168E /* Recipes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipes.h; sourceTree = "<group>"; };
+		8B11EB651B5178DC0049168E /* Recipes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipes.m; sourceTree = "<group>"; };
+		8B23913A1B526D2F007339ED /* Ingredients.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ingredients.h; sourceTree = "<group>"; };
+		8B23913B1B526D2F007339ED /* Ingredients.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ingredients.m; sourceTree = "<group>"; };
+		8B23913D1B53BEB0007339ED /* wood-floorboards-texture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wood-floorboards-texture.jpg"; sourceTree = "<group>"; };
+		8BC67A781B51144800CF5D73 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../coursDL/FacebookSDK_3.7.1/FacebookSDK.framework; sourceTree = "<group>"; };
+		8BCFA2C81B4CF5CB0069BEAD /* AccueilCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccueilCollectionViewController.h; path = Outils/AccueilCollectionViewController.h; sourceTree = "<group>"; };
+		8BCFA2C91B4CF5CB0069BEAD /* AccueilCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccueilCollectionViewController.m; path = Outils/AccueilCollectionViewController.m; sourceTree = "<group>"; };
+		9F017AA51DCEEDA9789BFBF5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFC0CB84BFA8D724AEDE47E3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +109,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B09492A1B4AE93300C611F5 /* libsqlite3.dylib in Frameworks */,
+				8BC67A791B51144800CF5D73 /* FacebookSDK.framework in Frameworks */,
+				26864E09B14FCE5AA77A1EE7 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,12 +125,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E9E5BEDC0BB4FE24C083076 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				19CB8DD916184B08317DEFB9 /* Pods.debug.xcconfig */,
+				AFC0CB84BFA8D724AEDE47E3 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8B01A29B1B4BA29E00855A04 /* Outils */ = {
+			isa = PBXGroup;
+			children = (
+				8B01A2BA1B4BB0B700855A04 /* Outils.h */,
+				8B01A2BB1B4BB0B700855A04 /* Outils.m */,
+				8B01A29C1B4BA29E00855A04 /* Database */,
+				8B01A2A11B4BA29E00855A04 /* ZvShare */,
+			);
+			path = Outils;
+			sourceTree = "<group>";
+		};
+		8B01A29C1B4BA29E00855A04 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				8B01A2B71B4BB0A300855A04 /* DataManager.h */,
+				8B01A2B81B4BB0A300855A04 /* DataManager.m */,
+				8B01A29F1B4BA29E00855A04 /* SynthesizeSingleton.h */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		8B01A2A11B4BA29E00855A04 /* ZvShare */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ZvShare;
+			sourceTree = "<group>";
+		};
 		8B0948B21B4AD51500C611F5 = {
 			isa = PBXGroup;
 			children = (
+				8B0948EB1B4AD8D500C611F5 /* Ressources */,
 				8B0948BD1B4AD51500C611F5 /* KrocFrigo */,
 				8B0948DA1B4AD51600C611F5 /* KrocFrigoTests */,
 				8B0948BC1B4AD51500C611F5 /* Products */,
+				1E9E5BEDC0BB4FE24C083076 /* Pods */,
+				C231E8BBCEE260F4312E3E2E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,15 +186,16 @@
 		8B0948BD1B4AD51500C611F5 /* KrocFrigo */ = {
 			isa = PBXGroup;
 			children = (
+				8B01A29B1B4BA29E00855A04 /* Outils */,
+				8B2D391F1B551EDD0035F9E1 /* Controllers */,
 				8B0948C21B4AD51600C611F5 /* AppDelegate.h */,
 				8B0948C31B4AD51600C611F5 /* AppDelegate.m */,
-				8B0948C81B4AD51600C611F5 /* ViewController.h */,
-				8B0948C91B4AD51600C611F5 /* ViewController.m */,
 				8B0948CB1B4AD51600C611F5 /* Main.storyboard */,
 				8B0948CE1B4AD51600C611F5 /* Images.xcassets */,
 				8B0948D01B4AD51600C611F5 /* LaunchScreen.xib */,
 				8B0948C51B4AD51600C611F5 /* KrocFrigo.xcdatamodeld */,
 				8B0948BE1B4AD51500C611F5 /* Supporting Files */,
+				8B0949541B4AEC2700C611F5 /* classes */,
 			);
 			path = KrocFrigo;
 			sourceTree = "<group>";
@@ -122,6 +226,88 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8B0948EB1B4AD8D500C611F5 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				8B0948EC1B4AD8D500C611F5 /* Image App */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		8B0948EC1B4AD8D500C611F5 /* Image App */ = {
+			isa = PBXGroup;
+			children = (
+				8B23913D1B53BEB0007339ED /* wood-floorboards-texture.jpg */,
+				8B11EB3D1B515F6B0049168E /* pic test */,
+			);
+			path = "Image App";
+			sourceTree = "<group>";
+		};
+		8B0949541B4AEC2700C611F5 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				8B11EB641B5178DC0049168E /* Recipes.h */,
+				8B11EB651B5178DC0049168E /* Recipes.m */,
+				8B23913A1B526D2F007339ED /* Ingredients.h */,
+				8B23913B1B526D2F007339ED /* Ingredients.m */,
+			);
+			name = classes;
+			sourceTree = "<group>";
+		};
+		8B11EB3D1B515F6B0049168E /* pic test */ = {
+			isa = PBXGroup;
+			children = (
+				8B11EB3E1B515F960049168E /* RecipePhotoImagePack-2 */,
+			);
+			name = "pic test";
+			sourceTree = "<group>";
+		};
+		8B11EB3E1B515F960049168E /* RecipePhotoImagePack-2 */ = {
+			isa = PBXGroup;
+			children = (
+				8B11EB3F1B515F960049168E /* angry_birds_cake.jpg */,
+				8B11EB401B515F960049168E /* creme_brelee.jpg */,
+				8B11EB411B515F960049168E /* egg_benedict.jpg */,
+				8B11EB421B515F960049168E /* full_breakfast.jpg */,
+				8B11EB431B515F960049168E /* green_tea.jpg */,
+				8B11EB441B515F960049168E /* ham_and_cheese_panini.jpg */,
+				8B11EB451B515F960049168E /* ham_and_egg_sandwich.jpg */,
+				8B11EB461B515F960049168E /* hamburger.jpg */,
+				8B11EB471B515F960049168E /* instant_noodle_with_egg.jpg */,
+				8B11EB481B515F960049168E /* japanese_noodle_with_pork.jpg */,
+				8B11EB491B515F960049168E /* mushroom_risotto.jpg */,
+				8B11EB4A1B515F960049168E /* noodle_with_bbq_pork.jpg */,
+				8B11EB4B1B515F960049168E /* photo-frame.png */,
+				8B11EB4C1B515F960049168E /* starbucks_coffee.jpg */,
+				8B11EB4D1B515F960049168E /* thai_shrimp_cake.jpg */,
+				8B11EB4E1B515F960049168E /* vegetable_curry.jpg */,
+				8B11EB4F1B515F960049168E /* white_chocolate_donut.jpg */,
+			);
+			name = "RecipePhotoImagePack-2";
+			path = "../../../../../Downloads/RecipePhotoImagePack-2";
+			sourceTree = "<group>";
+		};
+		8B2D391F1B551EDD0035F9E1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8B11EB611B51780C0049168E /* ReciepesDetailsViewController.h */,
+				8BCFA2C81B4CF5CB0069BEAD /* AccueilCollectionViewController.h */,
+				8BCFA2C91B4CF5CB0069BEAD /* AccueilCollectionViewController.m */,
+				8B11EB621B51780C0049168E /* ReciepesDetailsViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		C231E8BBCEE260F4312E3E2E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8BC67A781B51144800CF5D73 /* FacebookSDK.framework */,
+				8B0949291B4AE93300C611F5 /* libsqlite3.dylib */,
+				9F017AA51DCEEDA9789BFBF5 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,9 +315,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B0948E11B4AD51600C611F5 /* Build configuration list for PBXNativeTarget "KrocFrigo" */;
 			buildPhases = (
+				228B40EBF04E6FA415708353 /* Check Pods Manifest.lock */,
 				8B0948B71B4AD51500C611F5 /* Sources */,
 				8B0948B81B4AD51500C611F5 /* Frameworks */,
 				8B0948B91B4AD51500C611F5 /* Resources */,
+				19535AE99AC22B5209CE4D53 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,9 +390,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B11EB531B515F960049168E /* full_breakfast.jpg in Resources */,
 				8B0948CD1B4AD51600C611F5 /* Main.storyboard in Resources */,
+				8B11EB511B515F960049168E /* creme_brelee.jpg in Resources */,
+				8B11EB601B515F960049168E /* white_chocolate_donut.jpg in Resources */,
 				8B0948D21B4AD51600C611F5 /* LaunchScreen.xib in Resources */,
+				8B11EB5E1B515F960049168E /* thai_shrimp_cake.jpg in Resources */,
+				8B11EB5C1B515F960049168E /* photo-frame.png in Resources */,
+				8B11EB581B515F960049168E /* instant_noodle_with_egg.jpg in Resources */,
+				8B11EB571B515F960049168E /* hamburger.jpg in Resources */,
+				8B11EB5B1B515F960049168E /* noodle_with_bbq_pork.jpg in Resources */,
+				8B11EB5D1B515F960049168E /* starbucks_coffee.jpg in Resources */,
+				8B11EB5F1B515F960049168E /* vegetable_curry.jpg in Resources */,
+				8B11EB501B515F960049168E /* angry_birds_cake.jpg in Resources */,
+				8B23913E1B53BEB0007339ED /* wood-floorboards-texture.jpg in Resources */,
 				8B0948CF1B4AD51600C611F5 /* Images.xcassets in Resources */,
+				8B11EB551B515F960049168E /* ham_and_cheese_panini.jpg in Resources */,
+				8B11EB541B515F960049168E /* green_tea.jpg in Resources */,
+				8B11EB5A1B515F960049168E /* mushroom_risotto.jpg in Resources */,
+				8B11EB521B515F960049168E /* egg_benedict.jpg in Resources */,
+				8B11EB561B515F960049168E /* ham_and_egg_sandwich.jpg in Resources */,
+				8B11EB591B515F960049168E /* japanese_noodle_with_pork.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +423,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		19535AE99AC22B5209CE4D53 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		228B40EBF04E6FA415708353 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8B0948B71B4AD51500C611F5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -224,8 +463,13 @@
 			files = (
 				8B0948C41B4AD51600C611F5 /* AppDelegate.m in Sources */,
 				8B0948C11B4AD51600C611F5 /* main.m in Sources */,
-				8B0948CA1B4AD51600C611F5 /* ViewController.m in Sources */,
 				8B0948C71B4AD51600C611F5 /* KrocFrigo.xcdatamodeld in Sources */,
+				8B23913C1B526D2F007339ED /* Ingredients.m in Sources */,
+				8B01A2B91B4BB0A300855A04 /* DataManager.m in Sources */,
+				8B01A2BC1B4BB0B700855A04 /* Outils.m in Sources */,
+				8BCFA2CA1B4CF5CB0069BEAD /* AccueilCollectionViewController.m in Sources */,
+				8B11EB631B51780C0049168E /* ReciepesDetailsViewController.m in Sources */,
+				8B11EB661B5178DC0049168E /* Recipes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,20 +595,34 @@
 		};
 		8B0948E21B4AD51600C611F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19CB8DD916184B08317DEFB9 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/andieperrault/Desktop/VoxTemplates/Rennes/Rennes_FR/FacebookSDK_3.7.1,
+					/Users/andieperrault/Documents/coursDL/FacebookSDK_3.7.1,
+				);
 				INFOPLIST_FILE = KrocFrigo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		8B0948E31B4AD51600C611F5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFC0CB84BFA8D724AEDE47E3 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/andieperrault/Desktop/VoxTemplates/Rennes/Rennes_FR/FacebookSDK_3.7.1,
+					/Users/andieperrault/Documents/coursDL/FacebookSDK_3.7.1,
+				);
 				INFOPLIST_FILE = KrocFrigo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -422,6 +680,7 @@
 				8B0948E31B4AD51600C611F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8B0948E41B4AD51600C611F5 /* Build configuration list for PBXNativeTarget "KrocFrigoTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +689,7 @@
 				8B0948E61B4AD51600C611F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

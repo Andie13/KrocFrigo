@@ -11,8 +11,8 @@
 #import "FMDatabaseAdditions.h"
 #import "FMDatabaseQueue.h"
 
-#import "POI.h"
-#import "Media.h"
+//#import "POI.h"
+//#import "Media.h"
 
 @interface DataManager : NSObject {
 
@@ -23,16 +23,16 @@
 + (DataManager *)sharedDataManager;
 
 - (void)initiliaze;
-- (NSArray *)getPOI;
-- (POI *)getPOI:(int)idPOI;
-- (int)getIdProchainPOI;
-- (NSArray *)getMedias:(int)idPOI;
-- (NSArray *)getMediasPrincipaux:(int)idPOI;
-- (NSArray *)getMediasSecondaires:(int)idPOI;
-- (Media *)getMedia:(int)idMedia;
-- (void)setPOIAsFinished:(int)idPOI;
-- (void)setMediaAsUnlock:(int)idMedia;
-- (void)clearAlbum;
-- (NSArray *)getPersonnages;
+//- (NSArray *)getPOI;
+//- (POI *)getPOI:(int)idPOI;
+//- (int)getIdProchainPOI;
+//- (NSArray *)getMedias:(int)idPOI;
+//- (NSArray *)getMediasPrincipaux:(int)idPOI;
+//- (NSArray *)getMediasSecondaires:(int)idPOI;
+//- (Media *)getMedia:(int)idMedia;
+//- (void)setPOIAsFinished:(int)idPOI;
+//- (void)setMediaAsUnlock:(int)idMedia;
+//- (void)clearAlbum;
+//- (NSArray *)getPersonnages;
 
 @end
