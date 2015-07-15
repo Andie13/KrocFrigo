@@ -41,6 +41,7 @@
 		8B23913E1B53BEB0007339ED /* wood-floorboards-texture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B23913D1B53BEB0007339ED /* wood-floorboards-texture.jpg */; };
 		8BC67A791B51144800CF5D73 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC67A781B51144800CF5D73 /* FacebookSDK.framework */; };
 		8BCFA2CA1B4CF5CB0069BEAD /* AccueilCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BCFA2C91B4CF5CB0069BEAD /* AccueilCollectionViewController.m */; };
+		8BE2744A1B5668DB00E76A86 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE274491B5668DB00E76A86 /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,8 @@
 		8BC67A781B51144800CF5D73 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../coursDL/FacebookSDK_3.7.1/FacebookSDK.framework; sourceTree = "<group>"; };
 		8BCFA2C81B4CF5CB0069BEAD /* AccueilCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccueilCollectionViewController.h; path = Outils/AccueilCollectionViewController.h; sourceTree = "<group>"; };
 		8BCFA2C91B4CF5CB0069BEAD /* AccueilCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccueilCollectionViewController.m; path = Outils/AccueilCollectionViewController.m; sourceTree = "<group>"; };
+		8BE274481B5668DB00E76A86 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		8BE274491B5668DB00E76A86 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		9F017AA51DCEEDA9789BFBF5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFC0CB84BFA8D724AEDE47E3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -290,6 +293,8 @@
 		8B2D391F1B551EDD0035F9E1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8BE274481B5668DB00E76A86 /* SWRevealViewController.h */,
+				8BE274491B5668DB00E76A86 /* SWRevealViewController.m */,
 				8B11EB611B51780C0049168E /* ReciepesDetailsViewController.h */,
 				8BCFA2C81B4CF5CB0069BEAD /* AccueilCollectionViewController.h */,
 				8BCFA2C91B4CF5CB0069BEAD /* AccueilCollectionViewController.m */,
@@ -468,6 +473,7 @@
 				8B01A2B91B4BB0A300855A04 /* DataManager.m in Sources */,
 				8B01A2BC1B4BB0B700855A04 /* Outils.m in Sources */,
 				8BCFA2CA1B4CF5CB0069BEAD /* AccueilCollectionViewController.m in Sources */,
+				8BE2744A1B5668DB00E76A86 /* SWRevealViewController.m in Sources */,
 				8B11EB631B51780C0049168E /* ReciepesDetailsViewController.m in Sources */,
 				8B11EB661B5178DC0049168E /* Recipes.m in Sources */,
 			);

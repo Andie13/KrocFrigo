@@ -9,10 +9,11 @@
 #import "AccueilCollectionViewController.h"
 #import "Recipes.h"
 #import "ReciepesDetailsViewController.h"
+#import "SWRevealViewController.h"
 
 @interface AccueilCollectionViewController (){
    
-    
+    __weak IBOutlet UIBarButtonItem *revealButtonItem;
     
     NSArray *collectionImages;
 }
@@ -25,6 +26,9 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+      [self customSetup];
+    
+   
     
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"<=" style:UIBarButtonItemStylePlain target:nil action:nil];
@@ -34,6 +38,17 @@ static NSString * const reuseIdentifier = @"Cell";
     
     NSLog(@"ici");
        // Do any additional setup after loading the view.
+}
+
+- (void)customSetup
+{
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self->revealButtonItem setTarget: self.revealViewController];
+        [self->revealButtonItem setAction: @selector( revealToggle: )];
+        [self.navigationController.navigationBar addGestureRecognizer: self.revealViewController.panGestureRecognizer];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
