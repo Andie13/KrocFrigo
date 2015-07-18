@@ -39,6 +39,8 @@
 		8B11EB661B5178DC0049168E /* Recipes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B11EB651B5178DC0049168E /* Recipes.m */; };
 		8B23913C1B526D2F007339ED /* Ingredients.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B23913B1B526D2F007339ED /* Ingredients.m */; };
 		8B23913E1B53BEB0007339ED /* wood-floorboards-texture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B23913D1B53BEB0007339ED /* wood-floorboards-texture.jpg */; };
+		8B37C04D1B56E7230011F32B /* NavigationViewControllerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B37C04C1B56E7230011F32B /* NavigationViewControllerTableViewController.m */; };
+		8B4CAAD41B5906AD003FDFC4 /* CreditsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4CAAD31B5906AD003FDFC4 /* CreditsViewController.m */; };
 		8BC67A791B51144800CF5D73 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC67A781B51144800CF5D73 /* FacebookSDK.framework */; };
 		8BCFA2CA1B4CF5CB0069BEAD /* AccueilCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BCFA2C91B4CF5CB0069BEAD /* AccueilCollectionViewController.m */; };
 		8BE2744A1B5668DB00E76A86 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE274491B5668DB00E76A86 /* SWRevealViewController.m */; };
@@ -98,6 +100,10 @@
 		8B23913A1B526D2F007339ED /* Ingredients.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ingredients.h; sourceTree = "<group>"; };
 		8B23913B1B526D2F007339ED /* Ingredients.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ingredients.m; sourceTree = "<group>"; };
 		8B23913D1B53BEB0007339ED /* wood-floorboards-texture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wood-floorboards-texture.jpg"; sourceTree = "<group>"; };
+		8B37C04B1B56E7230011F32B /* NavigationViewControllerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewControllerTableViewController.h; sourceTree = "<group>"; };
+		8B37C04C1B56E7230011F32B /* NavigationViewControllerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewControllerTableViewController.m; sourceTree = "<group>"; };
+		8B4CAAD21B5906AD003FDFC4 /* CreditsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditsViewController.h; sourceTree = "<group>"; };
+		8B4CAAD31B5906AD003FDFC4 /* CreditsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditsViewController.m; sourceTree = "<group>"; };
 		8BC67A781B51144800CF5D73 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../coursDL/FacebookSDK_3.7.1/FacebookSDK.framework; sourceTree = "<group>"; };
 		8BCFA2C81B4CF5CB0069BEAD /* AccueilCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccueilCollectionViewController.h; path = Outils/AccueilCollectionViewController.h; sourceTree = "<group>"; };
 		8BCFA2C91B4CF5CB0069BEAD /* AccueilCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccueilCollectionViewController.m; path = Outils/AccueilCollectionViewController.m; sourceTree = "<group>"; };
@@ -299,6 +305,10 @@
 				8BCFA2C81B4CF5CB0069BEAD /* AccueilCollectionViewController.h */,
 				8BCFA2C91B4CF5CB0069BEAD /* AccueilCollectionViewController.m */,
 				8B11EB621B51780C0049168E /* ReciepesDetailsViewController.m */,
+				8B37C04B1B56E7230011F32B /* NavigationViewControllerTableViewController.h */,
+				8B37C04C1B56E7230011F32B /* NavigationViewControllerTableViewController.m */,
+				8B4CAAD21B5906AD003FDFC4 /* CreditsViewController.h */,
+				8B4CAAD31B5906AD003FDFC4 /* CreditsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -468,6 +478,8 @@
 			files = (
 				8B0948C41B4AD51600C611F5 /* AppDelegate.m in Sources */,
 				8B0948C11B4AD51600C611F5 /* main.m in Sources */,
+				8B37C04D1B56E7230011F32B /* NavigationViewControllerTableViewController.m in Sources */,
+				8B4CAAD41B5906AD003FDFC4 /* CreditsViewController.m in Sources */,
 				8B0948C71B4AD51600C611F5 /* KrocFrigo.xcdatamodeld in Sources */,
 				8B23913C1B526D2F007339ED /* Ingredients.m in Sources */,
 				8B01A2B91B4BB0A300855A04 /* DataManager.m in Sources */,
