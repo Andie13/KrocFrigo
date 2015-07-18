@@ -9,5 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface CreditsViewController : UIViewController
+    
+    
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sideBarButton;
+  
+ 
+    
+
 
 @end

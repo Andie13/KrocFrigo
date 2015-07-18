@@ -10,6 +10,7 @@
 
 @interface AccueilCollectionViewController : UICollectionViewController
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sideBarButton;
 
 
 

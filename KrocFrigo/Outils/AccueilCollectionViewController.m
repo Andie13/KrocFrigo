@@ -28,15 +28,7 @@ static NSString * const reuseIdentifier = @"Cell";
     [super viewDidLoad];
       [self customSetup];
     
-    
-    SWRevealViewController *revealViewController = self.revealViewController;
-    if ( revealViewController )
-    {
-        [self->revealButtonItem setTarget: self.revealViewController];
-        [self->revealButtonItem setAction: @selector( revealToggle: )];
-        [self.navigationController.navigationBar addGestureRecognizer: self.revealViewController.panGestureRecognizer];
-    }
-
+   
     
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"<=" style:UIBarButtonItemStylePlain target:nil action:nil];
@@ -49,7 +41,15 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (void)customSetup
-{}
+{
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.sideBarButton setTarget: self.revealViewController];
+        [self.sideBarButton setAction: @selector( revealToggle: )];
+        [self.navigationController.navigationBar addGestureRecognizer: self.revealViewController.panGestureRecognizer];
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

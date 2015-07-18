@@ -18,6 +18,7 @@
 		8B0948D21B4AD51600C611F5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B0948D01B4AD51600C611F5 /* LaunchScreen.xib */; };
 		8B0948DE1B4AD51600C611F5 /* KrocFrigoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0948DD1B4AD51600C611F5 /* KrocFrigoTests.m */; };
 		8B09492A1B4AE93300C611F5 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B0949291B4AE93300C611F5 /* libsqlite3.dylib */; };
+		8B0A39CD1B5A5AB40082C6E4 /* SideBarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A39CC1B5A5AB40082C6E4 /* SideBarTableViewController.m */; };
 		8B11EB501B515F960049168E /* angry_birds_cake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B11EB3F1B515F960049168E /* angry_birds_cake.jpg */; };
 		8B11EB511B515F960049168E /* creme_brelee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B11EB401B515F960049168E /* creme_brelee.jpg */; };
 		8B11EB521B515F960049168E /* egg_benedict.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B11EB411B515F960049168E /* egg_benedict.jpg */; };
@@ -39,7 +40,6 @@
 		8B11EB661B5178DC0049168E /* Recipes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B11EB651B5178DC0049168E /* Recipes.m */; };
 		8B23913C1B526D2F007339ED /* Ingredients.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B23913B1B526D2F007339ED /* Ingredients.m */; };
 		8B23913E1B53BEB0007339ED /* wood-floorboards-texture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B23913D1B53BEB0007339ED /* wood-floorboards-texture.jpg */; };
-		8B37C04D1B56E7230011F32B /* NavigationViewControllerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B37C04C1B56E7230011F32B /* NavigationViewControllerTableViewController.m */; };
 		8B4CAAD41B5906AD003FDFC4 /* CreditsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4CAAD31B5906AD003FDFC4 /* CreditsViewController.m */; };
 		8BC67A791B51144800CF5D73 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC67A781B51144800CF5D73 /* FacebookSDK.framework */; };
 		8BCFA2CA1B4CF5CB0069BEAD /* AccueilCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BCFA2C91B4CF5CB0069BEAD /* AccueilCollectionViewController.m */; };
@@ -76,6 +76,8 @@
 		8B0948DC1B4AD51600C611F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B0948DD1B4AD51600C611F5 /* KrocFrigoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KrocFrigoTests.m; sourceTree = "<group>"; };
 		8B0949291B4AE93300C611F5 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		8B0A39CB1B5A5AB40082C6E4 /* SideBarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideBarTableViewController.h; sourceTree = "<group>"; };
+		8B0A39CC1B5A5AB40082C6E4 /* SideBarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideBarTableViewController.m; sourceTree = "<group>"; };
 		8B11EB3F1B515F960049168E /* angry_birds_cake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = angry_birds_cake.jpg; sourceTree = "<group>"; };
 		8B11EB401B515F960049168E /* creme_brelee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = creme_brelee.jpg; sourceTree = "<group>"; };
 		8B11EB411B515F960049168E /* egg_benedict.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = egg_benedict.jpg; sourceTree = "<group>"; };
@@ -100,8 +102,6 @@
 		8B23913A1B526D2F007339ED /* Ingredients.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ingredients.h; sourceTree = "<group>"; };
 		8B23913B1B526D2F007339ED /* Ingredients.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ingredients.m; sourceTree = "<group>"; };
 		8B23913D1B53BEB0007339ED /* wood-floorboards-texture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wood-floorboards-texture.jpg"; sourceTree = "<group>"; };
-		8B37C04B1B56E7230011F32B /* NavigationViewControllerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewControllerTableViewController.h; sourceTree = "<group>"; };
-		8B37C04C1B56E7230011F32B /* NavigationViewControllerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewControllerTableViewController.m; sourceTree = "<group>"; };
 		8B4CAAD21B5906AD003FDFC4 /* CreditsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditsViewController.h; sourceTree = "<group>"; };
 		8B4CAAD31B5906AD003FDFC4 /* CreditsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditsViewController.m; sourceTree = "<group>"; };
 		8BC67A781B51144800CF5D73 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../coursDL/FacebookSDK_3.7.1/FacebookSDK.framework; sourceTree = "<group>"; };
@@ -305,10 +305,10 @@
 				8BCFA2C81B4CF5CB0069BEAD /* AccueilCollectionViewController.h */,
 				8BCFA2C91B4CF5CB0069BEAD /* AccueilCollectionViewController.m */,
 				8B11EB621B51780C0049168E /* ReciepesDetailsViewController.m */,
-				8B37C04B1B56E7230011F32B /* NavigationViewControllerTableViewController.h */,
-				8B37C04C1B56E7230011F32B /* NavigationViewControllerTableViewController.m */,
 				8B4CAAD21B5906AD003FDFC4 /* CreditsViewController.h */,
 				8B4CAAD31B5906AD003FDFC4 /* CreditsViewController.m */,
+				8B0A39CB1B5A5AB40082C6E4 /* SideBarTableViewController.h */,
+				8B0A39CC1B5A5AB40082C6E4 /* SideBarTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -478,9 +478,9 @@
 			files = (
 				8B0948C41B4AD51600C611F5 /* AppDelegate.m in Sources */,
 				8B0948C11B4AD51600C611F5 /* main.m in Sources */,
-				8B37C04D1B56E7230011F32B /* NavigationViewControllerTableViewController.m in Sources */,
 				8B4CAAD41B5906AD003FDFC4 /* CreditsViewController.m in Sources */,
 				8B0948C71B4AD51600C611F5 /* KrocFrigo.xcdatamodeld in Sources */,
+				8B0A39CD1B5A5AB40082C6E4 /* SideBarTableViewController.m in Sources */,
 				8B23913C1B526D2F007339ED /* Ingredients.m in Sources */,
 				8B01A2B91B4BB0A300855A04 /* DataManager.m in Sources */,
 				8B01A2BC1B4BB0B700855A04 /* Outils.m in Sources */,

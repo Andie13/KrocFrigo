@@ -7,6 +7,9 @@
 //
 
 #import "CreditsViewController.h"
+#import "AccueilCollectionViewController.h"
+#import "SWRevealViewController.h"
+
 
 @interface CreditsViewController ()
 
@@ -16,8 +19,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self customSetup];
+   
 }
+
+- (void)customSetup
+{
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.sideBarButton setTarget: self.revealViewController];
+        [self.sideBarButton setAction: @selector( revealToggle: )];
+        [self.navigationController.navigationBar addGestureRecognizer: self.revealViewController.panGestureRecognizer];
+    }
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
