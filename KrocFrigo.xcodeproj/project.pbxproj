@@ -45,6 +45,19 @@
 		8B11EB661B5178DC0049168E /* Recipes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B11EB651B5178DC0049168E /* Recipes.m */; };
 		8B23913C1B526D2F007339ED /* Ingredients.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B23913B1B526D2F007339ED /* Ingredients.m */; };
 		8B23913E1B53BEB0007339ED /* wood-floorboards-texture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B23913D1B53BEB0007339ED /* wood-floorboards-texture.jpg */; };
+		8B25780E1B5E28EC002F31E1 /* MonGardeMangerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B25780D1B5E28EC002F31E1 /* MonGardeMangerTableViewController.m */; };
+		8B2578101B5E4771002F31E1 /* kroc_db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 8B25780F1B5E4771002F31E1 /* kroc_db.sqlite */; };
+		8B2578161B5E5034002F31E1 /* AddFoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B2578151B5E5034002F31E1 /* AddFoodViewController.m */; };
+		8B2B08151B5FD36700CE1704 /* catTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B2B08141B5FD36700CE1704 /* catTableViewCell.m */; };
+		8B2B08201B5FE25300CE1704 /* viennoiseries.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B2B08171B5FE25300CE1704 /* viennoiseries.jpg */; };
+		8B2B08211B5FE25300CE1704 /* pâtisserie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B2B08181B5FE25300CE1704 /* pâtisserie.jpg */; };
+		8B2B08221B5FE25300CE1704 /* epices.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B2B08191B5FE25300CE1704 /* epices.jpg */; };
+		8B2B08231B5FE25300CE1704 /* fruits.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B2B081A1B5FE25300CE1704 /* fruits.jpg */; };
+		8B2B08241B5FE25300CE1704 /* laitages.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B2B081B1B5FE25300CE1704 /* laitages.jpg */; };
+		8B2B08251B5FE25300CE1704 /* feculents.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B2B081C1B5FE25300CE1704 /* feculents.jpg */; };
+		8B2B08261B5FE25300CE1704 /* légumes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B2B081D1B5FE25300CE1704 /* légumes.jpg */; };
+		8B2B08271B5FE25300CE1704 /* produits_de_la_mer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B2B081E1B5FE25300CE1704 /* produits_de_la_mer.jpg */; };
+		8B2B08281B5FE25300CE1704 /* viande.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B2B081F1B5FE25300CE1704 /* viande.jpg */; };
 		8B4CAAD41B5906AD003FDFC4 /* CreditsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4CAAD31B5906AD003FDFC4 /* CreditsViewController.m */; };
 		8BC67A791B51144800CF5D73 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC67A781B51144800CF5D73 /* FacebookSDK.framework */; };
 		8BCFA2CA1B4CF5CB0069BEAD /* AccueilCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BCFA2C91B4CF5CB0069BEAD /* AccueilCollectionViewController.m */; };
@@ -112,6 +125,22 @@
 		8B23913A1B526D2F007339ED /* Ingredients.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ingredients.h; sourceTree = "<group>"; };
 		8B23913B1B526D2F007339ED /* Ingredients.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ingredients.m; sourceTree = "<group>"; };
 		8B23913D1B53BEB0007339ED /* wood-floorboards-texture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wood-floorboards-texture.jpg"; sourceTree = "<group>"; };
+		8B25780C1B5E28EC002F31E1 /* MonGardeMangerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonGardeMangerTableViewController.h; sourceTree = "<group>"; };
+		8B25780D1B5E28EC002F31E1 /* MonGardeMangerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonGardeMangerTableViewController.m; sourceTree = "<group>"; };
+		8B25780F1B5E4771002F31E1 /* kroc_db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = kroc_db.sqlite; path = db/kroc_db.sqlite; sourceTree = "<group>"; };
+		8B2578141B5E5034002F31E1 /* AddFoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFoodViewController.h; sourceTree = "<group>"; };
+		8B2578151B5E5034002F31E1 /* AddFoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFoodViewController.m; sourceTree = "<group>"; };
+		8B2B08131B5FD36700CE1704 /* catTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = catTableViewCell.h; path = Ressources/catTableViewCell.h; sourceTree = "<group>"; };
+		8B2B08141B5FD36700CE1704 /* catTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = catTableViewCell.m; path = Ressources/catTableViewCell.m; sourceTree = "<group>"; };
+		8B2B08171B5FE25300CE1704 /* viennoiseries.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = viennoiseries.jpg; sourceTree = "<group>"; };
+		8B2B08181B5FE25300CE1704 /* pâtisserie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pâtisserie.jpg"; sourceTree = "<group>"; };
+		8B2B08191B5FE25300CE1704 /* epices.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = epices.jpg; sourceTree = "<group>"; };
+		8B2B081A1B5FE25300CE1704 /* fruits.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fruits.jpg; sourceTree = "<group>"; };
+		8B2B081B1B5FE25300CE1704 /* laitages.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = laitages.jpg; sourceTree = "<group>"; };
+		8B2B081C1B5FE25300CE1704 /* feculents.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = feculents.jpg; sourceTree = "<group>"; };
+		8B2B081D1B5FE25300CE1704 /* légumes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "légumes.jpg"; sourceTree = "<group>"; };
+		8B2B081E1B5FE25300CE1704 /* produits_de_la_mer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = produits_de_la_mer.jpg; sourceTree = "<group>"; };
+		8B2B081F1B5FE25300CE1704 /* viande.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = viande.jpg; sourceTree = "<group>"; };
 		8B4CAAD21B5906AD003FDFC4 /* CreditsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditsViewController.h; sourceTree = "<group>"; };
 		8B4CAAD31B5906AD003FDFC4 /* CreditsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditsViewController.m; sourceTree = "<group>"; };
 		8BC67A781B51144800CF5D73 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../coursDL/FacebookSDK_3.7.1/FacebookSDK.framework; sourceTree = "<group>"; };
@@ -197,6 +226,7 @@
 		8B0948BD1B4AD51500C611F5 /* KrocFrigo */ = {
 			isa = PBXGroup;
 			children = (
+				8B2B08121B5FD32400CE1704 /* Views */,
 				8B01A29B1B4BA29E00855A04 /* Outils */,
 				8B2D391F1B551EDD0035F9E1 /* Controllers */,
 				8B0948C21B4AD51600C611F5 /* AppDelegate.h */,
@@ -240,6 +270,8 @@
 		8B0948EB1B4AD8D500C611F5 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				8B2B08161B5FE22400CE1704 /* imgCat */,
+				8B25780F1B5E4771002F31E1 /* kroc_db.sqlite */,
 				8B0948EC1B4AD8D500C611F5 /* Image App */,
 			);
 			path = Ressources;
@@ -303,6 +335,32 @@
 			path = "../../../../../Downloads/RecipePhotoImagePack-2";
 			sourceTree = "<group>";
 		};
+		8B2B08121B5FD32400CE1704 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8B2B08131B5FD36700CE1704 /* catTableViewCell.h */,
+				8B2B08141B5FD36700CE1704 /* catTableViewCell.m */,
+			);
+			name = Views;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		8B2B08161B5FE22400CE1704 /* imgCat */ = {
+			isa = PBXGroup;
+			children = (
+				8B2B08171B5FE25300CE1704 /* viennoiseries.jpg */,
+				8B2B08181B5FE25300CE1704 /* pâtisserie.jpg */,
+				8B2B08191B5FE25300CE1704 /* epices.jpg */,
+				8B2B081A1B5FE25300CE1704 /* fruits.jpg */,
+				8B2B081B1B5FE25300CE1704 /* laitages.jpg */,
+				8B2B081C1B5FE25300CE1704 /* feculents.jpg */,
+				8B2B081D1B5FE25300CE1704 /* légumes.jpg */,
+				8B2B081E1B5FE25300CE1704 /* produits_de_la_mer.jpg */,
+				8B2B081F1B5FE25300CE1704 /* viande.jpg */,
+			);
+			name = imgCat;
+			sourceTree = "<group>";
+		};
 		8B2D391F1B551EDD0035F9E1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,6 +374,10 @@
 				8B4CAAD31B5906AD003FDFC4 /* CreditsViewController.m */,
 				8B0A39CB1B5A5AB40082C6E4 /* SideBarTableViewController.h */,
 				8B0A39CC1B5A5AB40082C6E4 /* SideBarTableViewController.m */,
+				8B25780C1B5E28EC002F31E1 /* MonGardeMangerTableViewController.h */,
+				8B25780D1B5E28EC002F31E1 /* MonGardeMangerTableViewController.m */,
+				8B2578141B5E5034002F31E1 /* AddFoodViewController.h */,
+				8B2578151B5E5034002F31E1 /* AddFoodViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -412,11 +474,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B2B08281B5FE25300CE1704 /* viande.jpg in Resources */,
 				8B11EB531B515F960049168E /* full_breakfast.jpg in Resources */,
 				8B0948CD1B4AD51600C611F5 /* Main.storyboard in Resources */,
 				8B11EB511B515F960049168E /* creme_brelee.jpg in Resources */,
 				8B0A39D51B5A74D60082C6E4 /* gradient.png in Resources */,
 				8B11EB601B515F960049168E /* white_chocolate_donut.jpg in Resources */,
+				8B2B08241B5FE25300CE1704 /* laitages.jpg in Resources */,
 				8B0948D21B4AD51600C611F5 /* LaunchScreen.xib in Resources */,
 				8B11EB5E1B515F960049168E /* thai_shrimp_cake.jpg in Resources */,
 				8B11EB5C1B515F960049168E /* photo-frame.png in Resources */,
@@ -427,17 +491,25 @@
 				8B11EB5D1B515F960049168E /* starbucks_coffee.jpg in Resources */,
 				8B11EB5F1B515F960049168E /* vegetable_curry.jpg in Resources */,
 				8B11EB501B515F960049168E /* angry_birds_cake.jpg in Resources */,
+				8B2B08211B5FE25300CE1704 /* pâtisserie.jpg in Resources */,
+				8B2B08201B5FE25300CE1704 /* viennoiseries.jpg in Resources */,
 				8B23913E1B53BEB0007339ED /* wood-floorboards-texture.jpg in Resources */,
 				8B0948CF1B4AD51600C611F5 /* Images.xcassets in Resources */,
+				8B2578101B5E4771002F31E1 /* kroc_db.sqlite in Resources */,
 				8B11EB551B515F960049168E /* ham_and_cheese_panini.jpg in Resources */,
 				8B11EB541B515F960049168E /* green_tea.jpg in Resources */,
 				8B11EB5A1B515F960049168E /* mushroom_risotto.jpg in Resources */,
+				8B2B08261B5FE25300CE1704 /* légumes.jpg in Resources */,
 				8B11EB521B515F960049168E /* egg_benedict.jpg in Resources */,
 				8B11EB561B515F960049168E /* ham_and_egg_sandwich.jpg in Resources */,
+				8B2B08271B5FE25300CE1704 /* produits_de_la_mer.jpg in Resources */,
 				8B0A39D71B5AB3E30082C6E4 /* splashscreen.png in Resources */,
 				8B11EB591B515F960049168E /* japanese_noodle_with_pork.jpg in Resources */,
+				8B2B08231B5FE25300CE1704 /* fruits.jpg in Resources */,
 				8B0A39D31B5A71F00082C6E4 /* menu@3x.png in Resources */,
+				8B2B08221B5FE25300CE1704 /* epices.jpg in Resources */,
 				8B0A39D21B5A71F00082C6E4 /* menu@2x.png in Resources */,
+				8B2B08251B5FE25300CE1704 /* feculents.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +560,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B25780E1B5E28EC002F31E1 /* MonGardeMangerTableViewController.m in Sources */,
 				8B0948C41B4AD51600C611F5 /* AppDelegate.m in Sources */,
 				8B0948C11B4AD51600C611F5 /* main.m in Sources */,
 				8B4CAAD41B5906AD003FDFC4 /* CreditsViewController.m in Sources */,
@@ -498,7 +571,9 @@
 				8B01A2BC1B4BB0B700855A04 /* Outils.m in Sources */,
 				8BCFA2CA1B4CF5CB0069BEAD /* AccueilCollectionViewController.m in Sources */,
 				8BE2744A1B5668DB00E76A86 /* SWRevealViewController.m in Sources */,
+				8B2B08151B5FD36700CE1704 /* catTableViewCell.m in Sources */,
 				8B11EB631B51780C0049168E /* ReciepesDetailsViewController.m in Sources */,
+				8B2578161B5E5034002F31E1 /* AddFoodViewController.m in Sources */,
 				8B11EB661B5178DC0049168E /* Recipes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

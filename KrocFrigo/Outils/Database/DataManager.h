@@ -8,31 +8,31 @@
 #import <Foundation/Foundation.h>
 
 #import "FMDatabase.h"
+#import "FMDB.h"
 #import "FMDatabaseAdditions.h"
 #import "FMDatabaseQueue.h"
 
-//#import "POI.h"
-//#import "Media.h"
+#import "Ingredients.h"
 
 @interface DataManager : NSObject {
-
+    
+ FMDatabase *database;
 }
 
-@property (nonatomic, strong) FMDatabaseQueue *dbQueue;
+
+
+@property (nonatomic, retain) FMDatabase *database;
+
+@property (nonatomic, retain) NSString *documentDirectory;
+@property (nonatomic, retain) NSString *cacheDirectory;
+@property (nonatomic, retain) NSString *tempDirectory;
 
 + (DataManager *)sharedDataManager;
+- (NSArray *) getIngredientsDansFrigo:(int)id_aliment;
+-(NSArray*) getNomIngPicker;
+-(NSArray*) getNomQntPicker;
+-(NSArray*) getNomUnitePicker;
+- (NSArray*)getCat;
 
-- (void)initiliaze;
-//- (NSArray *)getPOI;
-//- (POI *)getPOI:(int)idPOI;
-//- (int)getIdProchainPOI;
-//- (NSArray *)getMedias:(int)idPOI;
-//- (NSArray *)getMediasPrincipaux:(int)idPOI;
-//- (NSArray *)getMediasSecondaires:(int)idPOI;
-//- (Media *)getMedia:(int)idMedia;
-//- (void)setPOIAsFinished:(int)idPOI;
-//- (void)setMediaAsUnlock:(int)idMedia;
-//- (void)clearAlbum;
-//- (NSArray *)getPersonnages;
 
 @end

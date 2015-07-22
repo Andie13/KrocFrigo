@@ -1,28 +1,43 @@
 //
-//  SideBarTableViewController.m
+//  MonGardeMangerTableViewController.m
 //  KrocFrigo
 //
-//  Created by Andie Perrault on 18/07/2015.
+//  Created by Andie Perrault on 21/07/2015.
 //  Copyright (c) 2015 Andie Perrault. All rights reserved.
 //
 
-#import "SideBarTableViewController.h"
+#import "MonGardeMangerTableViewController.h"
+#import "SWRevealViewController.h"
+#import "DataManager.h"
+#import "Ingredients.h"
 
-@interface SideBarTableViewController ()
+
+@interface MonGardeMangerTableViewController (){
+    NSArray *nbIngredientsDansFrigo;
+}
 
 @end
 
-@implementation SideBarTableViewController{
-    NSArray *menuItem;
-}
-
+@implementation MonGardeMangerTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self customSetup];
     
+    nbIngredientsDansFrigo = [[DataManager sharedDataManager]getIngredientsDansFrigo:0];
+    NSLog(@"---------->%@",nbIngredientsDansFrigo);
     
-    menuItem = @[@"Accueil",@"Credits",@"Mon garde-manger"];
-   }
+}
+- (void)customSetup
+{
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.sideBarButton setTarget: self.revealViewController];
+        [self.sideBarButton setAction: @selector( revealToggle: )];
+        [self.navigationController.navigationBar addGestureRecognizer: self.revealViewController.panGestureRecognizer];
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -33,23 +48,24 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
+    // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return menuItem.count;
+    return [nbIngredientsDansFrigo count] ;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    NSString *cellId = [menuItem objectAtIndex:indexPath.row];
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
+    Ingredients *i=[nbIngredientsDansFrigo objectAtIndex:indexPath.row];
+    cell.textLabel.text = i.nom_aliment;
+    cell.textColor = [UIColor whiteColor];
+     return cell;
     
-    // Configure the cell...
-    
-    return cell;
 }
 
 
@@ -87,20 +103,14 @@
 }
 */
 
-
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"la ou pas ");
-    
-    // Set the title of navigation bar by using the menu items
-    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-    UINavigationController *destViewController = (UINavigationController*)segue.destinationViewController;
-    destViewController.title = [[menuItem objectAtIndex:indexPath.row] capitalizedString];
-    
-   
-    
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
 }
+*/
 
 @end

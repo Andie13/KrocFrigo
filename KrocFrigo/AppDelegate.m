@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "DataManager.h"
+#import "Ingredients.h"
 
 @interface AppDelegate ()
 
@@ -16,12 +18,15 @@
 @synthesize home;
 
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
 #if TARGET_IPHONE_SIMULATOR
     // where are you?
     NSLog(@"Documents Directory: %@", [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject]);
 #endif
+    
+    
     return YES;
 }
 

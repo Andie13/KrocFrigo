@@ -8,23 +8,19 @@
 #import "DataManager.h"
 #import "SynthesizeSingleton.h"
 #import "AppDelegate.h"
+#import "Ingredients.h"
 
 @implementation DataManager
 
+
+@synthesize database;
+
+@synthesize documentDirectory;
+@synthesize cacheDirectory;
+@synthesize tempDirectory;
+
+
 SYNTHESIZE_SINGLETON_FOR_CLASS(DataManager);
-
-- (void) dealloc {
-    _dbQueue = nil;
-}
-
-- (id)init  {
-    
-    self = [super init];
-    if (self) {
-        [self initiliaze];
-    }
-    return self;
-}
 
 - (void)addCustomFunctions:(sqlite3 *)db {
     
@@ -47,16 +43,101 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
     }
 }
 
-- (void)initiliaze {
+#pragma mark - Initialization
+- (id)init  {
     
-
-    NSString *databasePath = [[NSBundle mainBundle] pathForResource:@"nom_base" ofType:@"extension" inDirectory:nil];
-    
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    if ([fileManager fileExistsAtPath:databasePath]) {
-        _dbQueue = [FMDatabaseQueue databaseQueueWithPath:databasePath];
+    self = [super init];
+    if (self) {
+        
+        /*BOOL success;
+         NSFileManager *fileManager = [NSFileManager defaultManager];
+         NSError *error;
+         
+         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+         documentDirectory = [[NSString alloc] initWithString:[paths objectAtIndex:0]];
+         
+         paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+         cacheDirectory = [[NSString alloc] initWithString:[paths objectAtIndex:0]];
+         
+         tempDirectory = [[NSString alloc] initWithString:NSTemporaryDirectory()];
+         
+         NSString *writableDBPath = [documentDirectory stringByAppendingPathComponent:@"clermont-ferrand.sqlite"];
+         success = [fileManager fileExistsAtPath:writableDBPath];
+         
+         // si la base de données n'existe pas, on copie celle qui est stockée dans le bundle
+         if(!success)
+         {
+         NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"clermont-ferrand.sqlite"];
+         success = [fileManager copyItemAtPath:defaultDBPath toPath:writableDBPath error:&error];
+         NSLog(@"database copy in document directory");
+         }*/
+        
+        NSString *databasePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"kroc_db.sqlite"];
+        database = [FMDatabase databaseWithPath:databasePath];
+//
+   //     if (database ) {
+//            NSLog(@"found");
+//        }->ok
+        
+        
+  
     }
+    
+    return self;
 }
 
+
+- (NSArray *) getIngredientsDansFrigo: (int)id_aliment{
+    
+    NSMutableArray *ingredients = [NSMutableArray new];
+    [self.database open];
+    
+   NSString *condidionIngredients = id_aliment == 0 ? @"" : [NSString stringWithFormat:@" WHERE adf.id_aliment = %d", id_aliment];
+    
+    NSString* query = [NSString stringWithFormat:@"select  a.nom_aliment from aliments_dans_frigo adf join Aliments a on adf.id_aliment = a.id_aliment %@",condidionIngredients];
+    
+    FMResultSet *resultSet = [self.database executeQuery:query];
+    while ([resultSet next]) {
+        
+        Ingredients *ingredient = [Ingredients new];
+        
+        ingredient.nom_aliment = [resultSet stringForColumnIndex:0];
+        
+               [ingredients addObject:ingredient];
+        
+    }
+    
+    if ([self.database hadError]) {
+        NSLog(@"Database error: %@", [self.database lastErrorMessage]);
+    }
+    
+    [resultSet close];
+    [self.database close];
+    
+    return ingredients;
+
+}
+-(NSArray *)getCat{
+    NSMutableArray *cat = [NSMutableArray new];
+    [self.database open];
+    
+    NSString* query = [NSString stringWithFormat:@"select classe from classes_aliments"];
+    
+    FMResultSet *resultSet = [self.database executeQuery:query];
+    while ([resultSet next]) {
+        Ingredients *i = [Ingredients new];
+        
+        i.nom_classeAlim = [resultSet stringForColumnIndex:0];
+        
+        [cat addObject:i];
+        NSLog(@"nom cat %@",i.nom_classeAlim);
+    }
+    [resultSet close];
+    [self.database close];
+    
+    return cat;
+    
+    
+}
 
 @end
