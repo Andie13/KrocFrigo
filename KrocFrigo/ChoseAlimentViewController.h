@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ChoseAlimentViewController : UIViewController
 
+@class Ingredients;
+@interface ChoseAlimentViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate>
+
+
+@property (nonatomic, strong) Ingredients *ingr;
 @end

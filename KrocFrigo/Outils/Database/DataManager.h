@@ -29,10 +29,9 @@
 
 + (DataManager *)sharedDataManager;
 - (NSArray *) getIngredientsDansFrigo:(int)id_aliment;
--(NSArray*) getNomIngPicker;
--(NSArray*) getNomQntPicker;
--(NSArray*) getNomUnitePicker;
-- (NSArray*)getCat;
 
+- (NSArray*)getCat;
+-(NSArray*)
+getIngrediantsFromCat:(int)id_cat;
 
 @end

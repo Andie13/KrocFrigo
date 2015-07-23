@@ -105,7 +105,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)collectionView:(UICollectionView *)collectionView
 didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     [self performSegueWithIdentifier:@"showRecipeDetails" sender:indexPath];
-    NSLog(@"id sel poi------------->>>>> %ld", (long)indexPath);
+   
 }
 
 

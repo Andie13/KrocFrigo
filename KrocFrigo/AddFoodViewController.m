@@ -10,6 +10,7 @@
 #import "DataManager.h"
 #import "Ingredients.h"
 #import "catTableViewCell.h"
+#import "ChoseAlimentViewController.h"
 
 @interface AddFoodViewController (){
    
@@ -23,7 +24,10 @@
  NSArray *category;
  NSString *selectedCat;
 
+
 @implementation AddFoodViewController
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -74,13 +78,38 @@
     
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-   
-[self performSegueWithIdentifier:@"ToChoseAliments" sender:indexPath];
     
     
+    [self performSegueWithIdentifier:@"toChoseAliments" sender:indexPath];
+  
+}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  
+    
+
+    
+    if ([segue.identifier isEqualToString:@"toChoseAliments"]) {
+      
+        if([sender isKindOfClass:[Ingredients class]]){
+            Ingredients *aliment;
+           
+            if([sender isKindOfClass:[Ingredients class]]){
+                aliment = (Ingredients*)sender;
+            } else{
+                aliment = [category objectAtIndex:((NSIndexPath*)sender).row];
+                
+            }
+        ChoseAlimentViewController *cvc = segue.destinationViewController;
+            cvc.ingr = aliment;
+       
+        
+    }
+    }
 }
 
-
+    
+    
+    
 
 
 @end

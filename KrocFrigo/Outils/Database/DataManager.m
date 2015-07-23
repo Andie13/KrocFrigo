@@ -121,13 +121,13 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
     NSMutableArray *cat = [NSMutableArray new];
     [self.database open];
     
-    NSString* query = [NSString stringWithFormat:@"select classe from classes_aliments"];
+    NSString* query = [NSString stringWithFormat:@"select id_classe, classe from classes_aliments"];
     
     FMResultSet *resultSet = [self.database executeQuery:query];
     while ([resultSet next]) {
         Ingredients *i = [Ingredients new];
-        
-        i.nom_classeAlim = [resultSet stringForColumnIndex:0];
+        i.id_cat = [resultSet intForColumnIndex:0];
+        i.nom_classeAlim = [resultSet stringForColumnIndex:1];
         
         [cat addObject:i];
         NSLog(@"nom cat %@",i.nom_classeAlim);
@@ -137,6 +137,38 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
     
     return cat;
     
+    
+}
+- (NSArray *) getIngrediantsFromCat:(int)id_cat{
+    
+    NSMutableArray *ingredients = [NSMutableArray new];
+    [self.database open];
+    
+    NSString *condiIdCat = id_cat == 0 ? @"" : [NSString stringWithFormat:@" WHERE c.id_classe = %d", id_cat];
+    
+    NSString* query = [NSString stringWithFormat:@"SELECT a.id_aliment, a.nom_aliment,c.classe FROM Aliments a JOIN classes_aliments c ON a.classe_aliments = c.id_classe %@",condiIdCat];
+    
+    FMResultSet *resultSet = [self.database executeQuery:query];
+    while ([resultSet next]) {
+        
+        Ingredients *ingredient = [Ingredients new];
+        
+        ingredient.nom_classeAlim = [resultSet stringForColumnIndex:0
+                                  ];
+        
+        
+        [ingredients addObject:ingredient];
+        
+    }
+    
+    if ([self.database hadError]) {
+        NSLog(@"Database error: %@", [self.database lastErrorMessage]);
+    }
+    
+    [resultSet close];
+    [self.database close];
+    
+    return ingredients;
     
 }
 
