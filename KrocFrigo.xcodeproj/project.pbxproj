@@ -13,7 +13,6 @@
 		8B0948C11B4AD51600C611F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0948C01B4AD51600C611F5 /* main.m */; };
 		8B0948C41B4AD51600C611F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0948C31B4AD51600C611F5 /* AppDelegate.m */; };
 		8B0948C71B4AD51600C611F5 /* KrocFrigo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B0948C51B4AD51600C611F5 /* KrocFrigo.xcdatamodeld */; };
-		8B0948CD1B4AD51600C611F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B0948CB1B4AD51600C611F5 /* Main.storyboard */; };
 		8B0948CF1B4AD51600C611F5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B0948CE1B4AD51600C611F5 /* Images.xcassets */; };
 		8B0948D21B4AD51600C611F5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B0948D01B4AD51600C611F5 /* LaunchScreen.xib */; };
 		8B0948DE1B4AD51600C611F5 /* KrocFrigoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0948DD1B4AD51600C611F5 /* KrocFrigoTests.m */; };
@@ -61,6 +60,8 @@
 		8B4CAAD41B5906AD003FDFC4 /* CreditsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4CAAD31B5906AD003FDFC4 /* CreditsViewController.m */; };
 		8BC67A791B51144800CF5D73 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC67A781B51144800CF5D73 /* FacebookSDK.framework */; };
 		8BCFA2CA1B4CF5CB0069BEAD /* AccueilCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BCFA2C91B4CF5CB0069BEAD /* AccueilCollectionViewController.m */; };
+		8BE13F871B60D994009B6CFC /* ChoseAlimentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE13F861B60D994009B6CFC /* ChoseAlimentViewController.m */; };
+		8BE13F891B60DEEF009B6CFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BE13F881B60DEEF009B6CFC /* Main.storyboard */; };
 		8BE2744A1B5668DB00E76A86 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE274491B5668DB00E76A86 /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -87,7 +88,6 @@
 		8B0948C21B4AD51600C611F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8B0948C31B4AD51600C611F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8B0948C61B4AD51600C611F5 /* KrocFrigo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KrocFrigo.xcdatamodel; sourceTree = "<group>"; };
-		8B0948CC1B4AD51600C611F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B0948CE1B4AD51600C611F5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8B0948D11B4AD51600C611F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8B0948D71B4AD51600C611F5 /* KrocFrigoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KrocFrigoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +146,9 @@
 		8BC67A781B51144800CF5D73 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../coursDL/FacebookSDK_3.7.1/FacebookSDK.framework; sourceTree = "<group>"; };
 		8BCFA2C81B4CF5CB0069BEAD /* AccueilCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccueilCollectionViewController.h; path = Outils/AccueilCollectionViewController.h; sourceTree = "<group>"; };
 		8BCFA2C91B4CF5CB0069BEAD /* AccueilCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccueilCollectionViewController.m; path = Outils/AccueilCollectionViewController.m; sourceTree = "<group>"; };
+		8BE13F851B60D994009B6CFC /* ChoseAlimentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoseAlimentViewController.h; sourceTree = "<group>"; };
+		8BE13F861B60D994009B6CFC /* ChoseAlimentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoseAlimentViewController.m; sourceTree = "<group>"; };
+		8BE13F881B60DEEF009B6CFC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8BE274481B5668DB00E76A86 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		8BE274491B5668DB00E76A86 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		9F017AA51DCEEDA9789BFBF5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -231,8 +234,8 @@
 				8B2D391F1B551EDD0035F9E1 /* Controllers */,
 				8B0948C21B4AD51600C611F5 /* AppDelegate.h */,
 				8B0948C31B4AD51600C611F5 /* AppDelegate.m */,
-				8B0948CB1B4AD51600C611F5 /* Main.storyboard */,
 				8B0948CE1B4AD51600C611F5 /* Images.xcassets */,
+				8BE13F881B60DEEF009B6CFC /* Main.storyboard */,
 				8B0948D01B4AD51600C611F5 /* LaunchScreen.xib */,
 				8B0948C51B4AD51600C611F5 /* KrocFrigo.xcdatamodeld */,
 				8B0948BE1B4AD51500C611F5 /* Supporting Files */,
@@ -378,6 +381,8 @@
 				8B25780D1B5E28EC002F31E1 /* MonGardeMangerTableViewController.m */,
 				8B2578141B5E5034002F31E1 /* AddFoodViewController.h */,
 				8B2578151B5E5034002F31E1 /* AddFoodViewController.m */,
+				8BE13F851B60D994009B6CFC /* ChoseAlimentViewController.h */,
+				8BE13F861B60D994009B6CFC /* ChoseAlimentViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -476,7 +481,6 @@
 			files = (
 				8B2B08281B5FE25300CE1704 /* viande.jpg in Resources */,
 				8B11EB531B515F960049168E /* full_breakfast.jpg in Resources */,
-				8B0948CD1B4AD51600C611F5 /* Main.storyboard in Resources */,
 				8B11EB511B515F960049168E /* creme_brelee.jpg in Resources */,
 				8B0A39D51B5A74D60082C6E4 /* gradient.png in Resources */,
 				8B11EB601B515F960049168E /* white_chocolate_donut.jpg in Resources */,
@@ -490,6 +494,7 @@
 				8B11EB5B1B515F960049168E /* noodle_with_bbq_pork.jpg in Resources */,
 				8B11EB5D1B515F960049168E /* starbucks_coffee.jpg in Resources */,
 				8B11EB5F1B515F960049168E /* vegetable_curry.jpg in Resources */,
+				8BE13F891B60DEEF009B6CFC /* Main.storyboard in Resources */,
 				8B11EB501B515F960049168E /* angry_birds_cake.jpg in Resources */,
 				8B2B08211B5FE25300CE1704 /* pâtisserie.jpg in Resources */,
 				8B2B08201B5FE25300CE1704 /* viennoiseries.jpg in Resources */,
@@ -562,6 +567,7 @@
 			files = (
 				8B25780E1B5E28EC002F31E1 /* MonGardeMangerTableViewController.m in Sources */,
 				8B0948C41B4AD51600C611F5 /* AppDelegate.m in Sources */,
+				8BE13F871B60D994009B6CFC /* ChoseAlimentViewController.m in Sources */,
 				8B0948C11B4AD51600C611F5 /* main.m in Sources */,
 				8B4CAAD41B5906AD003FDFC4 /* CreditsViewController.m in Sources */,
 				8B0948C71B4AD51600C611F5 /* KrocFrigo.xcdatamodeld in Sources */,
@@ -597,14 +603,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8B0948CB1B4AD51600C611F5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8B0948CC1B4AD51600C611F5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8B0948D01B4AD51600C611F5 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -21,6 +21,7 @@
 
 
  NSArray *category;
+ NSString *selectedCat;
 
 @implementation AddFoodViewController
 
@@ -72,14 +73,12 @@
     return cell;
     
 }
-
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    [self performSegueWithIdentifier:@"openPlaceView" sender:indexPath];
-//    
-//}
-
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+   
+[self performSegueWithIdentifier:@"ToChoseAliments" sender:indexPath];
+    
+    
+}
 
 
 

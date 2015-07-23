@@ -155,37 +155,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Catégories d'aliments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7m-uD-tvc">
-                                <rect key="frame" x="76" y="99" width="168" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.95081237818248121" green="0.91119071233838944" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="qJM-ba-gJs">
-                                <rect key="frame" x="38" y="164" width="266" height="284"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="89" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="qJM-ba-gJs">
+                                <rect key="frame" x="-6" y="140" width="339" height="428"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="catCell" id="7pQ-mf-Mdm" customClass="catTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="catCell" rowHeight="89" id="7pQ-mf-Mdm" customClass="catTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="266" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7pQ-mf-Mdm" id="T9J-62-uz4">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="20" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ham_and_cheese_panini.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="svd-Ar-Htn">
-                                                    <rect key="frame" x="13" y="4" width="65" height="35"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="légumes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFe-bH-JvS">
-                                                    <rect key="frame" x="135" y="11" width="117" height="21"/>
+                                                    <rect key="frame" x="135" y="33" width="117" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" tag="20" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="légumes.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="svd-Ar-Htn">
+                                                    <rect key="frame" x="16" y="5" width="95" height="78"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.83456724429999996" green="1" blue="0.84306410440000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="imageCat" destination="svd-Ar-Htn" id="Gee-eD-dNg"/>
                                             <outlet property="labelCat" destination="BFe-bH-JvS" id="9rr-GH-odP"/>
+                                            <segue destination="oeo-Wb-gQ3" kind="push" id="yAq-sH-7h3"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -194,8 +189,19 @@
                                     <outlet property="delegate" destination="is1-5e-EXo" id="rdd-de-pFp"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Catégories d'aliments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7m-uD-tvc">
+                                <rect key="frame" x="76" y="97" width="168" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.95081237818248121" green="0.91119071233838944" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.24705882370000001" green="0.41176471110000001" blue="0.1176470593" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="qJM-ba-gJs" firstAttribute="left" secondItem="gyq-Wu-vtI" secondAttribute="left" id="09z-rK-nXW"/>
+                            <constraint firstAttribute="trailing" secondItem="qJM-ba-gJs" secondAttribute="trailing" id="PYF-da-ieQ"/>
+                            <constraint firstItem="MBi-NQ-3k2" firstAttribute="top" secondItem="qJM-ba-gJs" secondAttribute="bottom" id="zpL-97-xsw"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1sr-yH-2Ok"/>
                     <connections>
@@ -205,6 +211,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9eO-uj-CRN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2386" y="973"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mAJ-LA-P4J">
+            <objects>
+                <viewController id="oeo-Wb-gQ3" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cpt-a7-Ot7"/>
+                        <viewControllerLayoutGuide type="bottom" id="AxV-mM-I3S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DRb-Wp-Adg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Err-WJ-Fly"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hFC-X8-2Yx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2772" y="973"/>
         </scene>
         <!--Reciepes Details View Controller-->
         <scene sceneID="0va-7X-CWq">
@@ -431,7 +456,7 @@
         <image name="angry_birds_cake.jpg" width="560" height="350"/>
         <image name="full_breakfast.jpg" width="560" height="350"/>
         <image name="gradient.png" width="2480" height="3508"/>
-        <image name="ham_and_cheese_panini.jpg" width="560" height="350"/>
+        <image name="légumes.jpg" width="2356" height="1571"/>
         <image name="menu.png" width="22" height="22"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
