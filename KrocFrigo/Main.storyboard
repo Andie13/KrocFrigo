@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="H4X-BO-eEJ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Les recettes du jour-->
@@ -132,7 +131,7 @@
                         <barButtonItem key="leftBarButtonItem" image="menu.png" id="ONB-KH-VQT"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="5UY-20-cvD">
                             <connections>
-                                <segue destination="is1-5e-EXo" kind="push" id="RY5-MV-lub"/>
+                                <segue destination="pgx-KD-B23" kind="push" id="MiS-CB-ZDr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -144,156 +143,83 @@
             </objects>
             <point key="canvasLocation" x="1909" y="985"/>
         </scene>
-        <!--1 - Choix de la catégorie-->
-        <scene sceneID="6CH-u5-xl8">
+        <!--Food Cat Table View Controller-->
+        <scene sceneID="thK-wn-QE1">
             <objects>
-                <viewController id="is1-5e-EXo" customClass="AddFoodViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="z1U-v7-ieJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="MBi-NQ-3k2"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gyq-Wu-vtI">
+                <tableViewController id="pgx-KD-B23" customClass="foodCatTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="73" sectionHeaderHeight="22" sectionFooterHeight="22" id="0pT-lu-OER">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Catégories d'aliments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7m-uD-tvc">
-                                <rect key="frame" x="76" y="97" width="168" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.95081237818248121" green="0.91119071233838944" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="qJM-ba-gJs">
-                                <rect key="frame" x="0.0" y="140" width="339" height="428"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="catCell" rowHeight="90" id="7pQ-mf-Mdm" customClass="catTableViewCell">
-                                        <rect key="frame" x="0.0" y="0.0" width="266" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7pQ-mf-Mdm" id="T9J-62-uz4">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="légumes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFe-bH-JvS">
-                                                    <rect key="frame" x="149" y="33" width="117" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" tag="20" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="légumes.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="svd-Ar-Htn">
-                                                    <rect key="frame" x="19" y="5" width="85" height="78"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="89B-Re-SbJ"/>
-                                                        <constraint firstAttribute="height" constant="45" id="aHF-3j-Fha"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="svd-Ar-Htn" firstAttribute="top" secondItem="T9J-62-uz4" secondAttribute="top" constant="2" id="CgV-Vk-YfV"/>
-                                                <constraint firstAttribute="centerY" secondItem="BFe-bH-JvS" secondAttribute="centerY" constant="0.5" id="FDp-jt-Uma"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="svd-Ar-Htn" secondAttribute="bottom" constant="2" id="mX5-hg-Yxa"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.83456724429999996" green="1" blue="0.84306410440000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <connections>
-                                            <outlet property="imageCat" destination="svd-Ar-Htn" id="Gee-eD-dNg"/>
-                                            <outlet property="labelCat" destination="BFe-bH-JvS" id="9rr-GH-odP"/>
-                                            <segue destination="F14-W8-Qzz" kind="push" identifier="toChoseAliments" id="KWs-8H-gMD"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="catCell" rowHeight="73" id="WH3-ny-bnZ" customClass="catTableViewCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WH3-ny-bnZ" id="a31-Xs-LWz">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ysl-5n-rJq">
+                                            <rect key="frame" x="15" y="8" width="80" height="53"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xsn-EE-ReV">
+                                            <rect key="frame" x="146" y="25" width="115" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="dataSource" destination="is1-5e-EXo" id="bl5-tE-Zdh"/>
-                                    <outlet property="delegate" destination="is1-5e-EXo" id="rdd-de-pFp"/>
+                                    <outlet property="imageCat" destination="ysl-5n-rJq" id="FsM-2x-zGE"/>
+                                    <outlet property="labelCat" destination="Xsn-EE-ReV" id="iAy-lJ-ILb"/>
+                                    <segue destination="vYb-a1-zaY" kind="push" identifier="toAlimentChoser" id="8g0-Ih-f8a"/>
                                 </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.24705882370000001" green="0.41176471110000001" blue="0.1176470593" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="qJM-ba-gJs" firstAttribute="left" secondItem="gyq-Wu-vtI" secondAttribute="left" id="09z-rK-nXW"/>
-                            <constraint firstItem="qJM-ba-gJs" firstAttribute="top" secondItem="z1U-v7-ieJ" secondAttribute="bottom" constant="70" id="FjL-G9-Wrh"/>
-                            <constraint firstAttribute="trailing" secondItem="qJM-ba-gJs" secondAttribute="trailing" id="PYF-da-ieQ"/>
-                            <constraint firstAttribute="centerX" secondItem="H7m-uD-tvc" secondAttribute="centerX" id="ivv-xp-9bN"/>
-                            <constraint firstItem="MBi-NQ-3k2" firstAttribute="top" secondItem="qJM-ba-gJs" secondAttribute="bottom" id="zpL-97-xsw"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="1 - Choix de la catégorie" id="1sr-yH-2Ok"/>
-                    <connections>
-                        <outlet property="catAlimTableView" destination="qJM-ba-gJs" id="fch-kq-d9N"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9eO-uj-CRN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="pgx-KD-B23" id="Z1M-Gv-QWU"/>
+                            <outlet property="delegate" destination="pgx-KD-B23" id="zKz-j0-jnV"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="stb-ME-3V9"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JmX-Rj-4ah" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2364" y="985"/>
+            <point key="canvasLocation" x="2338" y="985"/>
         </scene>
-        <!--2- Choix des aliments-->
-        <scene sceneID="38K-pS-GsR">
+        <!--Aliments Choser Collection View Controller-->
+        <scene sceneID="uhs-qS-eBb">
             <objects>
-                <viewController id="F14-W8-Qzz" customClass="ChoseAlimentViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="QC1-oq-PAx"/>
-                        <viewControllerLayoutGuide type="bottom" id="u4n-xG-urg"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="vDG-22-8CI">
+                <collectionViewController id="vYb-a1-zaY" customClass="AlimentsChoserCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="XOx-yA-7FS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pLg-VS-66D">
-                                <rect key="frame" x="16" y="105" width="288" height="356"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lTF-EA-1Vz">
-                                    <size key="itemSize" width="115" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="QAe-qm-eQS" customClass="AlimCollectionViewCell">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="115" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sb-Lj-Jp4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="115" height="50"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.98198784722222221" green="0.98198784722222221" blue="0.98198784722222221" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <color key="backgroundColor" red="0.51097526339999999" green="1" blue="0.41366863850000002" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <outlet property="alimentsLab" destination="7sb-Lj-Jp4" id="Bbj-DM-OS7"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="F14-W8-Qzz" id="aGC-t9-Vqb"/>
-                                    <outlet property="delegate" destination="F14-W8-Qzz" id="WUm-dn-yVy"/>
-                                </connections>
-                            </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjA-jc-QY1">
-                                <rect key="frame" x="108" y="76" width="135" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.24705882370000001" green="0.41176471110000001" blue="0.1176470593" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.83456724429999996" green="1" blue="0.84306410440000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="centerY" secondItem="pLg-VS-66D" secondAttribute="centerY" constant="1" id="idx-mm-XwG"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="2- Choix des aliments" id="FYr-o8-URZ"/>
-                    <connections>
-                        <outlet property="collOfAliments" destination="pLg-VS-66D" id="DBy-AN-j8g"/>
-                        <outlet property="titleLable" destination="zjA-jc-QY1" id="2Uf-XJ-jdZ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Eu3-LM-9tb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Isl-2T-EfE">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="EOk-BB-zzs">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="vYb-a1-zaY" id="GL8-gy-dwY"/>
+                            <outlet property="delegate" destination="vYb-a1-zaY" id="xfA-mi-plr"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="jsc-XY-tcy"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NJC-Ti-8gC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2762" y="985"/>
+            <point key="canvasLocation" x="2710" y="985"/>
         </scene>
         <!--Reciepes Details View Controller-->
         <scene sceneID="0va-7X-CWq">
@@ -520,7 +446,6 @@
         <image name="angry_birds_cake.jpg" width="560" height="350"/>
         <image name="full_breakfast.jpg" width="560" height="350"/>
         <image name="gradient.png" width="2480" height="3508"/>
-        <image name="légumes.jpg" width="2356" height="1571"/>
         <image name="menu.png" width="22" height="22"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

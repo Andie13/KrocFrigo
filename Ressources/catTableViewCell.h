@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface catTableViewCell : UITableViewCell
-
-@property (weak, nonatomic) IBOutlet UIImageView *imageCat;
-
 @property (weak, nonatomic) IBOutlet UILabel *labelCat;
+@property (weak, nonatomic) IBOutlet UIImageView *imageCat;
+@property (nonatomic , strong) NSString *id_cat;
+
+
 
 @end
