@@ -49,7 +49,7 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
     self = [super init];
     if (self) {
         
-        /*BOOL success;
+        BOOL success;
          NSFileManager *fileManager = [NSFileManager defaultManager];
          NSError *error;
          
@@ -61,23 +61,24 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
          
          tempDirectory = [[NSString alloc] initWithString:NSTemporaryDirectory()];
          
-         NSString *writableDBPath = [documentDirectory stringByAppendingPathComponent:@"clermont-ferrand.sqlite"];
+         NSString *writableDBPath = [documentDirectory stringByAppendingPathComponent:@"kroc_db.sqlite"];
          success = [fileManager fileExistsAtPath:writableDBPath];
          
          // si la base de données n'existe pas, on copie celle qui est stockée dans le bundle
          if(!success)
          {
-         NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"clermont-ferrand.sqlite"];
+         NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"kroc_db.sqlite"];
          success = [fileManager copyItemAtPath:defaultDBPath toPath:writableDBPath error:&error];
          NSLog(@"database copy in document directory");
-         }*/
+         }
         
         NSString *databasePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"kroc_db.sqlite"];
         database = [FMDatabase databaseWithPath:databasePath];
-//
-   //     if (database ) {
-//            NSLog(@"found");
-//        }->ok
+        
+        
+
+        if (database ) {
+         NSLog(@"found");      }
         
         
   
@@ -86,15 +87,16 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
     return self;
 }
 
-
-- (NSArray *) getIngredientsDansFrigo: (int)id_aliment{
+//récupère le nom des aliments présents dans le garde-manger
+#warning ourquoile résultat s'affiche 2 fois?
+- (NSArray *) getIngredientsDansFrigo{
     
     NSMutableArray *ingredients = [NSMutableArray new];
     [self.database open];
     
-   NSString *condidionIngredients = id_aliment == 0 ? @"" : [NSString stringWithFormat:@" WHERE adf.id_aliment = %d", id_aliment];
+//   NSString *condidionIngredients = id_aliment == 0 ? @"" : [NSString stringWithFormat:@" WHERE adf.id_aliment = %d", id_aliment];
     
-    NSString* query = [NSString stringWithFormat:@"select  a.nom_aliment from aliments_dans_frigo adf join Aliments a on adf.id_aliment = a.id_aliment %@",condidionIngredients];
+    NSString* query = [NSString stringWithFormat:@"select Aliments.nom_aliment from aliments_dans_frigo , Aliments where aliments_dans_frigo.id_aliment = Aliments.id_aliment GROUP BY Aliments.nom_aliment;"];
     
     FMResultSet *resultSet = [self.database executeQuery:query];
     while ([resultSet next]) {
@@ -102,7 +104,7 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
         Ingredients *ingredient = [Ingredients new];
         
         ingredient.nom_aliment = [resultSet stringForColumnIndex:0];
-        
+        NSLog(@"ingredient %@",ingredient.nom_aliment);
                [ingredients addObject:ingredient];
         
     }
@@ -117,6 +119,8 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
     return ingredients;
 
 }
+
+//récupère toutes les catégories d'aliments
 -(NSArray *)getCat{
     NSMutableArray *cat = [NSMutableArray new];
     [self.database open];
@@ -137,8 +141,10 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
     
     return cat;
     
-    
+
 }
+
+// récupère les infos reliées aux ingrédients compris dans la catégorie choisie.
 - (NSArray *) getIngrediantsFromCat:(int)id_cat{
     
     NSMutableArray *ingredients = [NSMutableArray new];
@@ -146,15 +152,18 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
     
     NSString *condiIdCat = id_cat == 0 ? @"" : [NSString stringWithFormat:@" WHERE c.id_classe = %d", id_cat];
     
-    NSString* query = [NSString stringWithFormat:@"SELECT a.id_aliment, a.nom_aliment,c.classe FROM Aliments a JOIN classes_aliments c ON a.classe_aliments = c.id_classe %@",condiIdCat];
+    NSString* query = [NSString stringWithFormat:@"SELECT a.id_aliment, a.nom_aliment, a.unite_mesure_ingredient,um.nom_unite FROM Aliments a JOIN classes_aliments c ON a.classe_aliments = c.id_classe JOIN unite_mesure um ON a.unite_mesure_ingredient = um.id_unite %@",condiIdCat];
     
     FMResultSet *resultSet = [self.database executeQuery:query];
     while ([resultSet next]) {
         
         Ingredients *ingredient = [Ingredients new];
         
-        ingredient.nom_classeAlim = [resultSet stringForColumnIndex:0
-                                  ];
+        ingredient.id_aliment = [resultSet intForColumnIndex:0];
+        ingredient.nom_aliment =[resultSet stringForColumnIndex:1];
+        ingredient.id_uniteMesure = [resultSet intForColumnIndex:2];
+        ingredient.unite_mesure = [resultSet stringForColumnIndex:3];
+        
         
         
         [ingredients addObject:ingredient];
@@ -171,5 +180,39 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
     return ingredients;
     
 }
+-(void) setfoodInTheFridge:(NSInteger)id_aliment qnt:(NSString*)qnt id_um:(NSInteger)id_um{
+  
+    
+    
+            if((id_aliment)&&(qnt)){
+                
+                [self.database open];
+
+  NSString* query = [NSString stringWithFormat:@"INSERT  INTO aliments_dans_frigo VALUES(?, ?, ?)"];
+        
+                if ([self.database executeUpdate:query, [NSNumber numberWithInteger:id_aliment], qnt,[NSNumber numberWithInteger:id_um]]) {
+                    NSLog(@"les données sont enregistréés");
+                }
+                
+                if ([self.database hadError]) {
+                    NSLog(@"Database error: %@", [self.database lastErrorMessage]);
+                }
+                
+        [self.database close];
+
+
+    }else{
+        UIAlertView *erreurAlert = [[UIAlertView alloc] initWithTitle:@"saisissez une quantité" message:nil delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
+
+        
+        [erreurAlert show];
+    }
+
+ 
+
+   
+    
+}
+
 
 @end

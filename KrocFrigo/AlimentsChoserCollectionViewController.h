@@ -15,6 +15,7 @@
     
 @property (nonatomic,strong) catTableViewCell* info;
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sideBarButton;
 
 
 

@@ -28,10 +28,10 @@
 @property (nonatomic, retain) NSString *tempDirectory;
 
 + (DataManager *)sharedDataManager;
-- (NSArray *) getIngredientsDansFrigo:(int)id_aliment;
+- (NSArray *) getIngredientsDansFrigo;
 
 - (NSArray*)getCat;
 -(NSArray*)
 getIngrediantsFromCat:(int)id_cat;
-
+-(void)setfoodInTheFridge:(NSInteger)id_aliment qnt:(NSString*)qnt id_um:(NSInteger)id_um;
 @end

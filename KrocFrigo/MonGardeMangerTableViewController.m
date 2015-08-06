@@ -24,7 +24,7 @@
     [super viewDidLoad];
     [self customSetup];
     
-    nbIngredientsDansFrigo = [[DataManager sharedDataManager]getIngredientsDansFrigo:0];
+    nbIngredientsDansFrigo = [[DataManager sharedDataManager]getIngredientsDansFrigo];
     NSLog(@"---------->%@",nbIngredientsDansFrigo);
     
 }

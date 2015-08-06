@@ -11,7 +11,7 @@
 #import "Ingredients.h"
 #import "catTableViewCell.h"
 #import "AlimCollectionViewCell.h"
-#import "AlimentsChoserCollectionViewController.h"
+#import "AlimChoserViewController.h"
 
 
 
@@ -64,7 +64,7 @@
 
     
     Ingredients *i = [category objectAtIndex:indexPath.row];
-    
+   
     cell.labelCat.text = i.nom_classeAlim;
    // cell.id_cat.text = [NSString stringWithFormat:@"%ld",(long)i.id_cat];
     
@@ -101,7 +101,7 @@
         
         
       //  NSLog(@"ici aussi  cat %@",cat);
-               AlimentsChoserCollectionViewController *alim = [segue destinationViewController];
+               AlimChoserViewController *alim = [segue destinationViewController];
         alim.info = sender;
     
     }

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="H4X-BO-eEJ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Les recettes du jour-->
@@ -131,7 +132,7 @@
                         <barButtonItem key="leftBarButtonItem" image="menu.png" id="ONB-KH-VQT"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="5UY-20-cvD">
                             <connections>
-                                <segue destination="pgx-KD-B23" kind="push" id="MiS-CB-ZDr"/>
+                                <segue destination="pgx-KD-B23" kind="push" id="Vhs-h3-x8m"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -171,7 +172,7 @@
                                 <connections>
                                     <outlet property="imageCat" destination="ysl-5n-rJq" id="FsM-2x-zGE"/>
                                     <outlet property="labelCat" destination="Xsn-EE-ReV" id="iAy-lJ-ILb"/>
-                                    <segue destination="vYb-a1-zaY" kind="push" identifier="toAlimentChoser" id="8g0-Ih-f8a"/>
+                                    <segue destination="Kl2-MO-w4p" kind="push" identifier="toAlimentChoser" id="LqG-nV-B1k"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -184,42 +185,100 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JmX-Rj-4ah" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2338" y="985"/>
+            <point key="canvasLocation" x="2814" y="894"/>
         </scene>
         <!--Aliments Choser Collection View Controller-->
         <scene sceneID="uhs-qS-eBb">
             <objects>
                 <collectionViewController id="vYb-a1-zaY" customClass="AlimentsChoserCollectionViewController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="XOx-yA-7FS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Isl-2T-EfE">
-                            <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="EOk-BB-zzs">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="vYb-a1-zaY" id="GL8-gy-dwY"/>
-                            <outlet property="delegate" destination="vYb-a1-zaY" id="xfA-mi-plr"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" id="jsc-XY-tcy"/>
+                    <navigationItem key="navigationItem" id="jsc-XY-tcy">
+                        <barButtonItem key="leftBarButtonItem" image="menu.png" id="Hrg-DQ-zS9"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="sideBarButton" destination="Hrg-DQ-zS9" id="fIf-GE-ic2"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NJC-Ti-8gC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2710" y="985"/>
+            <point key="canvasLocation" x="3120" y="1554"/>
+        </scene>
+        <!--Alim Choser View Controller-->
+        <scene sceneID="tJt-Co-c8h">
+            <objects>
+                <viewController id="Kl2-MO-w4p" customClass="AlimChoserViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OKa-Xg-L29"/>
+                        <viewControllerLayoutGuide type="bottom" id="oKV-t3-I4F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YyC-dq-xgz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XOx-yA-7FS">
+                                <rect key="frame" x="9" y="15" width="302" height="539"/>
+                                <color key="backgroundColor" red="0.24705882370000001" green="0.41176471110000001" blue="0.1176470593" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Isl-2T-EfE">
+                                    <size key="itemSize" width="79" height="134"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="alimCell" id="EOk-BB-zzs" customClass="AlimCollectionViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="79" height="134"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient.png" translatesAutoresizingMaskIntoConstraints="NO" id="yji-ji-ehn">
+                                                    <rect key="frame" x="-14" y="-22" width="150" height="204"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.64999999999999969" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8U-Gu-BuG">
+                                                    <rect key="frame" x="4" y="15" width="67" height="104"/>
+                                                    <color key="backgroundColor" red="0.83456724429999996" green="1" blue="0.84306410440000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.24705882370000001" green="0.41176471110000001" blue="0.1176470593" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.83456724429999996" green="1" blue="0.84306410440000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="yji-ji-ehn" firstAttribute="leading" secondItem="EOk-BB-zzs" secondAttribute="leadingMargin" constant="-22" id="9y8-ed-ht3"/>
+                                            <constraint firstItem="R8U-Gu-BuG" firstAttribute="centerY" secondItem="EOk-BB-zzs" secondAttribute="centerY" id="Ktb-S8-uje"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="yji-ji-ehn" secondAttribute="bottom" constant="-56" id="Ldv-KU-bNe"/>
+                                            <constraint firstItem="yji-ji-ehn" firstAttribute="top" secondItem="EOk-BB-zzs" secondAttribute="topMargin" constant="-30" id="N2d-up-Lfc"/>
+                                            <constraint firstItem="R8U-Gu-BuG" firstAttribute="top" secondItem="EOk-BB-zzs" secondAttribute="topMargin" constant="7" id="N4e-cj-MwV"/>
+                                            <constraint firstItem="R8U-Gu-BuG" firstAttribute="trailing" secondItem="EOk-BB-zzs" secondAttribute="trailingMargin" id="PsB-xp-tIw"/>
+                                            <constraint firstItem="R8U-Gu-BuG" firstAttribute="leading" secondItem="EOk-BB-zzs" secondAttribute="leadingMargin" constant="-4" id="dqr-j6-5fn"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="yji-ji-ehn" secondAttribute="trailing" constant="-65" id="fyc-Ka-w0Z"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="alimLabel" destination="R8U-Gu-BuG" id="xu9-cp-fLM"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Kl2-MO-w4p" id="fCj-DZ-9nf"/>
+                                    <outlet property="delegate" destination="Kl2-MO-w4p" id="uKS-1o-rMP"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16078431900000001" green="0.38823533059999998" blue="0.13333334029999999" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8TF-Zy-8Kr">
+                        <barButtonItem key="leftBarButtonItem" image="menu.png" id="J0Q-q7-AhE"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="XOx-yA-7FS" id="3ma-sO-abg"/>
+                        <outlet property="sideBarButton" destination="J0Q-q7-AhE" id="9vk-Ob-rxL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lE1-FF-bRK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3215" y="894"/>
         </scene>
         <!--Reciepes Details View Controller-->
         <scene sceneID="0va-7X-CWq">
@@ -335,26 +394,6 @@
                                     <segue destination="kh7-L1-ARI" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="fdv-oo-DrF"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Credits" textLabel="DKm-be-U0O" style="IBUITableViewCellStyleDefault" id="bmT-0f-oF1">
-                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bmT-0f-oF1" id="Bzn-g1-d69">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Credits " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DKm-be-U0O">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.16078431900000001" green="0.38823533059999998" blue="0.13333334029999999" alpha="1" colorSpace="deviceRGB"/>
-                                <connections>
-                                    <segue destination="RRZ-LH-WSs" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="Mbd-hk-gVP"/>
-                                </connections>
-                            </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Mon garde-manger" textLabel="6X9-l7-Ioy" style="IBUITableViewCellStyleDefault" id="fot-aF-g3G">
                                 <rect key="frame" x="0.0" y="66" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -373,6 +412,46 @@
                                 <color key="backgroundColor" red="0.16078431900000001" green="0.38823533059999998" blue="0.13333334029999999" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
                                     <segue destination="ro2-Hz-Eam" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="ZO8-Ks-Yss"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="addFood" textLabel="dF5-02-Yez" style="IBUITableViewCellStyleDefault" id="Te7-HR-TQx">
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Te7-HR-TQx" id="pdB-4w-s0U">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Ajouter des Aliments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dF5-02-Yez">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.16078431900000001" green="0.38823533059999998" blue="0.13333334029999999" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <segue destination="8lA-Xl-N41" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="1YV-yj-qjN"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Credits" textLabel="DKm-be-U0O" style="IBUITableViewCellStyleDefault" id="bmT-0f-oF1">
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bmT-0f-oF1" id="Bzn-g1-d69">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Credits " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DKm-be-U0O">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.16078431900000001" green="0.38823533059999998" blue="0.13333334029999999" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <segue destination="RRZ-LH-WSs" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="Mbd-hk-gVP"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -441,6 +520,24 @@
             </objects>
             <point key="canvasLocation" x="1418" y="985"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jkz-9z-ELs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8lA-Xl-N41" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YOC-gk-Wfs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pgx-KD-B23" kind="relationship" relationship="rootViewController" id="pQ7-O5-t7E"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="taL-FJ-4K0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2365" y="1319"/>
+        </scene>
     </scenes>
     <resources>
         <image name="angry_birds_cake.jpg" width="560" height="350"/>
@@ -455,5 +552,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="fdv-oo-DrF"/>
+        <segue reference="Vhs-h3-x8m"/>
     </inferredMetricsTieBreakers>
 </document>
