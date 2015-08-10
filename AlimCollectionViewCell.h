@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AlimCollectionViewCell : UICollectionViewCell
+@interface AlimCollectionViewCell : UICollectionViewCell{
+
+}
+
+
 @property (weak, nonatomic) IBOutlet UILabel *alimLabel;
 
 
@@ -16,6 +20,7 @@
 
 @property (nonatomic, assign)  NSInteger id_unite_mesure;
 @property (nonatomic, strong) NSString *unite_mesure;
+
 
 
 @end

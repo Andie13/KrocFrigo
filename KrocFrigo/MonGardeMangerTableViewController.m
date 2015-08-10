@@ -23,6 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self customSetup];
+   
+    self.tableView.allowsMultipleSelectionDuringEditing =NO;
     
     nbIngredientsDansFrigo = [[DataManager sharedDataManager]getIngredientsDansFrigo];
     NSLog(@"---------->%@",nbIngredientsDansFrigo);
@@ -38,6 +40,8 @@
         [self.navigationController.navigationBar addGestureRecognizer: self.revealViewController.panGestureRecognizer];
     }
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -61,33 +65,52 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
+    UIFont *myFont = [ UIFont fontWithName: @"Arial" size: 18.0 ];
+    cell.textLabel.font  = myFont;
+    
     Ingredients *i=[nbIngredientsDansFrigo objectAtIndex:indexPath.row];
-    cell.textLabel.text = i.nom_aliment;
-    cell.textColor = [UIColor whiteColor];
+ 
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.textLabel.font= myFont;
+    cell.textLabel.text = [NSString stringWithFormat:@"%d", i.id_aliment ];
+    cell.textLabel.text =[NSString stringWithFormat:@"%@ : %@ %@", i.nom_aliment, i.nom_quantite, i.unite_mesure];
      return cell;
     
 }
 
 
-/*
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
+    
     return YES;
 }
-*/
 
-/*
+-(UITableViewCellEditingStyle)tableView:(UITableView*)tableView editingStyleForRowAtIndexPath:(NSIndexPath*)indexPath
+{
+    return UITableViewCellEditingStyleDelete;
+}
+
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+     Ingredients *i=[nbIngredientsDansFrigo objectAtIndex:indexPath.row];
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+        NSLog(@"Je rentre");
+        
+        
+        [[DataManager sharedDataManager] DeleteAlimentsDansFrigo:i.id_aliment];
+        
+        
+       
+       
+
+        
+    }
 }
-*/
+
 
 /*
 // Override to support rearranging the table view.

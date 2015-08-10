@@ -72,8 +72,8 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
          NSLog(@"database copy in document directory");
          }
         
-        NSString *databasePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"kroc_db.sqlite"];
-        database = [FMDatabase databaseWithPath:databasePath];
+        //NSString *databasePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"kroc_db.sqlite"];
+        database = [FMDatabase databaseWithPath:writableDBPath];
         
         
 
@@ -88,7 +88,7 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
 }
 
 //récupère le nom des aliments présents dans le garde-manger
-#warning ourquoile résultat s'affiche 2 fois?
+
 - (NSArray *) getIngredientsDansFrigo{
     
     NSMutableArray *ingredients = [NSMutableArray new];
@@ -96,15 +96,18 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
     
 //   NSString *condidionIngredients = id_aliment == 0 ? @"" : [NSString stringWithFormat:@" WHERE adf.id_aliment = %d", id_aliment];
     
-    NSString* query = [NSString stringWithFormat:@"select Aliments.nom_aliment from aliments_dans_frigo , Aliments where aliments_dans_frigo.id_aliment = Aliments.id_aliment GROUP BY Aliments.nom_aliment;"];
+    NSString* query = [NSString stringWithFormat:@"select aliments_dans_frigo.id_aliment, Aliments.nom_aliment ,aliments_dans_frigo.quantite,  unite_mesure.nom_unite from aliments_dans_frigo , Aliments , unite_mesure where aliments_dans_frigo.id_aliment = Aliments.id_aliment AND Aliments.unite_mesure_ingredient = unite_mesure.id_unite GROUP BY Aliments.nom_aliment;;"];
     
     FMResultSet *resultSet = [self.database executeQuery:query];
     while ([resultSet next]) {
         
         Ingredients *ingredient = [Ingredients new];
         
-        ingredient.nom_aliment = [resultSet stringForColumnIndex:0];
-        NSLog(@"ingredient %@",ingredient.nom_aliment);
+        ingredient.id_aliment = [resultSet intForColumnIndex:0];
+        ingredient.nom_aliment = [resultSet stringForColumnIndex:1];
+        ingredient.nom_quantite = [resultSet stringForColumnIndex:2];
+        ingredient.unite_mesure = [resultSet stringForColumnIndex:3];
+    //    NSLog(@"ingredient %@",ingredient.nom_aliment);---->OK
                [ingredients addObject:ingredient];
         
     }
@@ -207,12 +210,38 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
         
         [erreurAlert show];
     }
-
- 
-
-   
-    
 }
+
+ //retirer aliment
+    -(void)DeleteAlimentsDansFrigo:(NSInteger)id_aliment{
+        
+        if(id_aliment){
+            
+           [self.database open];
+            NSString* query = [NSString stringWithFormat:@"DELETE FROM aliments_dans_frigo  WHERE id_aliment = %d",id_aliment];
+            
+            if ([self.database executeUpdate:query]) {
+              
+
+                FMResultSet *resultSet = [self.database executeQuery:query];
+                
+                if ([self.database hadError]) {
+                    NSLog(@"Database error: %@", [self.database lastErrorMessage]);
+                }
+                  NSLog(@"les données sont annulées");
+                
+                [resultSet close];
+                [self.database close];
+
+            
+        }
+    }
+
+    }
+    
+
 
 
 @end
+
+

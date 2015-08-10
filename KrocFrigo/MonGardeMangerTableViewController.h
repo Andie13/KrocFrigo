@@ -11,7 +11,7 @@
 @interface MonGardeMangerTableViewController : UITableViewController
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sideBarButton;
 
-
+-(void)reloadTableView;
 
 
 @end

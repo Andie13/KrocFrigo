@@ -10,21 +10,18 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="splashscreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ui3-im-akm">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashscreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ui3-im-akm">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="  Copyright (c) 2015 Andie Perrault. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-xW-0ye">
-                    <rect key="frame" x="19" y="638" width="336" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20" id="Kzo-t9-V3l"/>
-                <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="MfP-vx-nX0"/>
-                <constraint firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="ZEH-qu-HZ9"/>
+                <constraint firstItem="Ui3-im-akm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="5uk-wJ-tJF"/>
+                <constraint firstAttribute="bottom" secondItem="Ui3-im-akm" secondAttribute="bottom" id="K55-uA-UUJ"/>
+                <constraint firstAttribute="trailing" secondItem="Ui3-im-akm" secondAttribute="trailing" id="bko-Zk-Obf"/>
+                <constraint firstAttribute="centerX" secondItem="Ui3-im-akm" secondAttribute="centerX" id="bnO-9F-aSE"/>
+                <constraint firstAttribute="centerY" secondItem="Ui3-im-akm" secondAttribute="centerY" id="qnP-s1-Mbh"/>
+                <constraint firstItem="Ui3-im-akm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="w9i-1B-PdA"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>

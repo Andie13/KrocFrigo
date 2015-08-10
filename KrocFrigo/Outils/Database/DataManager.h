@@ -34,4 +34,5 @@
 -(NSArray*)
 getIngrediantsFromCat:(int)id_cat;
 -(void)setfoodInTheFridge:(NSInteger)id_aliment qnt:(NSString*)qnt id_um:(NSInteger)id_um;
+-(void)DeleteAlimentsDansFrigo:(NSInteger)id_aliment;
 @end
