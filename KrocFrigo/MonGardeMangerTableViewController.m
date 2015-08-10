@@ -105,13 +105,18 @@
         
         
        
-       
+        [ self reload];
 
         
     }
 }
 
 
+-(void)reload
+{
+     nbIngredientsDansFrigo = [[DataManager sharedDataManager]getIngredientsDansFrigo];
+       [self.tableView reloadData]; //lstDevide étant ma tableView
+}
 /*
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
