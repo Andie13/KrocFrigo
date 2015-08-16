@@ -7,15 +7,17 @@
 //
 
 #import "AccueilCollectionViewController.h"
+#import "DataManager.h"
 #import "Recipes.h"
 #import "ReciepesDetailsViewController.h"
+#import "AccueilCollectionViewCell.h"
 #import "SWRevealViewController.h"
 
 @interface AccueilCollectionViewController (){
    
     __weak IBOutlet UIBarButtonItem *revealButtonItem;
     
-    NSArray *collectionImages;
+    NSArray *collectionRecettes;
 }
 
 @end
@@ -34,12 +36,14 @@ static NSString * const reuseIdentifier = @"Cell";
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"<=" style:UIBarButtonItemStylePlain target:nil action:nil];
     
 
-    collectionImages = [NSArray arrayWithObjects:@"angry_birds_cake.jpg", @"creme_brelee.jpg", @"egg_benedict.jpg", @"full_breakfast.jpg", @"green_tea.jpg", @"ham_and_cheese_panini.jpg", @"ham_and_egg_sandwich.jpg", @"hamburger.jpg", @"instant_noodle_with_egg.jpg", @"japanese_noodle_with_pork.jpg", @"mushroom_risotto.jpg", @"noodle_with_bbq_pork.jpg", @"starbucks_coffee.jpg", @"thai_shrimp_cake.jpg", @"vegetable_curry.jpg", @"white_chocolate_donut.jpg", nil];
+    collectionRecettes =[[DataManager sharedDataManager]getRecepies];
     
-    NSLog(@"ici");
-       // Do any additional setup after loading the view.
+
 }
 
+- (void) dealloc{
+ 
+}
 - (void)customSetup
 {
     SWRevealViewController *revealViewController = self.revealViewController;
@@ -76,27 +80,28 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 
-    return collectionImages.count;
+    return collectionRecettes.count;
     
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *identifier = @"Cell";
+    static NSString *identifier = @"cellForAccueil";
     
  
 
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-    
-    UIImageView *recipeImageView = (UIImageView *)[cell viewWithTag:100];
-    recipeImageView.image = [UIImage imageNamed:[collectionImages objectAtIndex:indexPath.row]];
-   // NSLog(@"collection %@",[collectionImages objectAtIndex:indexPath.row] );
-    
-
-  
-    
-
-   
-    
+    AccueilCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+    Recipes *maRecette = [collectionRecettes objectAtIndex: indexPath.row];
+    cell.imageRecette.image = [UIImage imageNamed:[NSString stringWithFormat:@"R_%d.jpg",maRecette.idRecette]];
+ 
+    if (([maRecette.type_recette  isEqual: @"Hors d'oeuvres"])) {
+        cell.imageType.image = [UIImage imageNamed:@"HO.png"];
+    }
+    else if (([maRecette.type_recette  isEqual: @"Plat principal"])) {
+        NSLog(@"je rentre là");
+        cell.imageType.image = [UIImage imageNamed:@"PP.png"];
+    }else if (([maRecette.type_recette  isEqual: @"Dessert"])) {
+        cell.imageType.image = [UIImage imageNamed:@"D.png"];
+    }
 
     return cell;
 }
@@ -104,9 +109,16 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)collectionView:(UICollectionView *)collectionView
 didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    [self performSegueWithIdentifier:@"showRecipeDetails" sender:indexPath];
-   
+  
+    
+    Recipes *myRecipe = [collectionRecettes objectAtIndex:indexPath.row];
+    
+        ReciepesDetailsViewController *collVC = [self.storyboard instantiateViewControllerWithIdentifier:@"RecetteDetails"];
+        collVC.infoRecette = myRecipe;
+        [self.navigationController pushViewController:collVC animated:YES];
+    
 }
+
 
 
 #pragma mark <UICollectionViewDelegate>

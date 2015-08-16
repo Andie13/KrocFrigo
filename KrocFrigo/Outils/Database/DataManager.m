@@ -9,6 +9,7 @@
 #import "SynthesizeSingleton.h"
 #import "AppDelegate.h"
 #import "Ingredients.h"
+#import "Recipes.h"
 
 @implementation DataManager
 
@@ -85,6 +86,41 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
     }
     
     return self;
+}
+
+// récupérer recettes
+- (NSArray *) getRecepies{
+    
+    NSMutableArray *recettes = [NSMutableArray new];
+    [self.database open];
+    
+    NSString* query = [NSString stringWithFormat:@"SELECT r.id_recette,r.nom_recette,tr.type_recette,r.description_recette,r.temps_prepa_recette,r.nbre_couverts_recette FROM recette r join ingredients_recette ir on r.id_recette = ir.id_recette join type_recette tr on r.type_recette = tr.id_type  group by r.id_recette order by random()"];
+    
+    FMResultSet *resultSet = [self.database executeQuery:query];
+    while ([resultSet next]) {
+        
+        Recipes *rec = [Recipes new];
+        
+        rec.idRecette = [resultSet intForColumnIndex:0];
+        rec.nomRecette =[resultSet stringForColumnIndex:1];
+        rec.type_recette = [resultSet stringForColumnIndex:2];
+        rec.descriptionRecette = [resultSet stringForColumnIndex:3];
+        rec.tempsPrepaRecette = [resultSet stringForColumnIndex:4];
+        rec.nbreCouvertsRecette = [resultSet stringForColumnIndex:5];
+        
+               [recettes addObject:rec];
+        
+    }
+    
+    if ([self.database hadError]) {
+        NSLog(@"Database error: %@", [self.database lastErrorMessage]);
+    }
+    
+    [resultSet close];
+    [self.database close];
+    
+    return recettes;
+
 }
 
 //récupère le nom des aliments présents dans le garde-manger
@@ -183,6 +219,7 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
     return ingredients;
     
 }
+// enregistrer aliments dans garde-manger
 -(void) setfoodInTheFridge:(NSInteger)id_aliment qnt:(NSString*)qnt id_um:(NSInteger)id_um{
   
     
