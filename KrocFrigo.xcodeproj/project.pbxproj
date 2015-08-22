@@ -85,6 +85,9 @@
 		8B4CAAD41B5906AD003FDFC4 /* CreditsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4CAAD31B5906AD003FDFC4 /* CreditsViewController.m */; };
 		8B744B141B7335AE00A8E725 /* kroc_db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 8B744B131B7335AE00A8E725 /* kroc_db.sqlite */; };
 		8BA80E241B6CDC54006857A8 /* AlimChoserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA80E231B6CDC54006857A8 /* AlimChoserViewController.m */; };
+		8BB796541B88F27800734EB4 /* nonValider.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BB796521B88F27800734EB4 /* nonValider.jpg */; };
+		8BB796551B88F27800734EB4 /* valider.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BB796531B88F27800734EB4 /* valider.jpg */; };
+		8BB796571B890B5400734EB4 /* B.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BB796561B890B5400734EB4 /* B.png */; };
 		8BC67A791B51144800CF5D73 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC67A781B51144800CF5D73 /* FacebookSDK.framework */; };
 		8BCFA2CA1B4CF5CB0069BEAD /* AccueilCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BCFA2C91B4CF5CB0069BEAD /* AccueilCollectionViewController.m */; };
 		8BE13F8F1B612735009B6CFC /* AlimCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE13F8E1B612735009B6CFC /* AlimCollectionViewCell.m */; };
@@ -199,6 +202,9 @@
 		8B744B131B7335AE00A8E725 /* kroc_db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = kroc_db.sqlite; sourceTree = "<group>"; };
 		8BA80E221B6CDC54006857A8 /* AlimChoserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlimChoserViewController.h; sourceTree = "<group>"; };
 		8BA80E231B6CDC54006857A8 /* AlimChoserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlimChoserViewController.m; sourceTree = "<group>"; };
+		8BB796521B88F27800734EB4 /* nonValider.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nonValider.jpg; sourceTree = "<group>"; };
+		8BB796531B88F27800734EB4 /* valider.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = valider.jpg; sourceTree = "<group>"; };
+		8BB796561B890B5400734EB4 /* B.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = B.png; sourceTree = "<group>"; };
 		8BC67A781B51144800CF5D73 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../coursDL/FacebookSDK_3.7.1/FacebookSDK.framework; sourceTree = "<group>"; };
 		8BCFA2C81B4CF5CB0069BEAD /* AccueilCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccueilCollectionViewController.h; path = Outils/AccueilCollectionViewController.h; sourceTree = "<group>"; };
 		8BCFA2C91B4CF5CB0069BEAD /* AccueilCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccueilCollectionViewController.m; path = Outils/AccueilCollectionViewController.m; sourceTree = "<group>"; };
@@ -340,6 +346,9 @@
 		8B0948EC1B4AD8D500C611F5 /* Image App */ = {
 			isa = PBXGroup;
 			children = (
+				8BB796561B890B5400734EB4 /* B.png */,
+				8BB796521B88F27800734EB4 /* nonValider.jpg */,
+				8BB796531B88F27800734EB4 /* valider.jpg */,
 				8B2B36EF1B8105510085B071 /* D.png */,
 				8B2B36F01B8105510085B071 /* PP.png */,
 				8B2B36ED1B8102C10085B071 /* HO.png */,
@@ -634,10 +643,13 @@
 				8B0A39D71B5AB3E30082C6E4 /* splashscreen.png in Resources */,
 				8B11EB591B515F960049168E /* japanese_noodle_with_pork.jpg in Resources */,
 				8B2038B81B7F909D00899D9B /* R_4.jpg in Resources */,
+				8BB796551B88F27800734EB4 /* valider.jpg in Resources */,
 				8B2B08231B5FE25300CE1704 /* fruits.jpg in Resources */,
 				8B0A39D31B5A71F00082C6E4 /* menu@3x.png in Resources */,
 				8B2038B71B7F909D00899D9B /* R_3.jpg in Resources */,
 				8B2B08221B5FE25300CE1704 /* epices.jpg in Resources */,
+				8BB796541B88F27800734EB4 /* nonValider.jpg in Resources */,
+				8BB796571B890B5400734EB4 /* B.png in Resources */,
 				8B2038AF1B7F909D00899D9B /* R_15.jpg in Resources */,
 				8B2038B61B7F909D00899D9B /* R_21.jpg in Resources */,
 				8B2038BD1B7F909D00899D9B /* R_9.jpg in Resources */,

@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *nomIngredient;
 
 @property (weak, nonatomic) IBOutlet UILabel *qnt;
+@property (weak, nonatomic) IBOutlet UIImageView *imageVal;
 
 
 @end
