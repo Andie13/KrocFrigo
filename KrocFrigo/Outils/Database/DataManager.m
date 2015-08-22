@@ -123,6 +123,41 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
 
 }
 
+- (NSArray*) getIngredientsFromRecipe :(NSInteger) idRecette{
+    
+    NSString *condotionRecette = idRecette == 0 ? @"" : [NSString stringWithFormat:@"AND r.id_recette = %ld", (long)idRecette];
+    
+    
+    NSMutableArray *ingredients = [NSMutableArray new];
+    [self.database open];
+    
+    NSString* query = [NSString stringWithFormat:@"SELECT a.nom_aliment, ir.qnt_ingredient_recette FROM Aliments a , recette r, ingredients_recette ir  WHERE  a.id_aliment = ir.id_ingredients AND ir.id_recette = r.id_recette %@",condotionRecette];
+
+    
+    FMResultSet *resultSet = [self.database executeQuery:query];
+    while ([resultSet next]) {
+        
+        Ingredients *al = [Ingredients new];
+        
+        al.nom_aliment = [resultSet stringForColumnIndex:0];
+        al.nom_quantite = [resultSet stringForColumnIndex:1];
+        NSLog(@"ingredient %@",al.nom_aliment);
+        
+        [ingredients addObject:al];
+        
+    }
+    
+    if ([self.database hadError]) {
+        NSLog(@"Database error: %@", [self.database lastErrorMessage]);
+    }
+    
+    [resultSet close];
+    [self.database close];
+    
+    return ingredients;
+   
+
+}
 //récupère le nom des aliments présents dans le garde-manger
 
 - (NSArray *) getIngredientsDansFrigo{

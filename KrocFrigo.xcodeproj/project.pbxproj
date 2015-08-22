@@ -42,6 +42,7 @@
 		8B11EB601B515F960049168E /* white_chocolate_donut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B11EB4F1B515F960049168E /* white_chocolate_donut.jpg */; };
 		8B11EB631B51780C0049168E /* ReciepesDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B11EB621B51780C0049168E /* ReciepesDetailsViewController.m */; };
 		8B11EB661B5178DC0049168E /* Recipes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B11EB651B5178DC0049168E /* Recipes.m */; };
+		8B1870BC1B84A0AA00E3159C /* ListeIngredientRecetteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1870BB1B84A0A900E3159C /* ListeIngredientRecetteTableViewCell.m */; };
 		8B2038A91B7F909D00899D9B /* R_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B2038941B7F909C00899D9B /* R_1.jpg */; };
 		8B2038AA1B7F909D00899D9B /* R_10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B2038951B7F909C00899D9B /* R_10.jpg */; };
 		8B2038AB1B7F909D00899D9B /* R_11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B2038961B7F909C00899D9B /* R_11.jpg */; };
@@ -148,6 +149,8 @@
 		8B11EB621B51780C0049168E /* ReciepesDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReciepesDetailsViewController.m; path = Outils/ZvShare/ReciepesDetailsViewController.m; sourceTree = "<group>"; };
 		8B11EB641B5178DC0049168E /* Recipes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipes.h; sourceTree = "<group>"; };
 		8B11EB651B5178DC0049168E /* Recipes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipes.m; sourceTree = "<group>"; };
+		8B1870BA1B84A0A900E3159C /* ListeIngredientRecetteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListeIngredientRecetteTableViewCell.h; sourceTree = "<group>"; };
+		8B1870BB1B84A0A900E3159C /* ListeIngredientRecetteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListeIngredientRecetteTableViewCell.m; sourceTree = "<group>"; };
 		8B2038941B7F909C00899D9B /* R_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = R_1.jpg; sourceTree = "<group>"; };
 		8B2038951B7F909C00899D9B /* R_10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = R_10.jpg; sourceTree = "<group>"; };
 		8B2038961B7F909C00899D9B /* R_11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = R_11.jpg; sourceTree = "<group>"; };
@@ -434,6 +437,8 @@
 				8BE13F8E1B612735009B6CFC /* AlimCollectionViewCell.m */,
 				8B3AA60A1B7FB0BA00E34874 /* AccueilCollectionViewCell.h */,
 				8B3AA60B1B7FB0BA00E34874 /* AccueilCollectionViewCell.m */,
+				8B1870BA1B84A0A900E3159C /* ListeIngredientRecetteTableViewCell.h */,
+				8B1870BB1B84A0A900E3159C /* ListeIngredientRecetteTableViewCell.m */,
 			);
 			name = Views;
 			path = ..;
@@ -700,6 +705,7 @@
 				8BE13F8F1B612735009B6CFC /* AlimCollectionViewCell.m in Sources */,
 				8B01A2B91B4BB0A300855A04 /* DataManager.m in Sources */,
 				8B01A2BC1B4BB0B700855A04 /* Outils.m in Sources */,
+				8B1870BC1B84A0AA00E3159C /* ListeIngredientRecetteTableViewCell.m in Sources */,
 				8BCFA2CA1B4CF5CB0069BEAD /* AccueilCollectionViewController.m in Sources */,
 				8BE2744A1B5668DB00E76A86 /* SWRevealViewController.m in Sources */,
 				8B2B08151B5FD36700CE1704 /* catTableViewCell.m in Sources */,
