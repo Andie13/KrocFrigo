@@ -94,7 +94,7 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
     NSMutableArray *recettes = [NSMutableArray new];
     [self.database open];
     
-    NSString* query = [NSString stringWithFormat:@"SELECT r.id_recette,r.nom_recette,tr.type_recette,r.description_recette,r.temps_prepa_recette,r.nbre_couverts_recette FROM recette r join ingredients_recette ir on r.id_recette = ir.id_recette join type_recette tr on r.type_recette = tr.id_type  group by r.id_recette order by random()"];
+    NSString* query = [NSString stringWithFormat:@"SELECT r.id_recette,r.nom_recette,tr.type_recette,r.description_recette,r.temps_prepa_recette,r.nbre_couverts_recette FROM recettes r join aliments_recette ar on r.id_recette = ar.id_recette join type_recettes tr on r.type_recette = tr.id_type  group by r.id_recette order by random()"];
     
     FMResultSet *resultSet = [self.database executeQuery:query];
     while ([resultSet next]) {
@@ -131,7 +131,7 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
     NSMutableArray *ingredients = [NSMutableArray new];
     [self.database open];
     
-    NSString* query = [NSString stringWithFormat:@"SELECT a.nom_aliment, ir.qnt_ingredient_recette FROM Aliments a , recette r, ingredients_recette ir  WHERE  a.id_aliment = ir.id_ingredients AND ir.id_recette = r.id_recette %@",condotionRecette];
+    NSString* query = [NSString stringWithFormat:@"SELECT a.nom_aliment, ar.qnt_aliment FROM Aliments a , recettes r, aliments_recette ar WHERE  a.id_aliment = ar.id_aliment AND ar.id_recette = r.id_recette %@",condotionRecette];
 
     
     FMResultSet *resultSet = [self.database executeQuery:query];
@@ -167,7 +167,7 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
     
 //   NSString *condidionIngredients = id_aliment == 0 ? @"" : [NSString stringWithFormat:@" WHERE adf.id_aliment = %d", id_aliment];
     
-    NSString* query = [NSString stringWithFormat:@"select aliments_dans_frigo.id_aliment, Aliments.nom_aliment ,aliments_dans_frigo.quantite,  unite_mesure.nom_unite from aliments_dans_frigo , Aliments , unite_mesure where aliments_dans_frigo.id_aliment = Aliments.id_aliment AND Aliments.unite_mesure_ingredient = unite_mesure.id_unite GROUP BY Aliments.nom_aliment;;"];
+    NSString* query = [NSString stringWithFormat:@"SELECT aliments_dans_frigo.id_aliment, Aliments.nom_aliment ,aliments_dans_frigo.quantite,  unite_mesure.nom_unite FROM aliments_dans_frigo , Aliments , unite_mesure WHERE aliments_dans_frigo.id_aliment = Aliments.id_aliment AND Aliments.unite_mesure_aliment = unite_mesure.id_unite GROUP BY Aliments.nom_aliment;"];
     
     FMResultSet *resultSet = [self.database executeQuery:query];
     while ([resultSet next]) {
@@ -199,7 +199,7 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
     NSMutableArray *cat = [NSMutableArray new];
     [self.database open];
     
-    NSString* query = [NSString stringWithFormat:@"select id_classe, classe from classes_aliments"];
+    NSString* query = [NSString stringWithFormat:@"SELECT id_classe, classe FROM classes_aliments"];
     
     FMResultSet *resultSet = [self.database executeQuery:query];
     while ([resultSet next]) {
@@ -226,7 +226,7 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
     
     NSString *condiIdCat = id_cat == 0 ? @"" : [NSString stringWithFormat:@" WHERE c.id_classe = %d", id_cat];
     
-    NSString* query = [NSString stringWithFormat:@"SELECT a.id_aliment, a.nom_aliment, a.unite_mesure_ingredient,um.nom_unite FROM Aliments a JOIN classes_aliments c ON a.classe_aliments = c.id_classe JOIN unite_mesure um ON a.unite_mesure_ingredient = um.id_unite %@",condiIdCat];
+    NSString* query = [NSString stringWithFormat:@"SELECT a.id_aliment, a.nom_aliment, a.unite_mesure_aliment,um.nom_unite FROM Aliments a JOIN classes_aliments c ON a.classe_aliments = c.id_classe JOIN unite_mesure um ON a.unite_mesure_aliment = um.id_unite %@",condiIdCat];
     
     FMResultSet *resultSet = [self.database executeQuery:query];
     while ([resultSet next]) {
@@ -252,6 +252,45 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
     [self.database close];
     
     return ingredients;
+    
+}
+
+- (NSArray*)GetRecipesByType:(NSInteger )idRecipeType{
+    
+    NSMutableArray *recipe = [NSMutableArray new];
+    [self.database open];
+    
+    NSString *conId = idRecipeType == 0 ? @"" : [NSString stringWithFormat:@"  tr.id_type = %d", idRecipeType];
+    
+    NSString *query = [NSString stringWithFormat:@"SELECT r.id_recette, r.nom_recette, r.description_recette, nbre_couverts_recette, temps_prepa_recette  FROM recettes r JOIN  type_recettes tr ON r.type_recette = tr.id_type JOIN aliments_recette ar ON r.id_recette = ar.id_recette  WHERE %@ GROUP BY r.id_recette",conId];
+    
+    
+    FMResultSet *resultSet = [self.database executeQuery:query];
+    while ([resultSet next]) {
+        
+        Recipes *orederedRecipes = [Recipes new];
+        
+        orederedRecipes.idRecette= [resultSet intForColumnIndex:0];
+        orederedRecipes.nomRecette = [resultSet stringForColumnIndex:1];
+        orederedRecipes.descriptionRecette = [resultSet stringForColumnIndex:2];
+        orederedRecipes.nbreCouvertsRecette= [resultSet stringForColumnIndex:3];
+        orederedRecipes.tempsPrepaRecette = [resultSet stringForColumnIndex:4];
+        
+        
+        [recipe addObject:orederedRecipes];
+        
+    }
+    
+    if ([self.database hadError]) {
+        NSLog(@"Database error: %@", [self.database lastErrorMessage]);
+    }
+    
+    [resultSet close];
+    [self.database close];
+    
+    return recipe;
+    
+
     
 }
 // enregistrer aliments dans garde-manger

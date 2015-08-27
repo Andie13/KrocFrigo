@@ -232,8 +232,8 @@ UIView *selAlim;
     
     [[DataManager sharedDataManager] setfoodInTheFridge:IDAL qnt:qntTxt.text id_um:IDUM];
     
-    
-}
+    [self removeFromSuperview]
+    ;}
    /*-(void)valider:(id)sender{
        NSString *myData = (NSArray *)objc_getAssociatedObject(sender, &myDataKey);
    }*/

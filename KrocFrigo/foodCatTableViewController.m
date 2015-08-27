@@ -36,6 +36,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) dealloc{
+    category = nil;
+    
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

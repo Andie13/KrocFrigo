@@ -29,12 +29,12 @@
 
 + (DataManager *)sharedDataManager;
 - (NSArray *) getIngredientsDansFrigo;
-
+- (NSArray*)GetRecipesByType:(NSInteger )idRecipeType;
 - (NSArray*)getCat;
--(NSArray*)
-getIngrediantsFromCat:(int)id_cat;
+-(NSArray*)getIngrediantsFromCat:(int)id_cat;
 -(void)setfoodInTheFridge:(NSInteger)id_aliment qnt:(NSString*)qnt id_um:(NSInteger)id_um;
 -(void)DeleteAlimentsDansFrigo:(NSInteger)id_aliment;
 -(NSArray*)getRecepies;
 - (NSArray*) getIngredientsFromRecipe :(NSInteger) idRecette;
+
 @end

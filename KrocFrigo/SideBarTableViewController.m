@@ -21,7 +21,7 @@
     [super viewDidLoad];
     
     
-    menuItem = @[@"Accueil",@"Mon garde-manger",@"addFood",@"Credits"];
+    menuItem = @[@"Accueil",@"garde-manger",@"addFood",@"search",@"Credits"];
    }
 
 - (void)didReceiveMemoryWarning {
