@@ -36,5 +36,6 @@
 -(void)DeleteAlimentsDansFrigo:(NSInteger)id_aliment;
 -(NSArray*)getRecepies;
 - (NSArray*) getIngredientsFromRecipe :(NSInteger) idRecette;
+-(int)numberOgInginTheFridge:(NSInteger)idAlim;
 
 @end

@@ -131,7 +131,7 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
     NSMutableArray *ingredients = [NSMutableArray new];
     [self.database open];
     
-    NSString* query = [NSString stringWithFormat:@"SELECT a.nom_aliment, ar.qnt_aliment FROM Aliments a , recettes r, aliments_recette ar WHERE  a.id_aliment = ar.id_aliment AND ar.id_recette = r.id_recette %@",condotionRecette];
+    NSString* query = [NSString stringWithFormat:@"SELECT a.nom_aliment, ar.qnt_aliment, ar.id_aliment FROM Aliments a , recettes r, aliments_recette ar WHERE  a.id_aliment = ar.id_aliment AND ar.id_recette = r.id_recette %@",condotionRecette];
 
     
     FMResultSet *resultSet = [self.database executeQuery:query];
@@ -141,6 +141,7 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
         
         al.nom_aliment = [resultSet stringForColumnIndex:0];
         al.nom_quantite = [resultSet stringForColumnIndex:1];
+        al.id_aliment = [resultSet intForColumnIndex:2];
         NSLog(@"ingredient %@",al.nom_aliment);
         
         [ingredients addObject:al];
@@ -217,6 +218,22 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
     
 
 }
+-(int)numberOgInginTheFridge:(NSInteger)idAlim{
+    int nbIngSim = 0;
+    
+    NSString* query = [NSString stringWithFormat:@"SELECT COUNT(adf.id_aliment) FROM aliments_dans_frigo adf WHERE adf.id_aliment = %d",idAlim];
+    
+    [self.database open];
+    
+    FMResultSet *resultSet = [self.database executeQuery:query];
+    while ([resultSet next]) {
+        nbIngSim = [resultSet intForColumnIndex:0];
+    }
+    [resultSet close];
+    [self.database close];
+    
+    return nbIngSim;
+}
 
 // récupère les infos reliées aux ingrédients compris dans la catégorie choisie.
 - (NSArray *) getIngrediantsFromCat:(int)id_cat{
@@ -226,7 +243,7 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
     
     NSString *condiIdCat = id_cat == 0 ? @"" : [NSString stringWithFormat:@" WHERE c.id_classe = %d", id_cat];
     
-    NSString* query = [NSString stringWithFormat:@"SELECT a.id_aliment, a.nom_aliment, a.unite_mesure_aliment,um.nom_unite FROM Aliments a JOIN classes_aliments c ON a.classe_aliments = c.id_classe JOIN unite_mesure um ON a.unite_mesure_aliment = um.id_unite %@",condiIdCat];
+    NSString* query = [NSString stringWithFormat:@"SELECT a.id_aliment, a.nom_aliment, a.unite_mesure_aliment,um.nom_unite FROM Aliments a JOIN classes_aliments c ON a.classe_aliment = c.id_classe JOIN unite_mesure um ON a.unite_mesure_aliment = um.id_unite %@",condiIdCat];
     
     FMResultSet *resultSet = [self.database executeQuery:query];
     while ([resultSet next]) {
@@ -262,7 +279,7 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
     
     NSString *conId = idRecipeType == 0 ? @"" : [NSString stringWithFormat:@"  tr.id_type = %d", idRecipeType];
     
-    NSString *query = [NSString stringWithFormat:@"SELECT r.id_recette, r.nom_recette, r.description_recette, nbre_couverts_recette, temps_prepa_recette  FROM recettes r JOIN  type_recettes tr ON r.type_recette = tr.id_type JOIN aliments_recette ar ON r.id_recette = ar.id_recette  WHERE %@ GROUP BY r.id_recette",conId];
+    NSString *query = [NSString stringWithFormat:@"SELECT r.id_recette, r.nom_recette, r.description_recette, nbre_couverts_recette, temps_prepa_recette,tr.type_recette  FROM recettes r JOIN  type_recettes tr ON r.type_recette = tr.id_type JOIN aliments_recette ar ON r.id_recette = ar.id_recette  WHERE %@ GROUP BY r.id_recette",conId];
     
     
     FMResultSet *resultSet = [self.database executeQuery:query];
@@ -275,6 +292,7 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
         orederedRecipes.descriptionRecette = [resultSet stringForColumnIndex:2];
         orederedRecipes.nbreCouvertsRecette= [resultSet stringForColumnIndex:3];
         orederedRecipes.tempsPrepaRecette = [resultSet stringForColumnIndex:4];
+        orederedRecipes.type_recette = [resultSet stringForColumnIndex:5];
         
         
         [recipe addObject:orederedRecipes];

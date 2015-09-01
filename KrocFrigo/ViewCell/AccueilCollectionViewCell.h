@@ -10,6 +10,9 @@
 
 @interface AccueilCollectionViewCell : UICollectionViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageRecette;
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageType;
 
 
 @end

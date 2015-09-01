@@ -37,7 +37,7 @@ UIView *selAlim;
     [super viewDidLoad];
    [self customSetup];
     
-    // NSLog(@"info %@",info.id_cat);
+    NSLog(@"info %@",info.id_cat);
     
     
     
@@ -46,12 +46,12 @@ UIView *selAlim;
     self.navigationItem.titleView = info.labelCat;
     aliments = [[DataManager sharedDataManager] getIngrediantsFromCat:id_cat];
     
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
+    
+    
     [self.navigationItem setHidesBackButton:YES animated:YES];
     
     
-    // Do any additional setup after loading the view.}
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

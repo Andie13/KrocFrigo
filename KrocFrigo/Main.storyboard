@@ -31,10 +31,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="184" height="123"/>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HO.png" translatesAutoresizingMaskIntoConstraints="NO" id="lC2-Mr-quK">
-                                            <rect key="frame" x="0.0" y="61" width="79" height="62"/>
+                                            <rect key="frame" x="0.0" y="59" width="157" height="64"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="79" id="4Wo-cL-nWS"/>
-                                                <constraint firstAttribute="height" constant="62" id="wm5-28-RDe"/>
+                                                <constraint firstAttribute="width" constant="157" id="4Wo-cL-nWS"/>
+                                                <constraint firstAttribute="height" constant="64" id="wm5-28-RDe"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
@@ -50,8 +50,8 @@
                                 </constraints>
                                 <size key="customSize" width="157" height="123"/>
                                 <connections>
-                                    <outlet property="imageRecette" destination="vIH-Lp-V6J" id="k7i-1K-pE8"/>
-                                    <outlet property="imageType" destination="lC2-Mr-quK" id="JDQ-54-mmv"/>
+                                    <outlet property="imageRecette" destination="vIH-Lp-V6J" id="lrq-Tx-k4V"/>
+                                    <outlet property="imageType" destination="lC2-Mr-quK" id="V6M-i1-gJY"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -311,7 +311,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UIA-15-MeH">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UIA-15-MeH">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GP9-dl-72Q">
@@ -322,8 +322,8 @@
                                 <color key="shadowColor" red="0.28359817832245138" green="0.70387300531914887" blue="0.2212517455375603" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="-2" height="2"/>
                             </label>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hKT-TM-gRU" userLabel="Ingredients">
-                                <rect key="frame" x="0.0" y="546" width="375" height="493"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hKT-TM-gRU" userLabel="Ingredients">
+                                <rect key="frame" x="0.0" y="502" width="375" height="493"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="83" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dDV-Rc-5mZ">
                                         <rect key="frame" x="0.0" y="60" width="375" height="433"/>
@@ -399,8 +399,8 @@
                                     <constraint firstAttribute="trailing" secondItem="CFF-U2-e0G" secondAttribute="trailing" id="wsb-7b-tAA"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dt8-hd-Eac" userLabel="Préparation">
-                                <rect key="frame" x="0.0" y="607" width="375" height="493"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dt8-hd-Eac" userLabel="Préparation">
+                                <rect key="frame" x="0.0" y="563" width="375" height="493"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFZ-5w-0cN" userLabel="PréparationBtn">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
@@ -451,16 +451,13 @@
                             <constraint firstItem="gnw-VI-gbJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="GP9-dl-72Q" secondAttribute="bottom" constant="8" id="d5e-lT-SeI"/>
                             <constraint firstItem="hKT-TM-gRU" firstAttribute="leading" secondItem="vIZ-ft-gBh" secondAttribute="leading" id="fzA-di-CzW"/>
                             <constraint firstItem="GP9-dl-72Q" firstAttribute="top" secondItem="wp3-7G-W6s" secondAttribute="top" constant="76" id="g7s-sm-EHp"/>
-                            <constraint firstItem="gnw-VI-gbJ" firstAttribute="bottom" secondItem="UIA-15-MeH" secondAttribute="bottom" id="hYV-Fm-TGh"/>
+                            <constraint firstItem="gnw-VI-gbJ" firstAttribute="bottom" secondItem="UIA-15-MeH" secondAttribute="bottom" constant="-44" id="hYV-Fm-TGh"/>
                             <constraint firstItem="UIA-15-MeH" firstAttribute="leading" secondItem="vIZ-ft-gBh" secondAttribute="leading" id="hrv-KG-zCV"/>
                             <constraint firstItem="hKT-TM-gRU" firstAttribute="top" secondItem="gnw-VI-gbJ" secondAttribute="bottom" constant="-121" id="q5f-YM-Kdd"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="GP9-dl-72Q" secondAttribute="trailing" constant="8" id="vKc-GS-mIc"/>
                         </constraints>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem image="menu.png" id="noP-4P-gE4"/>
-                        <barButtonItem image="menu.png" id="KCH-RP-Qbu"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="Ddk-fN-se0">
                         <barButtonItem key="leftBarButtonItem" image="menu.png" id="a5b-kH-6tB"/>
                     </navigationItem>
@@ -777,13 +774,84 @@
                     <view key="view" contentMode="scaleToFill" id="Lb6-Cw-C10">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="B.png" translatesAutoresizingMaskIntoConstraints="NO" id="Gt9-po-JH4">
+                                <rect key="frame" x="43" y="64" width="228" height="117"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="117" id="NhK-dZ-lJn"/>
+                                    <constraint firstAttribute="width" constant="228" id="R59-HF-pnD"/>
+                                </constraints>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5Gd-IY-KGd">
+                                <rect key="frame" x="7" y="189" width="307" height="371"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="0.0" id="rDR-Es-qpH">
+                                    <size key="itemSize" width="150" height="145"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellForRecipeByType" id="jnN-wV-jb6" customClass="ShowByTypeCollectionViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="145"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="R_5.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bAJ-fE-KEB">
+                                                    <rect key="frame" x="0.0" y="0.0" width="157" height="145"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1td-8H-rj3">
+                                                    <rect key="frame" x="-3" y="124" width="157" height="21"/>
+                                                    <color key="backgroundColor" red="0.99558080810000005" green="0.8976417189" blue="0.84456677120000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="bAJ-fE-KEB" secondAttribute="trailing" constant="-7" id="0Hg-X4-jRy"/>
+                                            <constraint firstItem="bAJ-fE-KEB" firstAttribute="leading" secondItem="jnN-wV-jb6" secondAttribute="leading" id="1AY-MC-hYh"/>
+                                            <constraint firstItem="1td-8H-rj3" firstAttribute="top" relation="lessThanOrEqual" secondItem="jnN-wV-jb6" secondAttribute="topMargin" constant="116" id="7ef-Hx-MxO"/>
+                                            <constraint firstItem="1td-8H-rj3" firstAttribute="leading" secondItem="jnN-wV-jb6" secondAttribute="leading" constant="-3" id="9pj-RC-Fcj"/>
+                                            <constraint firstAttribute="trailing" secondItem="1td-8H-rj3" secondAttribute="trailing" constant="-4" id="gLl-9a-4m0"/>
+                                            <constraint firstAttribute="bottom" secondItem="1td-8H-rj3" secondAttribute="bottom" id="h13-GM-lLJ"/>
+                                            <constraint firstItem="bAJ-fE-KEB" firstAttribute="top" secondItem="jnN-wV-jb6" secondAttribute="top" id="p2z-ms-ZcG"/>
+                                            <constraint firstAttribute="bottom" secondItem="bAJ-fE-KEB" secondAttribute="bottom" id="s0O-Tq-8n3"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageRecipe" destination="bAJ-fE-KEB" id="2zI-8H-qvF"/>
+                                            <outlet property="nameRecipe" destination="1td-8H-rj3" id="6Cz-Nc-w6f"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="i6O-yc-3es" id="l0u-9K-XzI"/>
+                                    <outlet property="delegate" destination="i6O-yc-3es" id="eh7-7g-F77"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Gt9-po-JH4" secondAttribute="centerX" constant="3" id="N7g-4K-zQX"/>
+                            <constraint firstItem="Gt9-po-JH4" firstAttribute="top" secondItem="cki-eD-c1Z" secondAttribute="bottom" id="wS3-Yi-2CN"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="1un-84-OZ3"/>
+                    <navigationItem key="navigationItem" id="1un-84-OZ3">
+                        <barButtonItem key="leftBarButtonItem" image="menu.png" id="EVQ-A5-nlj"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backgroundView" destination="Lb6-Cw-C10" id="Rac-j8-hrh"/>
+                        <outlet property="imageType" destination="Gt9-po-JH4" id="CLN-0P-tQo"/>
+                        <outlet property="recipessByTypeCollection" destination="5Gd-IY-KGd" id="q0R-9i-TsG"/>
+                        <outlet property="sideBarButton" destination="EVQ-A5-nlj" id="3Tm-et-dng"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2NT-CQ-eVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2134" y="-1415"/>
+            <point key="canvasLocation" x="2140" y="-1433"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NvW-bP-o6u">
@@ -914,7 +982,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="B.png" width="600" height="317"/>
         <image name="HO.png" width="568" height="311"/>
+        <image name="R_5.jpg" width="1600" height="1116"/>
         <image name="full_breakfast.jpg" width="560" height="350"/>
         <image name="gradient.png" width="2480" height="3508"/>
         <image name="menu.png" width="22" height="22"/>

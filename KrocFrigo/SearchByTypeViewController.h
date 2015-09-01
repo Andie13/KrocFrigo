@@ -10,8 +10,10 @@
 #import "Recipes.h"
 
 @class Recipes;
-@interface SearchByTypeViewController : UIViewController
+@interface SearchByTypeViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property(nonatomic, assign) NSInteger idType;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sideBarButton;
+
 
 @end
