@@ -191,7 +191,6 @@
                                 <connections>
                                     <outlet property="imageCat" destination="ysl-5n-rJq" id="FsM-2x-zGE"/>
                                     <outlet property="labelCat" destination="Xsn-EE-ReV" id="iAy-lJ-ILb"/>
-                                    <segue destination="Kl2-MO-w4p" kind="push" identifier="toAlimentChoser" id="LqG-nV-B1k"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -206,25 +205,10 @@
             </objects>
             <point key="canvasLocation" x="2814" y="894"/>
         </scene>
-        <!--Aliments Choser Collection View Controller-->
-        <scene sceneID="uhs-qS-eBb">
-            <objects>
-                <collectionViewController id="vYb-a1-zaY" customClass="AlimentsChoserCollectionViewController" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="jsc-XY-tcy">
-                        <barButtonItem key="leftBarButtonItem" image="menu.png" id="Hrg-DQ-zS9"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="sideBarButton" destination="Hrg-DQ-zS9" id="fIf-GE-ic2"/>
-                    </connections>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NJC-Ti-8gC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3120" y="1554"/>
-        </scene>
         <!--Alim Choser View Controller-->
         <scene sceneID="tJt-Co-c8h">
             <objects>
-                <viewController id="Kl2-MO-w4p" customClass="AlimChoserViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AlimChoser" id="Kl2-MO-w4p" customClass="AlimChoserViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OKa-Xg-L29"/>
                         <viewControllerLayoutGuide type="bottom" id="oKV-t3-I4F"/>
@@ -297,7 +281,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lE1-FF-bRK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3215" y="894"/>
+            <point key="canvasLocation" x="3747" y="894"/>
         </scene>
         <!--Reciepes Details View Controller-->
         <scene sceneID="0va-7X-CWq">
@@ -378,6 +362,7 @@
                                             <constraint firstAttribute="height" constant="60" id="SLk-qC-WeC"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <size key="titleShadowOffset" width="1" height="2"/>
                                         <state key="normal" title="Ingrédients">
                                             <color key="titleColor" red="0.99558080810000005" green="0.99558080810000005" blue="0.99558080810000005" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -409,6 +394,7 @@
                                             <constraint firstAttribute="height" constant="60" id="xEG-Ab-UtI"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <size key="titleShadowOffset" width="1" height="2"/>
                                         <state key="normal" title="Préparation">
                                             <color key="titleColor" red="0.99558080810000005" green="0.99558080810000005" blue="0.99558080810000005" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -549,26 +535,6 @@
                                 <color key="backgroundColor" red="0.16078431900000001" green="0.38823533059999998" blue="0.13333334029999999" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
                                     <segue destination="ro2-Hz-Eam" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="ZO8-Ks-Yss"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="addFood" textLabel="dF5-02-Yez" style="IBUITableViewCellStyleDefault" id="Te7-HR-TQx">
-                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Te7-HR-TQx" id="pdB-4w-s0U">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Ajouter des Aliments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dF5-02-Yez">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.16078431900000001" green="0.38823533059999998" blue="0.13333334029999999" alpha="1" colorSpace="deviceRGB"/>
-                                <connections>
-                                    <segue destination="8lA-Xl-N41" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="1YV-yj-qjN"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="search" textLabel="M0I-X3-VUe" style="IBUITableViewCellStyleDefault" id="sHh-Cy-eaL">
@@ -924,25 +890,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="taL-FJ-4K0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2365" y="1319"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="LaA-nd-qmS">
-            <objects>
-                <viewController id="vjX-WR-pyN" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hfI-Di-jwY"/>
-                        <viewControllerLayoutGuide type="bottom" id="TNn-Fb-cNw"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="n7W-cU-Zev">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="maf-yL-7d1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2784" y="274"/>
+            <point key="canvasLocation" x="2268" y="1619"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="n8C-U3-MN0">
@@ -980,6 +928,24 @@
             </objects>
             <point key="canvasLocation" x="1721" y="-1433"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ceT-sK-Fp2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RI4-BX-2J0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="D18-jD-RdS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Kl2-MO-w4p" kind="relationship" relationship="rootViewController" id="1CY-TM-e50"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gRg-o8-lTF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3215" y="894"/>
+        </scene>
     </scenes>
     <resources>
         <image name="B.png" width="600" height="317"/>
@@ -998,6 +964,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="fdv-oo-DrF"/>
-        <segue reference="Vhs-h3-x8m"/>
+        <segue reference="pQ7-O5-t7E"/>
     </inferredMetricsTieBreakers>
 </document>

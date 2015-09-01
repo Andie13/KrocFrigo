@@ -70,8 +70,11 @@
         self.typeImage.image = [UIImage imageNamed:@"B.png"];
         
     }
-
-    
+    else if (([infoRecette.type_recette  isEqual: @"Boulangerie/viennoiserie"])) {
+    [self.prepaBtn setBackgroundColor:[UIColor colorWithRed:250/255.0 green:255/255.0 blue:58/255.0 alpha:0.8]];
+    [self.ingredientBtn setBackgroundColor:[UIColor colorWithRed:250/255.0 green:255/255.0 blue:58/255.0 alpha:0.8]];
+    self.typeImage.image = [UIImage imageNamed:@"BOU.png"];
+    }
     
     listeIngredients = [[DataManager sharedDataManager]getIngredientsFromRecipe:infoRecette.idRecette];
     

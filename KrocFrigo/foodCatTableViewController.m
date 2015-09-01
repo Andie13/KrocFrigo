@@ -87,8 +87,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-// [self performSegueWithIdentifier:@"toAlimentChoser" sender:indexPath];
+    Ingredients *i = [category objectAtIndex:indexPath.row];
+    AlimChoserViewController *collVC = [self.storyboard instantiateViewControllerWithIdentifier:@"AlimChoser"];
+    collVC.info = i;
+    [self.navigationController pushViewController:collVC animated:YES];
+
     
  }
 
@@ -97,20 +100,7 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"je suis la");
-    
-    if ([[segue identifier] isEqualToString:@"toAlimentChoser"]) {
-        //Ingredients *cat;
-        
-       // cat = (Ingredients *)sender;
-        
-        
-      //  NSLog(@"ici aussi  cat %@",cat);
-               AlimChoserViewController *alim = [segue destinationViewController];
-        alim.info = sender;
-    
     }
-  }
 
 
 

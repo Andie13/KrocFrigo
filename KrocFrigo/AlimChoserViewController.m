@@ -37,13 +37,14 @@ UIView *selAlim;
     [super viewDidLoad];
    [self customSetup];
     
-    NSLog(@"info %@",info.id_cat);
+    NSLog(@"info %ld",(long)info.id_cat);
     
     
     
-    NSInteger id_cat = [info.id_cat integerValue];
+    NSInteger id_cat = info.id_cat;
     
-    self.navigationItem.titleView = info.labelCat;
+  //  self.navigationItem.titleView = [NSString stringWithFormat:@"%@",info.nom_classeAlim];
+    ;
     aliments = [[DataManager sharedDataManager] getIngrediantsFromCat:id_cat];
     
     

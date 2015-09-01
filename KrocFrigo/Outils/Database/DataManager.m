@@ -240,10 +240,10 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
     
     NSMutableArray *ingredients = [NSMutableArray new];
     [self.database open];
+
+    NSString *condiIdCat = id_cat == 0 ? @"" : [NSString stringWithFormat:@" WHERE a.classe_aliment =%d", id_cat];
     
-    NSString *condiIdCat = id_cat == 0 ? @"" : [NSString stringWithFormat:@" WHERE c.id_classe = %d", id_cat];
-    
-    NSString* query = [NSString stringWithFormat:@"SELECT a.id_aliment, a.nom_aliment, a.unite_mesure_aliment,um.nom_unite FROM Aliments a JOIN classes_aliments c ON a.classe_aliment = c.id_classe JOIN unite_mesure um ON a.unite_mesure_aliment = um.id_unite %@",condiIdCat];
+    NSString* query = [NSString stringWithFormat:@"select a.id_aliment, a.nom_aliment, um.nom_unite from Aliments a,unite_mesure um %@ and a.unite_mesure_aliment = um.id_unite",condiIdCat];
     
     FMResultSet *resultSet = [self.database executeQuery:query];
     while ([resultSet next]) {
@@ -252,8 +252,8 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
         
         ingredient.id_aliment = [resultSet intForColumnIndex:0];
         ingredient.nom_aliment =[resultSet stringForColumnIndex:1];
-        ingredient.id_uniteMesure = [resultSet intForColumnIndex:2];
-        ingredient.unite_mesure = [resultSet stringForColumnIndex:3];
+        
+        ingredient.unite_mesure = [resultSet stringForColumnIndex:2];
         
         
         

@@ -121,15 +121,15 @@
 - (void)collectionView:(UICollectionView *)collectionView
 didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
-//    
+    
    Recipes *myRecipe = [listeRecipe objectAtIndex:indexPath.row];
-//    
+    
    ReciepesDetailsViewController *collVC = [self.storyboard instantiateViewControllerWithIdentifier:@"RecetteDetails"];
     collVC.infoRecette = myRecipe;
     [self.navigationController pushViewController:collVC animated:YES];
    
 }
-//
+
 
 
 

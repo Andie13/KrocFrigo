@@ -14,7 +14,7 @@
 @interface AlimChoserViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sideBarButton;
     
-    @property (nonatomic,strong) catTableViewCell* info;
+    @property (nonatomic,strong) Ingredients* info;
     
 @property (nonatomic, strong) UITextField *qntTxt;
 

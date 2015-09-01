@@ -97,6 +97,10 @@ static NSString * const reuseIdentifier = @"Cell";
     }else if (([maRecette.type_recette  isEqual: @"Boissons"])) {
         cell.imageType.image = [UIImage imageNamed:@"B.png"];
     }
+    else if (([maRecette.type_recette  isEqual: @"Boulangerie/viennoiserie"])) {
+        cell.imageType.image = [UIImage imageNamed:@"BOU.png"];
+    }
+
 
     return cell;
 }
