@@ -11,20 +11,24 @@
 #import "DataManager.h"
 #import "Recipes.h"
 #import "SearchByTypeViewController.h"
+#import "SearchByStockViewController.h"
+#import "SearchByClassViewController.h"
 
 @interface SearchViewController (){
     bool isVisible;
     NSArray *listRecettesByType;
+    NSArray *listeOfRecipes;
+    NSArray *listOrecipesByStock;
 }
 
 @property (weak, nonatomic) IBOutlet UIButton *entreeBtn;
 
 @property (weak, nonatomic) IBOutlet UIButton *platsBtn;
 
-
 @property (weak, nonatomic) IBOutlet UIButton *dessertBtn;
 @property (weak, nonatomic) IBOutlet UIButton *boissonBtn;
 
+@property (weak, nonatomic) IBOutlet UIButton *searchByStock;
 
 @end
 
@@ -35,6 +39,11 @@
     [super viewDidLoad];
     
     [self customSetup];
+    
+    
+    self.searchByStock.titleLabel.numberOfLines=0;
+    
+    
     self.entreeBtn.hidden = true;
     self.platsBtn.hidden = true;
     self.dessertBtn.hidden = true;
@@ -96,6 +105,16 @@
       [self.navigationController pushViewController:SbtVC animated:YES];
     
 }
+- (IBAction)searchByStockAction:(id)sender {
+    listOrecipesByStock = [[DataManager sharedDataManager]getRecipesByStock];
+      
+    SearchByStockViewController *sbsVc = [self.storyboard instantiateViewControllerWithIdentifier:@"searchByStock"];
+    
+    sbsVc.ListOfRecipesByStock = listOrecipesByStock;
+    [self.navigationController pushViewController:sbsVc animated:YES];
+    
+}
+
 
 - (void)customSetup
 {
@@ -108,6 +127,29 @@
     }
 }
 
+- (IBAction)withoutPorkSearch:(id)sender {
+ NSString *classeRecette = @"cochon";
+    listeOfRecipes = [[DataManager sharedDataManager]GetRecipesWithoutPork:classeRecette];
+    
+    SearchByStockViewController *sbsVc = [self.storyboard instantiateViewControllerWithIdentifier:@"searchByStock"];
+    
+    sbsVc.ListOfRecipesByStock = listeOfRecipes;
+    [self.navigationController pushViewController:sbsVc animated:YES];
+    
+
+    
+}
+- (IBAction)veggieSearch:(id)sender {
+    NSString *classeRecette = @"veggie";
+    listeOfRecipes = [[DataManager sharedDataManager]GetRecipesBylass:classeRecette];
+    
+    SearchByStockViewController *sbsVc = [self.storyboard instantiateViewControllerWithIdentifier:@"searchByStock"];
+    
+    sbsVc.ListOfRecipesByStock = listeOfRecipes;
+    [self.navigationController pushViewController:sbsVc animated:YES];
+    
+
+}
 
 /*
 #pragma mark - Navigation

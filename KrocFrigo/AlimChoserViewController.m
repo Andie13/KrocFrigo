@@ -68,6 +68,19 @@ UIView *selAlim;
             [self.navigationController.navigationBar addGestureRecognizer: self.revealViewController.panGestureRecognizer];
         }
     }
+
+
+- (void)loadView
+{
+    [super loadView];
+    UIButton *backButton = [[UIButton alloc] initWithFrame: CGRectMake(0, 0, 44.0f, 30.0f)];
+    [backButton setImage:[UIImage imageNamed:@"back.png"]  forState:UIControlStateNormal];
+    [backButton addTarget:self action:@selector(popVC) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+}
+- (void) popVC{
+    [self.navigationController popViewControllerAnimated:YES];
+}
     /*
      #pragma mark - Navigation
      

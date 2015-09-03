@@ -94,7 +94,7 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
     NSMutableArray *recettes = [NSMutableArray new];
     [self.database open];
     
-    NSString* query = [NSString stringWithFormat:@"SELECT r.id_recette,r.nom_recette,tr.type_recette,r.description_recette,r.temps_prepa_recette,r.nbre_couverts_recette FROM recettes r join aliments_recette ar on r.id_recette = ar.id_recette join type_recettes tr on r.type_recette = tr.id_type  group by r.id_recette order by random()"];
+    NSString* query = [NSString stringWithFormat:@"SELECT r.id_recette,r.nom_recette,tr.type_recette,r.description_recette,r.temps_prepa_recette,r.nbre_couverts_recette, r.classe_recette FROM recettes r join aliments_recette ar on r.id_recette = ar.id_recette join type_recettes tr on r.type_recette = tr.id_type  group by r.id_recette order by random()"];
     
     FMResultSet *resultSet = [self.database executeQuery:query];
     while ([resultSet next]) {
@@ -107,6 +107,7 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
         rec.descriptionRecette = [resultSet stringForColumnIndex:3];
         rec.tempsPrepaRecette = [resultSet stringForColumnIndex:4];
         rec.nbreCouvertsRecette = [resultSet stringForColumnIndex:5];
+        rec.classeRecette = [resultSet stringForColumnIndex:6];
         
                [recettes addObject:rec];
         
@@ -279,7 +280,7 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
     
     NSString *conId = idRecipeType == 0 ? @"" : [NSString stringWithFormat:@"  tr.id_type = %d", idRecipeType];
     
-    NSString *query = [NSString stringWithFormat:@"SELECT r.id_recette, r.nom_recette, r.description_recette, nbre_couverts_recette, temps_prepa_recette,tr.type_recette  FROM recettes r JOIN  type_recettes tr ON r.type_recette = tr.id_type JOIN aliments_recette ar ON r.id_recette = ar.id_recette  WHERE %@ GROUP BY r.id_recette",conId];
+    NSString *query = [NSString stringWithFormat:@"SELECT r.id_recette, r.nom_recette, r.description_recette, nbre_couverts_recette, temps_prepa_recette,tr.type_recette ,r.classe_recette FROM recettes r JOIN  type_recettes tr ON r.type_recette = tr.id_type JOIN aliments_recette ar ON r.id_recette = ar.id_recette  WHERE %@ GROUP BY r.id_recette",conId];
     
     
     FMResultSet *resultSet = [self.database executeQuery:query];
@@ -293,6 +294,7 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
         orederedRecipes.nbreCouvertsRecette= [resultSet stringForColumnIndex:3];
         orederedRecipes.tempsPrepaRecette = [resultSet stringForColumnIndex:4];
         orederedRecipes.type_recette = [resultSet stringForColumnIndex:5];
+        orederedRecipes.classeRecette = [resultSet stringForColumnIndex:6];
         
         
         [recipe addObject:orederedRecipes];
@@ -308,7 +310,120 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
     
     return recipe;
     
+}
 
+- (NSArray*)GetRecipesBylass:(NSString *)classeRecette{
+    
+    NSMutableArray *recipe = [NSMutableArray new];
+    [self.database open];
+    
+   
+    
+    NSString *query = [NSString stringWithFormat:@"SELECT r.id_recette, r.nom_recette, r.description_recette, nbre_couverts_recette, temps_prepa_recette,tr.type_recette ,r.classe_recette FROM recettes r JOIN  type_recettes tr ON r.type_recette = tr.id_type JOIN aliments_recette ar ON r.id_recette = ar.id_recette  WHERE classe_recette = '%@' GROUP BY r.id_recette",classeRecette];
+    
+    
+    FMResultSet *resultSet = [self.database executeQuery:query];
+    while ([resultSet next]) {
+        
+        Recipes *orederedRecipes = [Recipes new];
+        
+        orederedRecipes.idRecette= [resultSet intForColumnIndex:0];
+        orederedRecipes.nomRecette = [resultSet stringForColumnIndex:1];
+        orederedRecipes.descriptionRecette = [resultSet stringForColumnIndex:2];
+        orederedRecipes.nbreCouvertsRecette= [resultSet stringForColumnIndex:3];
+        orederedRecipes.tempsPrepaRecette = [resultSet stringForColumnIndex:4];
+        orederedRecipes.type_recette = [resultSet stringForColumnIndex:5];
+        orederedRecipes.classeRecette = [resultSet stringForColumnIndex:6];
+        
+        
+        [recipe addObject:orederedRecipes];
+        
+    }
+    
+    if ([self.database hadError]) {
+        NSLog(@"Database error: %@", [self.database lastErrorMessage]);
+    }
+    
+    [resultSet close];
+    [self.database close];
+    
+    return recipe;
+    
+}
+- (NSArray*)GetRecipesWithoutPork:(NSString *)classeRecette{
+    
+    NSMutableArray *recipe = [NSMutableArray new];
+    [self.database open];
+    
+    
+    
+    NSString *query = [NSString stringWithFormat:@"SELECT r.id_recette, r.nom_recette, r.description_recette, nbre_couverts_recette, temps_prepa_recette,tr.type_recette ,r.classe_recette FROM recettes r JOIN  type_recettes tr ON r.type_recette = tr.id_type JOIN aliments_recette ar ON r.id_recette = ar.id_recette  WHERE classe_recette != '%@' GROUP BY r.id_recette",classeRecette];
+    
+    
+    FMResultSet *resultSet = [self.database executeQuery:query];
+    while ([resultSet next]) {
+        
+        Recipes *orederedRecipes = [Recipes new];
+        
+        orederedRecipes.idRecette= [resultSet intForColumnIndex:0];
+        orederedRecipes.nomRecette = [resultSet stringForColumnIndex:1];
+        orederedRecipes.descriptionRecette = [resultSet stringForColumnIndex:2];
+        orederedRecipes.nbreCouvertsRecette= [resultSet stringForColumnIndex:3];
+        orederedRecipes.tempsPrepaRecette = [resultSet stringForColumnIndex:4];
+        orederedRecipes.type_recette = [resultSet stringForColumnIndex:5];
+        orederedRecipes.classeRecette = [resultSet stringForColumnIndex:6];
+        
+        
+        [recipe addObject:orederedRecipes];
+        
+    }
+    
+    if ([self.database hadError]) {
+        NSLog(@"Database error: %@", [self.database lastErrorMessage]);
+    }
+    
+    [resultSet close];
+    [self.database close];
+    
+    return recipe;
+    
+}
+
+
+-(NSArray*) getRecipesByStock{
+    NSMutableArray *recByStock = [NSMutableArray new];
+     [self.database open];
+    
+    NSString *query =@"SELECT ar.id_recette,count(*) AS nb_ing_recette, count(adf.id_aliment) AS nb_ingr_dans_frigo, r.nom_recette , r.description_recette, r.temps_prepa_recette, r.nbre_couverts_recette,tr.type_recette , r.classe_recette FROM aliments_recette ar LEFT JOIN aliments_dans_frigo adf ON adf.id_aliment  =  ar.id_aliment JOIN recettes r on ar.id_recette = r.id_recette JOIN type_recettes tr ON r.type_recette = tr.id_type  GROUP BY ar.id_recette HAVING nb_ing_recette = nb_ingr_dans_frigo" ;
+    
+    FMResultSet *resultSet = [self.database executeQuery:query];
+    while ([resultSet next]) {
+        
+        Recipes *r = [Recipes new];
+        
+        r.idRecette = [resultSet intForColumnIndex:0];
+        
+        r.nomRecette = [resultSet stringForColumnIndex:3];
+        r.descriptionRecette = [resultSet stringForColumnIndex:4];
+        r.tempsPrepaRecette = [resultSet stringForColumnIndex:5];
+        r.nbreCouvertsRecette = [resultSet stringForColumnIndex:6];
+        r.type_recette = [resultSet stringForColumnIndex:7];
+        r.classeRecette = [resultSet stringForColumnIndex:8];
+        
+        NSLog(@"nom recette %@",r.nomRecette);
+        [recByStock addObject:r];
+        
+    }
+    
+    if ([self.database hadError]) {
+        NSLog(@"Database error: %@", [self.database lastErrorMessage]);
+    }
+    
+    [resultSet close];
+    [self.database close];
+    
+    return recByStock;
+    
     
 }
 // enregistrer aliments dans garde-manger

@@ -37,5 +37,10 @@
 -(NSArray*)getRecepies;
 - (NSArray*) getIngredientsFromRecipe :(NSInteger) idRecette;
 -(int)numberOgInginTheFridge:(NSInteger)idAlim;
+-(NSArray*) getRecipesByStock;
+- (NSArray*)GetRecipesBylass:(NSString *)classeRecette;
+- (NSArray*)GetRecipesWithoutPork:(NSString *)classeRecette;
+
+
 
 @end

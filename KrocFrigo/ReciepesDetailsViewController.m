@@ -27,10 +27,14 @@
 @property (weak, nonatomic) IBOutlet UILabel *nomRecette;
 @property bool ncons;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintIngredientView;
+@property (weak, nonatomic) IBOutlet UILabel *nbreCouvertsLabel;
+
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *ingrConstraint;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionRecette;
 @property (weak, nonatomic) IBOutlet UIButton *ingredientBtn;
 @property (weak, nonatomic) IBOutlet UIButton *prepaBtn;
+
+@property (weak, nonatomic) IBOutlet UIImageView *recipeClassImage;
 
 @end
 
@@ -47,7 +51,8 @@
     self.nomRecette.text = infoRecette.nomRecette;
     self.imageRecipe.image = [UIImage imageNamed:[NSString stringWithFormat:@"R_%ld.jpg",(long)infoRecette.idRecette]];
     
-    
+    self.tempsPrepaLabel.text = infoRecette.tempsPrepaRecette;
+    self.nbreCouvertsLabel.text = infoRecette.nbreCouvertsRecette;
   
     if (([infoRecette.type_recette  isEqual: @"Hors d'oeuvres"])) {
         [self.prepaBtn setBackgroundColor:[UIColor colorWithRed:1/255.0 green:231/255.0 blue:204/255.0 alpha:0.6]];
@@ -74,6 +79,15 @@
     [self.prepaBtn setBackgroundColor:[UIColor colorWithRed:250/255.0 green:255/255.0 blue:58/255.0 alpha:0.8]];
     [self.ingredientBtn setBackgroundColor:[UIColor colorWithRed:250/255.0 green:255/255.0 blue:58/255.0 alpha:0.8]];
     self.typeImage.image = [UIImage imageNamed:@"BOU.png"];
+    }
+    
+    if ([infoRecette.classeRecette isEqualToString:@"cochon"]) {
+        self.recipeClassImage.image = [UIImage imageNamed:@"cochon.png"];
+        
+    }else if([infoRecette.classeRecette isEqualToString:@"veggie"]){
+        self.recipeClassImage.image = [UIImage imageNamed:@"veggie.png"];
+    }else{
+        self.recipeClassImage.hidden =true;
     }
     
     listeIngredients = [[DataManager sharedDataManager]getIngredientsFromRecipe:infoRecette.idRecette];
