@@ -122,27 +122,25 @@ UIView *selAlim;
     -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
         // NSLog(@" %@",[aliments objectAtIndex:indexPath.row]);
         Ingredients *selAli= [aliments objectAtIndex:indexPath.row];
-        NSLog(@"je tape");
-        NSLog(@"//////// %@",selAli.unite_mesure);
+       // NSLog(@"je tape");
+       // NSLog(@"//////// %@",selAli.unite_mesure);
         
         // la view
         
-        CGRect frame = CGRectMake(10, 80, 300, 350);
+        CGRect frame = CGRectMake(10, 80, 300, 285);
         selAlim =[[UIView alloc]initWithFrame:frame];
         selAlim.backgroundColor =[UIColor whiteColor];
         [selAlim setBackgroundColor:[[UIColor whiteColor] colorWithAlphaComponent:0.8]];
         selAlim.userInteractionEnabled = YES;
         
-        CGRect titleFrame = CGRectMake (30, 10, 200
+        CGRect titleFrame = CGRectMake (40, 10, 200
                                         , 50
                                         );
-        CGRect textdesc = CGRectMake (30, 60, 200, 50);
+        CGRect textdesc = CGRectMake (40, 60, 200, 50);
         CGRect qntText = CGRectMake (80, 120, 100, 50);
         CGRect qnt = CGRectMake (200, 120, 100, 50);
-         CGRect ok = CGRectMake (0, 180 , 290, 50);
-         CGRect non = CGRectMake (0, 232, 290, 50);
-
-
+         CGRect ok = CGRectMake (0, 180 , 300, 50);
+         CGRect non = CGRectMake (0, 232, 300, 50);
         
         //le titre de la view
         
@@ -152,7 +150,7 @@ UIView *selAlim;
         alertMessage.numberOfLines = 2;
         alertMessage.textAlignment = NSTextAlignmentCenter;
         
-        alertMessage.textColor = [UIColor greenColor];
+        alertMessage.textColor = [UIColor grayColor];
         
         //le descriptif
         UILabel *textDescr  = [[UILabel alloc]initWithFrame:textdesc];
@@ -248,73 +246,5 @@ UIView *selAlim;
     
     [self removeFromSuperview]
     ;}
-   /*-(void)valider:(id)sender{
-       NSString *myData = (NSArray *)objc_getAssociatedObject(sender, &myDataKey);
-   }*/
-
-
-        //    UIAlertView *selAliments = [[UIAlertView alloc] initWithTitle:@"saisissez la quantité "  message:[NSString stringWithFormat:@"%ld %@ en %@",(long)selAli.id_aliment,selAli.nom_aliment,selAli.unite_mesure ] delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:@"Oui, c'est bien ça", nil];
-        //    UILabel *um = [[UILabel alloc] initWithFrame:CGRectMake(20.0, 45.0, 245.0, 25.0)];
-        //    [um setBackgroundColor:[UIColor whiteColor]];
-        //
-        //     um.text = [NSString stringWithFormat:@"%@",selAli.unite_mesure];
-        //    NSLog(@"um %@",um.text);
-        //
-        //
-        //    UILabel *idAlim = [[UILabel alloc] initWithFrame:CGRectMake(20.0, 45.0, 245.0, 25.0)];
-        //    [um setBackgroundColor:[UIColor whiteColor]];
-        //
-        //    idAlim.text = [NSString stringWithFormat:@"%ld",(long)selAli.id_aliment];
-        //
-        //
-        //    [selAliments addSubview:um];
-        //    [selAliments addSubview:idAlim];
-        //
-        //
-        //
-        //    //textfield pour saisir la quantité
-        //
-        //    selAliments.alertViewStyle = UIAlertViewStylePlainTextInput;
-        //
-        //    UITextField *writeQnt= [selAliments textFieldAtIndex:0];
-        //
-        //
-        //    assert(writeQnt);
-        //
-        //    //keyboard numeric pour sécuriser les données entrées en base.
-        //    writeQnt.keyboardType = UIKeyboardTypeNumberPad;
-        //
-        //
-        //       [selAliments show];
-
-    /*
-     // Uncomment this method to specify if the specified item should be highlighted during tracking
-     - (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-     return YES;
-     }
-     */
-    
-    /*
-     // Uncomment this method to specify if the specified item should be selected
-     - (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-     return YES;
-     }
-     */
-    
-    /*
-     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-     - (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-     return NO;
-     }
-     
-     - (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-     return NO;
-     }
-     
-     - (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-     
-     }
-     */
-    
 
 @end

@@ -111,6 +111,7 @@
 
 - (void) dealloc{
     listeIngredients = nil;
+    NBIng = nil;
     
 }
 - (void)customSetup

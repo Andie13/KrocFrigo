@@ -28,23 +28,21 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //menu
       [self customSetup];
-    
-   
-    
-    
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"<=" style:UIBarButtonItemStylePlain target:nil action:nil];
-    
 
+    //test sur btn retour
+//    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"<=" style:UIBarButtonItemStylePlain target:nil action:nil];
+//    
+//Gets recipes from db randomly like
     collectionRecettes =[[DataManager sharedDataManager]getRecepies];
-    
 
 }
-
+// release adresses when usednecessary from iOS7 or later.Need to do it on every strog values
 - (void) dealloc{
     collectionRecettes = nil;
- 
 }
+//menu
 - (void)customSetup
 {
     SWRevealViewController *revealViewController = self.revealViewController;
@@ -58,19 +56,17 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-
 }
 
 
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-
     return 1;
 }
 
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+- (NSInteger)collctionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 
     return collectionRecettes.count;
     
@@ -81,11 +77,12 @@ static NSString * const reuseIdentifier = @"Cell";
     static NSString *identifier = @"cellForAccueil";
     
  
-
+//use view AccueilCollectionViewCell
     AccueilCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     Recipes *maRecette = [collectionRecettes objectAtIndex: indexPath.row];
-    cell.imageRecette.image = [UIImage imageNamed:[NSString stringWithFormat:@"R_%d.jpg",maRecette.idRecette]];
+    cell.imageRecette.image = [UIImage imageNamed:[NSString stringWithFormat:@"R_%ld.jpg",(long)maRecette.idRecette]];
  
+    //contition on recipe type displays the right image
     if (([maRecette.type_recette  isEqual: @"Hors d'oeuvres"])) {
         cell.imageType.image = [UIImage imageNamed:@"HO.png"];
     }
@@ -105,7 +102,8 @@ static NSString * const reuseIdentifier = @"Cell";
     return cell;
 }
 
-
+#pragma mark delegates
+//navigation on tap
 - (void)collectionView:(UICollectionView *)collectionView
 didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
   

@@ -27,7 +27,7 @@
     self.tableView.allowsMultipleSelectionDuringEditing =NO;
     
     nbIngredientsDansFrigo = [[DataManager sharedDataManager]getIngredientsDansFrigo];
-    NSLog(@"---------->%@",nbIngredientsDansFrigo);
+   // NSLog(@"---------->%@",nbIngredientsDansFrigo);
     
 }
 - (void)customSetup
@@ -75,7 +75,7 @@
  
     cell.textLabel.textColor = [UIColor whiteColor];
     cell.textLabel.font= myFont;
-    cell.textLabel.text = [NSString stringWithFormat:@"%d", i.id_aliment ];
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld", (long)i.id_aliment ];
     cell.textLabel.text =[NSString stringWithFormat:@"%@ : %@ %@", i.nom_aliment, i.nom_quantite, i.unite_mesure];
      return cell;
     
@@ -120,28 +120,6 @@
      nbIngredientsDansFrigo = [[DataManager sharedDataManager]getIngredientsDansFrigo];
        [self.tableView reloadData]; //lstDevide étant ma tableView
 }
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

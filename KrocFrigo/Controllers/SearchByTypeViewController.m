@@ -33,7 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self customSetup];
-    NSLog(@"type recette : %d",idType);
+    NSLog(@"type recette : %ld",(long)idType);
     listeRecipe = [[DataManager sharedDataManager]GetRecipesByType:idType];
     
     switch(idType){
@@ -109,7 +109,7 @@
     
     ShowByTypeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     Recipes *maRecette = [listeRecipe objectAtIndex: indexPath.row];
-    cell.imageRecipe.image = [UIImage imageNamed:[NSString stringWithFormat:@"R_%d.jpg",maRecette.idRecette]];
+    cell.imageRecipe.image = [UIImage imageNamed:[NSString stringWithFormat:@"R_%ld.jpg",(long)maRecette.idRecette]];
     cell.nameRecipe.numberOfLines = 0;
     cell.nameRecipe.text = maRecette.nomRecette;
     

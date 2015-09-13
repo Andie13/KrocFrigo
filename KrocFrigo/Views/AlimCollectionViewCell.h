@@ -15,9 +15,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *alimLabel;
 
-
-
-
 @property (nonatomic, assign)  NSInteger id_unite_mesure;
 @property (nonatomic, strong) NSString *unite_mesure;
 

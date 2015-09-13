@@ -70,7 +70,7 @@
     ShowByTypeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     Recipes *maRecette = [ListOfRecipesByStock objectAtIndex: indexPath.row];
   //  NSLog(@"ma recette %@",maRecette.nomRecette);
-    cell.imageRecipe.image = [UIImage imageNamed:[NSString stringWithFormat:@"R_%d.jpg",maRecette.idRecette]];
+    cell.imageRecipe.image = [UIImage imageNamed:[NSString stringWithFormat:@"R_%ld.jpg",(long)maRecette.idRecette]];
     cell.nameRecipe.numberOfLines = 0;
     cell.nameRecipe.text = maRecette.nomRecette;
     

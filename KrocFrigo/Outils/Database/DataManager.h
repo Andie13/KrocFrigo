@@ -1,8 +1,9 @@
 //
 //  DataManager.h
+///  KrocFrigo
 //
-//  Created by Simon Fage on 28/09/12.
-//  Copyright (c) 2011 Voxinzebox All rights reserved.
+//  Created by Andie Perrault on 22/07/2015.
+//  Copyright (c) 2015 Andie Perrault. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -28,19 +29,19 @@
 @property (nonatomic, retain) NSString *tempDirectory;
 
 + (DataManager *)sharedDataManager;
-- (NSArray *) getIngredientsDansFrigo;
-- (NSArray*)GetRecipesByType:(NSInteger )idRecipeType;
-- (NSArray*)getCat;
--(NSArray*)getIngrediantsFromCat:(int)id_cat;
--(void)setfoodInTheFridge:(NSInteger)id_aliment qnt:(NSString*)qnt id_um:(NSInteger)id_um;
--(void)DeleteAlimentsDansFrigo:(NSInteger)id_aliment;
--(NSArray*)getRecepies;
-- (NSArray*) getIngredientsFromRecipe :(NSInteger) idRecette;
--(int)numberOgInginTheFridge:(NSInteger)idAlim;
--(NSArray*) getRecipesByStock;
-- (NSArray*)GetRecipesBylass:(NSString *)classeRecette;
-- (NSArray*)GetRecipesWithoutPork:(NSString *)classeRecette;
-
+- (NSArray *) getIngredientsDansFrigo;// récupère les ingrédients qui sont dans le stock
+- (NSArray*)GetRecipesByType:(NSInteger )idRecipeType;// récupère les recettes par type
+- (NSArray*)getCat;// récupère les catégories
+-(NSArray*)getIngrediantsFromCat:(int)id_cat;//Récupère les ingrédients par catégorie
+-(void)setfoodInTheFridge:(NSInteger)id_aliment qnt:(NSString*)qnt id_um:(NSInteger)id_um;//ajoute les aliments à la base
+-(void)DeleteAlimentsDansFrigo:(NSInteger)id_aliment;//supprime les aliments de la base
+-(NSArray*)getRecepies;//récupère toutes les recettes
+- (NSArray*) getIngredientsFromRecipe :(NSInteger) idRecette;//récupère les ingrédients d'une recette
+-(int)numberOgInginTheFridge:(NSInteger)idAlim;//compte le nombre d'ingrédients dans le stock
+-(NSArray*) getRecipesByStock;//récupère les recettes en fonctions du stock
+- (NSArray*)GetRecipesBylass:(NSString *)classeRecette;//récupère les recettes par classe
+- (NSArray*)GetRecipesWithoutPork:(NSString *)classeRecette;//récupère les recettes ne contenant pas de porc
+- (NSArray*)GetRecipesByLevel:(NSString*)level;//récupère les recettes d'un niveau de difficulté
 
 
 @end

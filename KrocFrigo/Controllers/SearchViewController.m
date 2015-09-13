@@ -12,13 +12,16 @@
 #import "Recipes.h"
 #import "SearchByTypeViewController.h"
 #import "SearchByStockViewController.h"
-#import "SearchByClassViewController.h"
+
 
 @interface SearchViewController (){
     bool isVisible;
+    bool levelBtnVisible;
     NSArray *listRecettesByType;
     NSArray *listeOfRecipes;
     NSArray *listOrecipesByStock;
+    NSString *level;
+    
 }
 
 @property (weak, nonatomic) IBOutlet UIButton *entreeBtn;
@@ -29,6 +32,13 @@
 @property (weak, nonatomic) IBOutlet UIButton *boissonBtn;
 
 @property (weak, nonatomic) IBOutlet UIButton *searchByStock;
+@property (weak, nonatomic) IBOutlet UIButton *easyBtn;
+
+@property (weak, nonatomic) IBOutlet UIButton *avaerageBtn;
+
+@property (weak, nonatomic) IBOutlet UIButton *hard;
+
+
 
 @end
 
@@ -49,6 +59,11 @@
     self.dessertBtn.hidden = true;
     self.boissonBtn.hidden= true;
     isVisible = false;
+    
+    self.easyBtn.hidden = true;
+    self.avaerageBtn.hidden = true;
+    self.hard.hidden = true;
+    levelBtnVisible = false;
     
    }
 - (IBAction)byTypeAction:(id)sender {
@@ -105,6 +120,50 @@
       [self.navigationController pushViewController:SbtVC animated:YES];
     
 }
+
+- (IBAction)searchByLevel:(id)sender {
+    if (levelBtnVisible == false) {
+        self.easyBtn.hidden = false;
+        self.avaerageBtn.hidden = false;
+        self.hard.hidden = false;
+        
+        levelBtnVisible = true;
+    }
+    else{
+        self.easyBtn.hidden = true;
+        self.avaerageBtn.hidden = true;
+        self.hard.hidden = true;
+        
+        levelBtnVisible = false;
+    }
+    
+}
+- (IBAction)searchEasyAction:(id)sender {
+    level = @"facile";
+    listeOfRecipes = [[DataManager sharedDataManager]GetRecipesByLevel:level];
+    SearchByStockViewController *sbsVc = [self.storyboard instantiateViewControllerWithIdentifier:@"searchByStock"];
+    
+    sbsVc.ListOfRecipesByStock = listeOfRecipes;
+    [self.navigationController pushViewController:sbsVc animated:YES];
+}
+- (IBAction)searchAverageAction:(id)sender {
+    level =@"moyen";
+    listeOfRecipes = [[DataManager sharedDataManager]GetRecipesByLevel:level];
+    SearchByStockViewController *sbsVc = [self.storyboard instantiateViewControllerWithIdentifier:@"searchByStock"];
+    
+    sbsVc.ListOfRecipesByStock = listeOfRecipes;
+    [self.navigationController pushViewController:sbsVc animated:YES];
+}
+- (IBAction)searchHardAction:(id)sender {
+    level =@"difficile";
+    listeOfRecipes = [[DataManager sharedDataManager]GetRecipesByLevel:level];
+    SearchByStockViewController *sbsVc = [self.storyboard instantiateViewControllerWithIdentifier:@"searchByStock"];
+    
+    sbsVc.ListOfRecipesByStock = listeOfRecipes;
+    [self.navigationController pushViewController:sbsVc animated:YES];
+}
+
+
 - (IBAction)searchByStockAction:(id)sender {
     listOrecipesByStock = [[DataManager sharedDataManager]getRecipesByStock];
       
@@ -115,17 +174,6 @@
     
 }
 
-
-- (void)customSetup
-{
-    SWRevealViewController *revealViewController = self.revealViewController;
-    if ( revealViewController )
-    {
-        [self.sideBarButton setTarget: self.revealViewController];
-        [self.sideBarButton setAction: @selector( revealToggle: )];
-        [self.navigationController.navigationBar addGestureRecognizer: self.revealViewController.panGestureRecognizer];
-    }
-}
 
 - (IBAction)withoutPorkSearch:(id)sender {
  NSString *classeRecette = @"cochon";
@@ -150,15 +198,16 @@
     
 
 }
-
-/*
 #pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)customSetup
+{
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.sideBarButton setTarget: self.revealViewController];
+        [self.sideBarButton setAction: @selector( revealToggle: )];
+        [self.navigationController.navigationBar addGestureRecognizer: self.revealViewController.panGestureRecognizer];
+    }
 }
-*/
 
 @end

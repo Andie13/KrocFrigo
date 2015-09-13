@@ -1,10 +1,10 @@
 //
 //  DataManager.m
+//  KrocFrigo
 //
-//  Created by Simon Fage on 28/09/12.
-//  Copyright (c) Voxinzebox All rights reserved.
+//  Created by Andie Perrault on 22/07/2015.
+//  Copyright (c) 2015 Andie Perrault. All rights reserved.
 //
-
 #import "DataManager.h"
 #import "SynthesizeSingleton.h"
 #import "AppDelegate.h"
@@ -222,7 +222,7 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
 -(int)numberOgInginTheFridge:(NSInteger)idAlim{
     int nbIngSim = 0;
     
-    NSString* query = [NSString stringWithFormat:@"SELECT COUNT(adf.id_aliment) FROM aliments_dans_frigo adf WHERE adf.id_aliment = %d",idAlim];
+    NSString* query = [NSString stringWithFormat:@"SELECT COUNT(adf.id_aliment) FROM aliments_dans_frigo adf WHERE adf.id_aliment = %ld",(long)idAlim];
     
     [self.database open];
     
@@ -278,9 +278,46 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
     NSMutableArray *recipe = [NSMutableArray new];
     [self.database open];
     
-    NSString *conId = idRecipeType == 0 ? @"" : [NSString stringWithFormat:@"  tr.id_type = %d", idRecipeType];
+    NSString *conId = idRecipeType == 0 ? @"" : [NSString stringWithFormat:@"  tr.id_type = %ld", (long)idRecipeType];
     
     NSString *query = [NSString stringWithFormat:@"SELECT r.id_recette, r.nom_recette, r.description_recette, nbre_couverts_recette, temps_prepa_recette,tr.type_recette ,r.classe_recette FROM recettes r JOIN  type_recettes tr ON r.type_recette = tr.id_type JOIN aliments_recette ar ON r.id_recette = ar.id_recette  WHERE %@ GROUP BY r.id_recette",conId];
+    
+    
+    FMResultSet *resultSet = [self.database executeQuery:query];
+    while ([resultSet next]) {
+        
+        Recipes *orederedRecipes = [Recipes new];
+        
+        orederedRecipes.idRecette= [resultSet intForColumnIndex:0];
+        orederedRecipes.nomRecette = [resultSet stringForColumnIndex:1];
+        orederedRecipes.descriptionRecette = [resultSet stringForColumnIndex:2];
+        orederedRecipes.nbreCouvertsRecette= [resultSet stringForColumnIndex:3];
+        orederedRecipes.tempsPrepaRecette = [resultSet stringForColumnIndex:4];
+        orederedRecipes.type_recette = [resultSet stringForColumnIndex:5];
+        orederedRecipes.classeRecette = [resultSet stringForColumnIndex:6];
+        
+        
+        [recipe addObject:orederedRecipes];
+        
+    }
+    
+    if ([self.database hadError]) {
+        NSLog(@"Database error: %@", [self.database lastErrorMessage]);
+    }
+    
+    [resultSet close];
+    [self.database close];
+    
+    return recipe;
+    
+}
+- (NSArray*)GetRecipesByLevel:(NSString*)level{
+    
+    NSMutableArray *recipe = [NSMutableArray new];
+    [self.database open];
+    
+    
+    NSString *query = [NSString stringWithFormat:@"SELECT r.id_recette, r.nom_recette, r.description_recette, nbre_couverts_recette, temps_prepa_recette,tr.type_recette ,r.classe_recette FROM recettes r JOIN  type_recettes tr ON r.type_recette = tr.id_type JOIN aliments_recette ar ON r.id_recette = ar.id_recette  WHERE r.Difficulte ='%@' GROUP BY r.id_recette",level];
     
     
     FMResultSet *resultSet = [self.database executeQuery:query];
@@ -462,7 +499,7 @@ void unaccented(sqlite3_context *context, int argc, sqlite3_value **argv) {
         if(id_aliment){
             
            [self.database open];
-            NSString* query = [NSString stringWithFormat:@"DELETE FROM aliments_dans_frigo  WHERE id_aliment = %d",id_aliment];
+            NSString* query = [NSString stringWithFormat:@"DELETE FROM aliments_dans_frigo  WHERE id_aliment = %ld",(long)id_aliment];
             
             if ([self.database executeUpdate:query]) {
               
