@@ -14,7 +14,7 @@
 #import "SWRevealViewController.h"
 
 @interface AccueilCollectionViewController (){
-   
+    
     __weak IBOutlet UIBarButtonItem *revealButtonItem;
     
     NSArray *collectionRecettes;
@@ -28,21 +28,23 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //menu
-      [self customSetup];
-
-    //test sur btn retour
-//    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"<=" style:UIBarButtonItemStylePlain target:nil action:nil];
-//    
-//Gets recipes from db randomly like
+    [self customSetup];
+    
+    
+    
+    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"<=" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+    
     collectionRecettes =[[DataManager sharedDataManager]getRecepies];
-
+    
+    
 }
-// release adresses when usednecessary from iOS7 or later.Need to do it on every strog values
+
 - (void) dealloc{
     collectionRecettes = nil;
+    
 }
-//menu
 - (void)customSetup
 {
     SWRevealViewController *revealViewController = self.revealViewController;
@@ -56,18 +58,20 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+    
 }
 
 
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    
     return 1;
 }
 
 
-- (NSInteger)collctionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    
     return collectionRecettes.count;
     
 }
@@ -76,18 +80,17 @@ static NSString * const reuseIdentifier = @"Cell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identifier = @"cellForAccueil";
     
- 
-//use view AccueilCollectionViewCell
+    
+    
     AccueilCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     Recipes *maRecette = [collectionRecettes objectAtIndex: indexPath.row];
-    cell.imageRecette.image = [UIImage imageNamed:[NSString stringWithFormat:@"R_%ld.jpg",(long)maRecette.idRecette]];
- 
-    //contition on recipe type displays the right image
+    cell.imageRecette.image = [UIImage imageNamed:[NSString stringWithFormat:@"R_%d.jpg",maRecette.idRecette]];
+    
     if (([maRecette.type_recette  isEqual: @"Hors d'oeuvres"])) {
         cell.imageType.image = [UIImage imageNamed:@"HO.png"];
     }
     else if (([maRecette.type_recette  isEqual: @"Plat principal"])) {
-     
+        
         cell.imageType.image = [UIImage imageNamed:@"PP.png"];
     }else if (([maRecette.type_recette  isEqual: @"Dessert"])) {
         cell.imageType.image = [UIImage imageNamed:@"D.png"];
@@ -97,22 +100,21 @@ static NSString * const reuseIdentifier = @"Cell";
     else if (([maRecette.type_recette  isEqual: @"Boulangerie/viennoiserie"])) {
         cell.imageType.image = [UIImage imageNamed:@"BOU.png"];
     }
-
-
+    
+    
     return cell;
 }
 
-#pragma mark delegates
-//navigation on tap
+
 - (void)collectionView:(UICollectionView *)collectionView
 didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-  
+    
     
     Recipes *myRecipe = [collectionRecettes objectAtIndex:indexPath.row];
     
-        ReciepesDetailsViewController *collVC = [self.storyboard instantiateViewControllerWithIdentifier:@"RecetteDetails"];
-        collVC.infoRecette = myRecipe;
-        [self.navigationController pushViewController:collVC animated:YES];
+    ReciepesDetailsViewController *collVC = [self.storyboard instantiateViewControllerWithIdentifier:@"RecetteDetails"];
+    collVC.infoRecette = myRecipe;
+    [self.navigationController pushViewController:collVC animated:YES];
     
 }
 
