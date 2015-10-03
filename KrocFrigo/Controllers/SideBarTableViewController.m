@@ -21,7 +21,7 @@
     [super viewDidLoad];
     
     
-    menuItem = @[@"Accueil",@"garde-manger",@"search",@"Credits"];
+    menuItem = @[@"Accueil",@"garde-manger",@"search",@"Credits",@"Share"];
    }
 
 - (void)didReceiveMemoryWarning {

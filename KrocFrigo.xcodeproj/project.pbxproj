@@ -100,6 +100,9 @@
 		8B43F6611B9A033E00B919FB /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B43F6541B9A033E00B919FB /* SearchViewController.m */; };
 		8B43F6621B9A033E00B919FB /* SideBarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B43F6561B9A033E00B919FB /* SideBarTableViewController.m */; };
 		8B43F6631B9A033E00B919FB /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B43F6581B9A033E00B919FB /* SWRevealViewController.m */; };
+		8B462BE31BA6FA1B0023732D /* img_2-11368_smiley_dingo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B462BE21BA6FA1B0023732D /* img_2-11368_smiley_dingo.png */; };
+		8B462BE61BA6FB060023732D /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B462BE41BA6FB060023732D /* twitter.png */; };
+		8B462BE71BA6FB060023732D /* fb-share-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B462BE51BA6FB060023732D /* fb-share-button.png */; };
 		8B744B141B7335AE00A8E725 /* kroc_db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 8B744B131B7335AE00A8E725 /* kroc_db.sqlite */; };
 		8B7930461BA3462F0007F14F /* Assaisonnement.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B7930341BA3462F0007F14F /* Assaisonnement.jpg */; };
 		8B7930471BA3462F0007F14F /* Boissons.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B7930351BA3462F0007F14F /* Boissons.jpg */; };
@@ -140,6 +143,13 @@
 		8B9E30B41B8F0FF300B5EA8A /* R_23.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B9E30A11B8F0FF300B5EA8A /* R_23.jpg */; };
 		8B9E30B51B8F0FF300B5EA8A /* R_22.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B9E30A21B8F0FF300B5EA8A /* R_22.jpg */; };
 		8B9E30BE1B8F351500B5EA8A /* smileyChef.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B9E30BD1B8F351500B5EA8A /* smileyChef.jpg */; };
+		8B9F76141BA7003F00845385 /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B9F76101BA7003F00845385 /* email.png */; };
+		8B9F76151BA7003F00845385 /* FBShare.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B9F76111BA7003F00845385 /* FBShare.png */; };
+		8B9F76171BA7003F00845385 /* smileyInLove.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B9F76131BA7003F00845385 /* smileyInLove.png */; };
+		8B9F76191BA702AB00845385 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9F76181BA702AB00845385 /* MessageUI.framework */; };
+		8B9F761B1BA702BA00845385 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9F761A1BA702BA00845385 /* Social.framework */; };
+		8B9F761E1BA7030000845385 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9F761D1BA7030000845385 /* ShareViewController.m */; };
+		8B9F76201BA7120100845385 /* logoKroc.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B9F761F1BA7120100845385 /* logoKroc.png */; };
 		8BB796541B88F27800734EB4 /* nonValider.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BB796521B88F27800734EB4 /* nonValider.jpg */; };
 		8BB796551B88F27800734EB4 /* valider.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BB796531B88F27800734EB4 /* valider.jpg */; };
 		8BB796571B890B5400734EB4 /* B.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BB796561B890B5400734EB4 /* B.png */; };
@@ -276,6 +286,9 @@
 		8B43F6561B9A033E00B919FB /* SideBarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideBarTableViewController.m; sourceTree = "<group>"; };
 		8B43F6571B9A033E00B919FB /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		8B43F6581B9A033E00B919FB /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		8B462BE21BA6FA1B0023732D /* img_2-11368_smiley_dingo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img_2-11368_smiley_dingo.png"; path = "../../../../../Downloads/img_2-11368_smiley_dingo.png"; sourceTree = "<group>"; };
+		8B462BE41BA6FB060023732D /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitter.png; path = ../../../../../Downloads/twitter.png; sourceTree = "<group>"; };
+		8B462BE51BA6FB060023732D /* fb-share-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fb-share-button.png"; path = "../../../../../Downloads/fb-share-button.png"; sourceTree = "<group>"; };
 		8B744B131B7335AE00A8E725 /* kroc_db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = kroc_db.sqlite; sourceTree = "<group>"; };
 		8B7930341BA3462F0007F14F /* Assaisonnement.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Assaisonnement.jpg; sourceTree = "<group>"; };
 		8B7930351BA3462F0007F14F /* Boissons.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Boissons.jpg; sourceTree = "<group>"; };
@@ -316,6 +329,14 @@
 		8B9E30A11B8F0FF300B5EA8A /* R_23.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = R_23.jpg; sourceTree = "<group>"; };
 		8B9E30A21B8F0FF300B5EA8A /* R_22.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = R_22.jpg; sourceTree = "<group>"; };
 		8B9E30BD1B8F351500B5EA8A /* smileyChef.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = smileyChef.jpg; sourceTree = "<group>"; };
+		8B9F76101BA7003F00845385 /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email.png; sourceTree = "<group>"; };
+		8B9F76111BA7003F00845385 /* FBShare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FBShare.png; sourceTree = "<group>"; };
+		8B9F76131BA7003F00845385 /* smileyInLove.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smileyInLove.png; sourceTree = "<group>"; };
+		8B9F76181BA702AB00845385 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		8B9F761A1BA702BA00845385 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		8B9F761C1BA7030000845385 /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
+		8B9F761D1BA7030000845385 /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
+		8B9F761F1BA7120100845385 /* logoKroc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoKroc.png; sourceTree = "<group>"; };
 		8BB796521B88F27800734EB4 /* nonValider.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nonValider.jpg; sourceTree = "<group>"; };
 		8BB796531B88F27800734EB4 /* valider.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = valider.jpg; sourceTree = "<group>"; };
 		8BB796561B890B5400734EB4 /* B.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = B.png; sourceTree = "<group>"; };
@@ -330,6 +351,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B9F761B1BA702BA00845385 /* Social.framework in Frameworks */,
+				8B9F76191BA702AB00845385 /* MessageUI.framework in Frameworks */,
 				8B09492A1B4AE93300C611F5 /* libsqlite3.dylib in Frameworks */,
 				8BC67A791B51144800CF5D73 /* FacebookSDK.framework in Frameworks */,
 				26864E09B14FCE5AA77A1EE7 /* libPods.a in Frameworks */,
@@ -451,6 +474,13 @@
 		8B0948EC1B4AD8D500C611F5 /* Image App */ = {
 			isa = PBXGroup;
 			children = (
+				8B9F761F1BA7120100845385 /* logoKroc.png */,
+				8B9F76101BA7003F00845385 /* email.png */,
+				8B9F76111BA7003F00845385 /* FBShare.png */,
+				8B9F76131BA7003F00845385 /* smileyInLove.png */,
+				8B462BE41BA6FB060023732D /* twitter.png */,
+				8B462BE51BA6FB060023732D /* fb-share-button.png */,
+				8B462BE21BA6FA1B0023732D /* img_2-11368_smiley_dingo.png */,
 				8B7930581BA347410007F14F /* veggie.png */,
 				8B7930591BA347410007F14F /* cochon.png */,
 				8B1DF4B51B9F244C00E82CAF /* logo-gep.jpg */,
@@ -621,6 +651,8 @@
 				8B43F6521B9A033E00B919FB /* SearchByTypeViewController.m */,
 				8B43F6531B9A033E00B919FB /* SearchViewController.h */,
 				8B43F6541B9A033E00B919FB /* SearchViewController.m */,
+				8B9F761C1BA7030000845385 /* ShareViewController.h */,
+				8B9F761D1BA7030000845385 /* ShareViewController.m */,
 				8B43F6551B9A033E00B919FB /* SideBarTableViewController.h */,
 				8B43F6561B9A033E00B919FB /* SideBarTableViewController.m */,
 				8B43F6571B9A033E00B919FB /* SWRevealViewController.h */,
@@ -664,6 +696,8 @@
 		C231E8BBCEE260F4312E3E2E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8B9F761A1BA702BA00845385 /* Social.framework */,
+				8B9F76181BA702AB00845385 /* MessageUI.framework */,
 				8BC67A781B51144800CF5D73 /* FacebookSDK.framework */,
 				8B0949291B4AE93300C611F5 /* libsqlite3.dylib */,
 				9F017AA51DCEEDA9789BFBF5 /* libPods.a */,
@@ -722,6 +756,7 @@
 				TargetAttributes = {
 					8B0948BA1B4AD51500C611F5 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 8LKZ44U7N5;
 					};
 					8B0948D61B4AD51600C611F5 = {
 						CreatedOnToolsVersion = 6.4;
@@ -771,6 +806,7 @@
 				8B11EB601B515F960049168E /* white_chocolate_donut.jpg in Resources */,
 				8B9E30A51B8F0FF300B5EA8A /* R_38.jpg in Resources */,
 				8B2038AA1B7F909D00899D9B /* R_10.jpg in Resources */,
+				8B462BE31BA6FA1B0023732D /* img_2-11368_smiley_dingo.png in Resources */,
 				8B2038B41B7F909D00899D9B /* R_2.jpg in Resources */,
 				8B2038B91B7F909D00899D9B /* R_5.jpg in Resources */,
 				8B2038B21B7F909D00899D9B /* R_18.jpg in Resources */,
@@ -779,6 +815,7 @@
 				8B43F60C1B986B0700B919FB /* reveil.png in Resources */,
 				8B9E30B01B8F0FF300B5EA8A /* R_27.jpg in Resources */,
 				8B79304F1BA3462F0007F14F /* inclassable.jpg in Resources */,
+				8B462BE71BA6FB060023732D /* fb-share-button.png in Resources */,
 				8B0948D21B4AD51600C611F5 /* LaunchScreen.xib in Resources */,
 				8B7930501BA3462F0007F14F /* laitages.jpg in Resources */,
 				8B11EB5E1B515F960049168E /* thai_shrimp_cake.jpg in Resources */,
@@ -789,8 +826,10 @@
 				8B2038BA1B7F909D00899D9B /* R_6.jpg in Resources */,
 				8B11EB581B515F960049168E /* instant_noodle_with_egg.jpg in Resources */,
 				8B4222071BA58D6C00DD0068 /* R_60.jpg in Resources */,
+				8B9F76201BA7120100845385 /* logoKroc.png in Resources */,
 				8B9E30BE1B8F351500B5EA8A /* smileyChef.jpg in Resources */,
 				8B2038AD1B7F909D00899D9B /* R_13.jpg in Resources */,
+				8B9F76141BA7003F00845385 /* email.png in Resources */,
 				8B43F60A1B986AF200B919FB /* assiette couverts 3.png in Resources */,
 				8B9E30A71B8F0FF300B5EA8A /* R_36.jpg in Resources */,
 				8B0A39D11B5A71F00082C6E4 /* menu.png in Resources */,
@@ -803,6 +842,7 @@
 				8B7930491BA3462F0007F14F /* epices.jpg in Resources */,
 				8B11EB5B1B515F960049168E /* noodle_with_bbq_pork.jpg in Resources */,
 				8B29FDD01B96028D004DA051 /* R_53.jpg in Resources */,
+				8B462BE61BA6FB060023732D /* twitter.png in Resources */,
 				8B42220C1BA58D6C00DD0068 /* R_55.jpg in Resources */,
 				8B2038B51B7F909D00899D9B /* R_20.jpg in Resources */,
 				8B7930561BA3462F0007F14F /* viande.jpg in Resources */,
@@ -835,6 +875,7 @@
 				8B11EB5A1B515F960049168E /* mushroom_risotto.jpg in Resources */,
 				8B2B36EC1B80E8BD0085B071 /* Main.storyboard in Resources */,
 				8B29FDD31B96028D004DA051 /* R_41.jpg in Resources */,
+				8B9F76151BA7003F00845385 /* FBShare.png in Resources */,
 				8B2038AC1B7F909D00899D9B /* R_12.jpg in Resources */,
 				8B2038AE1B7F909D00899D9B /* R_14.jpg in Resources */,
 				8B4222061BA58D6C00DD0068 /* R_61.jpg in Resources */,
@@ -863,6 +904,7 @@
 				8B9E30A61B8F0FF300B5EA8A /* R_37.jpg in Resources */,
 				8B2038AF1B7F909D00899D9B /* R_15.jpg in Resources */,
 				8B2038B61B7F909D00899D9B /* R_21.jpg in Resources */,
+				8B9F76171BA7003F00845385 /* smileyInLove.png in Resources */,
 				8B2038BD1B7F909D00899D9B /* R_9.jpg in Resources */,
 				8B0A39D21B5A71F00082C6E4 /* menu@2x.png in Resources */,
 			);
@@ -924,6 +966,7 @@
 				8B43F6381B99FFF200B919FB /* catTableViewCell.m in Sources */,
 				8B43F65B1B9A033E00B919FB /* CreditsViewController.m in Sources */,
 				8B43F6631B9A033E00B919FB /* SWRevealViewController.m in Sources */,
+				8B9F761E1BA7030000845385 /* ShareViewController.m in Sources */,
 				8B43F6411B9A00DE00B919FB /* Recipes.m in Sources */,
 				8B43F6371B99FFF200B919FB /* AlimCollectionViewCell.m in Sources */,
 				8B43F6591B9A033E00B919FB /* AccueilCollectionViewController.m in Sources */,
@@ -1057,6 +1100,8 @@
 			baseConfigurationReference = 19CB8DD916184B08317DEFB9 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/andieperrault/Documents/coursDL/FacebookSDK_3.7.1,
@@ -1065,6 +1110,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1073,6 +1119,8 @@
 			baseConfigurationReference = AFC0CB84BFA8D724AEDE47E3 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/andieperrault/Documents/coursDL/FacebookSDK_3.7.1,
@@ -1081,6 +1129,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

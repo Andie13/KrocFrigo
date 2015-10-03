@@ -584,6 +584,100 @@
             </objects>
             <point key="canvasLocation" x="433" y="-1479"/>
         </scene>
+        <!--Share View Controller-->
+        <scene sceneID="ury-SK-PXU">
+            <objects>
+                <viewController id="Zcm-pv-sHX" customClass="ShareViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kI2-9Y-BPB"/>
+                        <viewControllerLayoutGuide type="bottom" id="ydv-Zo-Lmd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9kO-GG-v9K">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lwr-FY-t2a" userLabel="Twitter">
+                                <rect key="frame" x="30" y="400" width="261" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bNw-Dp-Xex"/>
+                                    <constraint firstAttribute="width" constant="261" id="dEI-tP-oZ7"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="twitter.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareOnTwitter:" destination="Zcm-pv-sHX" eventType="touchUpInside" id="7XS-Nz-7f1"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smileyInLove.png" translatesAutoresizingMaskIntoConstraints="NO" id="udb-wj-3JG">
+                                <rect key="frame" x="40" y="135" width="240" height="241"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="9d3-Hd-9tW"/>
+                                    <constraint firstAttribute="height" constant="241" id="Bzt-he-vwm"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dingue de cette appli????Partagez avec vos amis" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xml-Av-qKE">
+                                <rect key="frame" x="24" y="72" width="256" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="XOd-nq-Iae"/>
+                                    <constraint firstAttribute="width" constant="256" id="Zpw-iv-xIv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" red="0.97458859710000001" green="0.97458859710000001" blue="0.97458859710000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94h-Ui-qpt" userLabel="Mails">
+                                <rect key="frame" x="34" y="516" width="261" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="261" id="0Yg-r2-11v"/>
+                                    <constraint firstAttribute="height" constant="50" id="wZN-2E-Q82"/>
+                                </constraints>
+                                <state key="normal" image="email.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showEmailAction:" destination="Zcm-pv-sHX" eventType="touchUpInside" id="7kp-Dt-K8Q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yzo-0f-uD5" userLabel="FB">
+                                <rect key="frame" x="27" y="458" width="267" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="267" id="Khc-69-Z7o"/>
+                                    <constraint firstAttribute="height" constant="50" id="Vm5-RG-FI1"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="FBShare.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareOnFaceBook:" destination="Zcm-pv-sHX" eventType="touchUpInside" id="vPa-o2-kjg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.41596788945473179" green="0.81670752989999995" blue="0.42348993791378609" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Lwr-FY-t2a" secondAttribute="centerX" id="3Be-Yf-F9M"/>
+                            <constraint firstAttribute="centerX" secondItem="udb-wj-3JG" secondAttribute="centerX" id="EEF-ig-VxL"/>
+                            <constraint firstAttribute="centerX" secondItem="Xml-Av-qKE" secondAttribute="centerX" constant="8" id="ELN-6b-RMN"/>
+                            <constraint firstAttribute="centerX" secondItem="Yzo-0f-uD5" secondAttribute="centerX" constant="-0.5" id="Huj-JB-acU"/>
+                            <constraint firstItem="Xml-Av-qKE" firstAttribute="top" secondItem="kI2-9Y-BPB" secondAttribute="bottom" constant="8" id="IUe-Nw-Ymi"/>
+                            <constraint firstItem="udb-wj-3JG" firstAttribute="top" secondItem="Xml-Av-qKE" secondAttribute="bottom" constant="8" id="Ihy-tA-fVx"/>
+                            <constraint firstAttribute="centerX" secondItem="94h-Ui-qpt" secondAttribute="centerX" constant="-4.5" id="N3R-aY-h2b"/>
+                            <constraint firstItem="Lwr-FY-t2a" firstAttribute="top" secondItem="udb-wj-3JG" secondAttribute="bottom" constant="24" id="NHI-DR-toW"/>
+                            <constraint firstItem="94h-Ui-qpt" firstAttribute="top" secondItem="Yzo-0f-uD5" secondAttribute="bottom" constant="8" id="ZZL-UO-z7K"/>
+                            <constraint firstItem="Yzo-0f-uD5" firstAttribute="top" secondItem="Lwr-FY-t2a" secondAttribute="bottom" constant="8" id="bkT-DN-PAG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hzK-aE-Z3i">
+                        <barButtonItem key="leftBarButtonItem" image="menu.png" id="6a5-lV-yBg"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="sideBarButton" destination="6a5-lV-yBg" id="3Ca-EO-YTJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7e7-nk-vEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1596" y="-2717"/>
+        </scene>
         <!--Side Bar Table View Controller-->
         <scene sceneID="XNM-S4-fVu">
             <objects>
@@ -672,6 +766,26 @@
                                 <color key="backgroundColor" red="0.16078431900000001" green="0.38823533059999998" blue="0.13333334029999999" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
                                     <segue destination="RRZ-LH-WSs" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="Mbd-hk-gVP"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Share" textLabel="egP-Lp-XhO" style="IBUITableViewCellStyleDefault" id="KTQ-h9-Sk1">
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KTQ-h9-Sk1" id="Bc8-Y3-0sD">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Partagez" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="egP-Lp-XhO">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.16078431900000001" green="0.38823533059999998" blue="0.13333334029999999" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <segue destination="NNG-tZ-iCE" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="ytY-Jb-Z8P"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -813,12 +927,12 @@
                                     <action selector="searchHardAction:" destination="NFb-Ed-6jd" eventType="touchUpInside" id="u0P-vl-3ff"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AV1-eb-tDa">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AV1-eb-tDa">
                                 <rect key="frame" x="-65" y="425" width="344" height="48"/>
                                 <color key="backgroundColor" red="0.12002766989173178" green="0.81670752992021278" blue="0.73913965748686372" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="UxF-F4-T5G"/>
-                                    <constraint firstAttribute="width" constant="202" id="geu-KP-g2y"/>
+                                    <constraint firstAttribute="width" constant="344" id="geu-KP-g2y"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                 <size key="titleShadowOffset" width="1" height="0.0"/>
@@ -953,7 +1067,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="emG-Se-w19" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1974" y="-2123"/>
+            <point key="canvasLocation" x="2506" y="-2123"/>
         </scene>
         <!--Search By Type View Controller-->
         <scene sceneID="78h-Ja-ROf">
@@ -1043,7 +1157,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2NT-CQ-eVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2714" y="-2123"/>
+            <point key="canvasLocation" x="3246" y="-2123"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NvW-bP-o6u">
@@ -1116,7 +1230,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BuU-Ga-yEV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1528" y="-2123"/>
+            <point key="canvasLocation" x="2060" y="-2123"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vEJ-oD-2WZ">
@@ -1134,7 +1248,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VNX-Pn-eq8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2360" y="-2123"/>
+            <point key="canvasLocation" x="2892" y="-2123"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ceT-sK-Fp2">
@@ -1268,20 +1382,42 @@
             </objects>
             <point key="canvasLocation" x="2360" y="-1495"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jyd-pI-nPq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NNG-tZ-iCE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Y0-Kh-3Jd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Zcm-pv-sHX" kind="relationship" relationship="rootViewController" id="X1Y-1Y-qWL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DA6-Hp-S0n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1064" y="-2717"/>
+        </scene>
     </scenes>
     <resources>
         <image name="B.png" width="600" height="317"/>
+        <image name="FBShare.png" width="416" height="92"/>
         <image name="HO.png" width="568" height="311"/>
         <image name="R_5.jpg" width="1600" height="1116"/>
         <image name="a_table.png" width="732" height="564"/>
         <image name="assiette couverts 3.png" width="84" height="84"/>
         <image name="cochon.png" width="483" height="437"/>
+        <image name="email.png" width="101" height="50"/>
         <image name="full_breakfast.jpg" width="560" height="350"/>
         <image name="gradient.png" width="2480" height="3508"/>
         <image name="logo-gep.jpg" width="300" height="160"/>
         <image name="menu.png" width="22" height="22"/>
         <image name="reveil.png" width="516" height="768"/>
         <image name="smileyChef.jpg" width="213" height="236"/>
+        <image name="smileyInLove.png" width="300" height="300"/>
+        <image name="twitter.png" width="762" height="220"/>
         <image name="valider.jpg" width="130" height="131"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -1290,6 +1426,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="BRO-Fq-tr6"/>
+        <segue reference="fdv-oo-DrF"/>
     </inferredMetricsTieBreakers>
 </document>
