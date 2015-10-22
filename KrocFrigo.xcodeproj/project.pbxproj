@@ -100,9 +100,9 @@
 		8B43F6611B9A033E00B919FB /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B43F6541B9A033E00B919FB /* SearchViewController.m */; };
 		8B43F6621B9A033E00B919FB /* SideBarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B43F6561B9A033E00B919FB /* SideBarTableViewController.m */; };
 		8B43F6631B9A033E00B919FB /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B43F6581B9A033E00B919FB /* SWRevealViewController.m */; };
-		8B462BE31BA6FA1B0023732D /* img_2-11368_smiley_dingo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B462BE21BA6FA1B0023732D /* img_2-11368_smiley_dingo.png */; };
-		8B462BE61BA6FB060023732D /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B462BE41BA6FB060023732D /* twitter.png */; };
-		8B462BE71BA6FB060023732D /* fb-share-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B462BE51BA6FB060023732D /* fb-share-button.png */; };
+		8B469BF31BD94855001BA4B5 /* img_2-11368_ssmiley_dingo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B469BF21BD94855001BA4B5 /* img_2-11368_ssmiley_dingo.png */; settings = {ASSET_TAGS = (); }; };
+		8B469BF51BD948BA001BA4B5 /* twitter-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B469BF41BD948BA001BA4B5 /* twitter-logo.jpg */; settings = {ASSET_TAGS = (); }; };
+		8B4A3A7C1BD8F6E500B104D6 /* full_breakfast.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B4A3A7B1BD8F6E500B104D6 /* full_breakfast.jpg */; settings = {ASSET_TAGS = (); }; };
 		8B744B141B7335AE00A8E725 /* kroc_db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 8B744B131B7335AE00A8E725 /* kroc_db.sqlite */; };
 		8B7930461BA3462F0007F14F /* Assaisonnement.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B7930341BA3462F0007F14F /* Assaisonnement.jpg */; };
 		8B7930471BA3462F0007F14F /* Boissons.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B7930351BA3462F0007F14F /* Boissons.jpg */; };
@@ -286,9 +286,9 @@
 		8B43F6561B9A033E00B919FB /* SideBarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideBarTableViewController.m; sourceTree = "<group>"; };
 		8B43F6571B9A033E00B919FB /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		8B43F6581B9A033E00B919FB /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		8B462BE21BA6FA1B0023732D /* img_2-11368_smiley_dingo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img_2-11368_smiley_dingo.png"; path = "../../../../../Downloads/img_2-11368_smiley_dingo.png"; sourceTree = "<group>"; };
-		8B462BE41BA6FB060023732D /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitter.png; path = ../../../../../Downloads/twitter.png; sourceTree = "<group>"; };
-		8B462BE51BA6FB060023732D /* fb-share-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fb-share-button.png"; path = "../../../../../Downloads/fb-share-button.png"; sourceTree = "<group>"; };
+		8B469BF21BD94855001BA4B5 /* img_2-11368_ssmiley_dingo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img_2-11368_ssmiley_dingo.png"; sourceTree = "<group>"; };
+		8B469BF41BD948BA001BA4B5 /* twitter-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "twitter-logo.jpg"; sourceTree = "<group>"; };
+		8B4A3A7B1BD8F6E500B104D6 /* full_breakfast.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = full_breakfast.jpg; sourceTree = "<group>"; };
 		8B744B131B7335AE00A8E725 /* kroc_db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = kroc_db.sqlite; sourceTree = "<group>"; };
 		8B7930341BA3462F0007F14F /* Assaisonnement.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Assaisonnement.jpg; sourceTree = "<group>"; };
 		8B7930351BA3462F0007F14F /* Boissons.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Boissons.jpg; sourceTree = "<group>"; };
@@ -474,13 +474,13 @@
 		8B0948EC1B4AD8D500C611F5 /* Image App */ = {
 			isa = PBXGroup;
 			children = (
+				8B469BF41BD948BA001BA4B5 /* twitter-logo.jpg */,
+				8B469BF21BD94855001BA4B5 /* img_2-11368_ssmiley_dingo.png */,
+				8B4A3A7B1BD8F6E500B104D6 /* full_breakfast.jpg */,
 				8B9F761F1BA7120100845385 /* logoKroc.png */,
 				8B9F76101BA7003F00845385 /* email.png */,
 				8B9F76111BA7003F00845385 /* FBShare.png */,
 				8B9F76131BA7003F00845385 /* smileyInLove.png */,
-				8B462BE41BA6FB060023732D /* twitter.png */,
-				8B462BE51BA6FB060023732D /* fb-share-button.png */,
-				8B462BE21BA6FA1B0023732D /* img_2-11368_smiley_dingo.png */,
 				8B7930581BA347410007F14F /* veggie.png */,
 				8B7930591BA347410007F14F /* cochon.png */,
 				8B1DF4B51B9F244C00E82CAF /* logo-gep.jpg */,
@@ -795,6 +795,7 @@
 				8B2038B11B7F909D00899D9B /* R_17.jpg in Resources */,
 				8B2038AB1B7F909D00899D9B /* R_11.jpg in Resources */,
 				8B4222091BA58D6C00DD0068 /* R_58.jpg in Resources */,
+				8B469BF51BD948BA001BA4B5 /* twitter-logo.jpg in Resources */,
 				8B11EB511B515F960049168E /* creme_brelee.jpg in Resources */,
 				8B9E30B51B8F0FF300B5EA8A /* R_22.jpg in Resources */,
 				8B0A39D51B5A74D60082C6E4 /* gradient.png in Resources */,
@@ -806,7 +807,6 @@
 				8B11EB601B515F960049168E /* white_chocolate_donut.jpg in Resources */,
 				8B9E30A51B8F0FF300B5EA8A /* R_38.jpg in Resources */,
 				8B2038AA1B7F909D00899D9B /* R_10.jpg in Resources */,
-				8B462BE31BA6FA1B0023732D /* img_2-11368_smiley_dingo.png in Resources */,
 				8B2038B41B7F909D00899D9B /* R_2.jpg in Resources */,
 				8B2038B91B7F909D00899D9B /* R_5.jpg in Resources */,
 				8B2038B21B7F909D00899D9B /* R_18.jpg in Resources */,
@@ -815,7 +815,7 @@
 				8B43F60C1B986B0700B919FB /* reveil.png in Resources */,
 				8B9E30B01B8F0FF300B5EA8A /* R_27.jpg in Resources */,
 				8B79304F1BA3462F0007F14F /* inclassable.jpg in Resources */,
-				8B462BE71BA6FB060023732D /* fb-share-button.png in Resources */,
+				8B469BF31BD94855001BA4B5 /* img_2-11368_ssmiley_dingo.png in Resources */,
 				8B0948D21B4AD51600C611F5 /* LaunchScreen.xib in Resources */,
 				8B7930501BA3462F0007F14F /* laitages.jpg in Resources */,
 				8B11EB5E1B515F960049168E /* thai_shrimp_cake.jpg in Resources */,
@@ -842,7 +842,6 @@
 				8B7930491BA3462F0007F14F /* epices.jpg in Resources */,
 				8B11EB5B1B515F960049168E /* noodle_with_bbq_pork.jpg in Resources */,
 				8B29FDD01B96028D004DA051 /* R_53.jpg in Resources */,
-				8B462BE61BA6FB060023732D /* twitter.png in Resources */,
 				8B42220C1BA58D6C00DD0068 /* R_55.jpg in Resources */,
 				8B2038B51B7F909D00899D9B /* R_20.jpg in Resources */,
 				8B7930561BA3462F0007F14F /* viande.jpg in Resources */,
@@ -898,6 +897,7 @@
 				8B9E30A41B8F0FF300B5EA8A /* R_39.jpg in Resources */,
 				8B42220B1BA58D6C00DD0068 /* R_56.jpg in Resources */,
 				8B2038B71B7F909D00899D9B /* R_3.jpg in Resources */,
+				8B4A3A7C1BD8F6E500B104D6 /* full_breakfast.jpg in Resources */,
 				8BB796541B88F27800734EB4 /* nonValider.jpg in Resources */,
 				8BB796571B890B5400734EB4 /* B.png in Resources */,
 				8B7930471BA3462F0007F14F /* Boissons.jpg in Resources */,
@@ -1033,6 +1033,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1077,6 +1078,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1177,7 +1179,7 @@
 				8B0948E01B4AD51600C611F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		8B0948E11B4AD51600C611F5 /* Build configuration list for PBXNativeTarget "KrocFrigo" */ = {
 			isa = XCConfigurationList;
@@ -1186,7 +1188,7 @@
 				8B0948E31B4AD51600C611F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		8B0948E41B4AD51600C611F5 /* Build configuration list for PBXNativeTarget "KrocFrigoTests" */ = {
 			isa = XCConfigurationList;
@@ -1195,7 +1197,7 @@
 				8B0948E61B4AD51600C611F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 
