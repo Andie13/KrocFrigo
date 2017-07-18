@@ -72,11 +72,18 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    return collectionRecettes.count;
+    return 8;
     
 }
-
-
+// collection view for all screen size
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout *)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    float width = collectionView.frame.size.width / 2;
+    return CGSizeMake(width, width);
+    
+}
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identifier = @"cellForAccueil";
     
@@ -84,7 +91,7 @@ static NSString * const reuseIdentifier = @"Cell";
     
     AccueilCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     Recipes *maRecette = [collectionRecettes objectAtIndex: indexPath.row];
-    cell.imageRecette.image = [UIImage imageNamed:[NSString stringWithFormat:@"R_%d.jpg",maRecette.idRecette]];
+    cell.imageRecette.image = [UIImage imageNamed:[NSString stringWithFormat:@"R_%ld.jpg",(long)maRecette.idRecette]];
     
     if (([maRecette.type_recette  isEqual: @"Hors d'oeuvres"])) {
         cell.imageType.image = [UIImage imageNamed:@"HO.png"];

@@ -100,9 +100,9 @@
 		8B43F6611B9A033E00B919FB /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B43F6541B9A033E00B919FB /* SearchViewController.m */; };
 		8B43F6621B9A033E00B919FB /* SideBarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B43F6561B9A033E00B919FB /* SideBarTableViewController.m */; };
 		8B43F6631B9A033E00B919FB /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B43F6581B9A033E00B919FB /* SWRevealViewController.m */; };
-		8B469BF31BD94855001BA4B5 /* img_2-11368_ssmiley_dingo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B469BF21BD94855001BA4B5 /* img_2-11368_ssmiley_dingo.png */; settings = {ASSET_TAGS = (); }; };
-		8B469BF51BD948BA001BA4B5 /* twitter-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B469BF41BD948BA001BA4B5 /* twitter-logo.jpg */; settings = {ASSET_TAGS = (); }; };
-		8B4A3A7C1BD8F6E500B104D6 /* full_breakfast.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B4A3A7B1BD8F6E500B104D6 /* full_breakfast.jpg */; settings = {ASSET_TAGS = (); }; };
+		8B469BF31BD94855001BA4B5 /* img_2-11368_ssmiley_dingo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B469BF21BD94855001BA4B5 /* img_2-11368_ssmiley_dingo.png */; };
+		8B469BF51BD948BA001BA4B5 /* twitter-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B469BF41BD948BA001BA4B5 /* twitter-logo.jpg */; };
+		8B4A3A7C1BD8F6E500B104D6 /* full_breakfast.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B4A3A7B1BD8F6E500B104D6 /* full_breakfast.jpg */; };
 		8B744B141B7335AE00A8E725 /* kroc_db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 8B744B131B7335AE00A8E725 /* kroc_db.sqlite */; };
 		8B7930461BA3462F0007F14F /* Assaisonnement.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B7930341BA3462F0007F14F /* Assaisonnement.jpg */; };
 		8B7930471BA3462F0007F14F /* Boissons.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B7930351BA3462F0007F14F /* Boissons.jpg */; };
@@ -123,6 +123,7 @@
 		8B7930571BA3462F0007F14F /* viennoiseries.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B7930451BA3462F0007F14F /* viennoiseries.jpg */; };
 		8B79305A1BA347410007F14F /* veggie.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B7930581BA347410007F14F /* veggie.png */; };
 		8B79305B1BA347410007F14F /* cochon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B7930591BA347410007F14F /* cochon.png */; };
+		8B87EA4C1EE7200000845859 /* logo-polytech-marseille.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B87EA4B1EE7200000845859 /* logo-polytech-marseille.jpg */; };
 		8B9E30A31B8F0FF300B5EA8A /* R_40.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B9E30901B8F0FF300B5EA8A /* R_40.jpg */; };
 		8B9E30A41B8F0FF300B5EA8A /* R_39.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B9E30911B8F0FF300B5EA8A /* R_39.jpg */; };
 		8B9E30A51B8F0FF300B5EA8A /* R_38.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B9E30921B8F0FF300B5EA8A /* R_38.jpg */; };
@@ -309,6 +310,7 @@
 		8B7930451BA3462F0007F14F /* viennoiseries.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = viennoiseries.jpg; sourceTree = "<group>"; };
 		8B7930581BA347410007F14F /* veggie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = veggie.png; sourceTree = "<group>"; };
 		8B7930591BA347410007F14F /* cochon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cochon.png; sourceTree = "<group>"; };
+		8B87EA4B1EE7200000845859 /* logo-polytech-marseille.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "logo-polytech-marseille.jpg"; sourceTree = "<group>"; };
 		8B9E30901B8F0FF300B5EA8A /* R_40.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = R_40.jpg; sourceTree = "<group>"; };
 		8B9E30911B8F0FF300B5EA8A /* R_39.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = R_39.jpg; sourceTree = "<group>"; };
 		8B9E30921B8F0FF300B5EA8A /* R_38.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = R_38.jpg; sourceTree = "<group>"; };
@@ -476,10 +478,11 @@
 			children = (
 				8B469BF41BD948BA001BA4B5 /* twitter-logo.jpg */,
 				8B469BF21BD94855001BA4B5 /* img_2-11368_ssmiley_dingo.png */,
+				8B87EA4B1EE7200000845859 /* logo-polytech-marseille.jpg */,
 				8B4A3A7B1BD8F6E500B104D6 /* full_breakfast.jpg */,
+				8B9F76111BA7003F00845385 /* FBShare.png */,
 				8B9F761F1BA7120100845385 /* logoKroc.png */,
 				8B9F76101BA7003F00845385 /* email.png */,
-				8B9F76111BA7003F00845385 /* FBShare.png */,
 				8B9F76131BA7003F00845385 /* smileyInLove.png */,
 				8B7930581BA347410007F14F /* veggie.png */,
 				8B7930591BA347410007F14F /* cochon.png */,
@@ -751,7 +754,7 @@
 		8B0948B31B4AD51500C611F5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Andie Perrault";
 				TargetAttributes = {
 					8B0948BA1B4AD51500C611F5 = {
@@ -847,6 +850,7 @@
 				8B7930561BA3462F0007F14F /* viande.jpg in Resources */,
 				8B11EB5D1B515F960049168E /* starbucks_coffee.jpg in Resources */,
 				8B43F6121B9884D000B919FB /* a_table.png in Resources */,
+				8B87EA4C1EE7200000845859 /* logo-polytech-marseille.jpg in Resources */,
 				8B2B36F21B8105510085B071 /* PP.png in Resources */,
 				8B9E30AD1B8F0FF300B5EA8A /* R_30.jpg in Resources */,
 				8B2038BB1B7F909D00899D9B /* R_7.jpg in Resources */,
@@ -1030,11 +1034,13 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1075,6 +1081,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1104,6 +1111,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8LKZ44U7N5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/andieperrault/Documents/coursDL/FacebookSDK_3.7.1,
@@ -1111,6 +1119,7 @@
 				INFOPLIST_FILE = KrocFrigo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1123,6 +1132,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8LKZ44U7N5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/andieperrault/Documents/coursDL/FacebookSDK_3.7.1,
@@ -1130,6 +1140,7 @@
 				INFOPLIST_FILE = KrocFrigo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1149,6 +1160,7 @@
 				);
 				INFOPLIST_FILE = KrocFrigoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KrocFrigo.app/KrocFrigo";
 			};
@@ -1164,6 +1176,7 @@
 				);
 				INFOPLIST_FILE = KrocFrigoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KrocFrigo.app/KrocFrigo";
 			};
